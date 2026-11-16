@@ -1,0 +1,57 @@
+name: Daily update
+
+on:
+  schedule:
+    # 11:17 UTC, early morning Eastern
+    - cron: "17 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      FEC_API_KEY: ${{ secrets.FEC_API_KEY }}
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          packages: |
+            any::tidyverse
+            any::httr2
+            any::jsonlite
+            any::stringi
+            any::rvest
+            any::htmltools
+            any::knitr
+            any::rmarkdown
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+
+      # a failed feed is recorded in data/feed_status.csv and does not stop the job
+      - name: Run feeds
+        run: Rscript R/run_feeds.R
+
+      - name: Render page
+        run: quarto render
+
+      - name: Commit data and page
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data docs
+          git diff --cached --quiet || git commit -m "Daily update $(date -u +%F)"
+          git push

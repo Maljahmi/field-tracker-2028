@@ -1,0 +1,248 @@
+---
+title: "2028 field tracker"
+subtitle: "Who might run for president in 2028, by market odds and public signals"
+lang: en
+format:
+  html:
+    minimal: true
+    embed-resources: true
+    css: styles.css
+    toc: false
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+source("R/07_page_data.R")
+library(htmltools)
+
+top_n <- 20
+party_color <- c(D = "#012169", R = "#C84E00")
+party_name <- c(D = "Democratic", R = "Republican")
+
+# formatting
+nice_date <- function(d) paste0(format(d, "%B "), as.integer(format(d, "%d")), ", ", format(d, "%Y"))
+pct <- function(x) {
+  case_when(
+    is.na(x) ~ "–",
+    x >= 0.1 ~ sprintf("%.0f%%", 100 * x),
+    x >= 0.01 ~ sprintf("%.1f%%", 100 * x),
+    TRUE ~ "<1%"
+  )
+}
+compact <- function(x) {
+  case_when(
+    is.na(x) ~ "–",
+    x >= 1e6 ~ sprintf("%.1fM", x / 1e6),
+    x >= 1e3 ~ sprintf("%.1fK", x / 1e3),
+    TRUE ~ sprintf("%.0f", x)
+  )
+}
+yes_no <- function(x) if_else(x, "Yes", "No")
+
+# change in percentage points with a direction mark
+change_tag <- function(x) {
+  if (is.na(x)) return(span(class = "dim", "–"))
+  v <- 100 * x
+  if (abs(v) < 0.05) return(span(class = "dim", "0.0"))
+  span(
+    `aria-label` = sprintf("%s %.1f points", if (v > 0) "up" else "down", abs(v)),
+    span(class = "dir", if (v > 0) "▲" else "▼"), sprintf("%.1f", abs(v))
+  )
+}
+
+# 30-day line with an end dot; the scale spans at least 2 points or 30% of the price,
+# so small day-to-day noise does not fill the chart
+sparkline <- function(prices, party) {
+  prices <- prices[!is.na(prices)]
+  if (length(prices) < 2) return(NULL)
+  w <- 132; h <- 30; pad <- 5
+  lo <- min(prices); hi <- max(prices)
+  min_span <- max(0.02, 0.3 * last(prices))
+  if (hi - lo < min_span) {
+    mid <- (hi + lo) / 2
+    lo <- mid - min_span / 2
+    hi <- mid + min_span / 2
+  }
+  x <- pad + (seq_along(prices) - 1) / (length(prices) - 1) * (w - 2 * pad)
+  y <- h - pad - (prices - lo) / (hi - lo) * (h - 2 * pad)
+  label <- sprintf(
+    "Nomination odds over 30 days: low %s, high %s, now %s",
+    pct(min(prices)), pct(max(prices)), pct(last(prices))
+  )
+  HTML(sprintf(
+    paste0(
+      '<svg width="%d" height="%d" viewBox="0 0 %d %d" role="img" aria-label="%s"><title>%s</title>',
+      '<polyline points="%s" fill="none" stroke="%s" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>',
+      '<circle cx="%.1f" cy="%.1f" r="3.5" fill="%s" stroke="#ffffff" stroke-width="2"/></svg>'
+    ),
+    w, h, w, h, label, label,
+    paste(sprintf("%.1f,%.1f", x, y), collapse = " "), party_color[[party]],
+    last(x), last(y), party_color[[party]]
+  ))
+}
+
+# detail card
+card <- function(r) {
+  ev <- filter(events, candidate_id == r$candidate_id) |> arrange(desc(date))
+  filing <- if (!is.null(fec)) filter(fec, candidate_id == r$candidate_id)
+  fec_line <- if (is.null(filing)) {
+    "Not connected yet"
+  } else if (nrow(filing) == 0) {
+    "No 2028 filing found"
+  } else {
+    paste("Filed", filing$first_file_date[1])
+  }
+  div(
+    class = "card",
+    div(
+      h3("Markets"),
+      tags$dl(
+        tags$dt("Nomination, Polymarket"), tags$dd(pct(r$polymarket_nominee)),
+        tags$dt("Nomination, Kalshi"), tags$dd(pct(r$kalshi_nominee)),
+        tags$dt("Announces a run by end of 2027"), tags$dd(pct(r$polymarket_announce_2028)),
+        tags$dt("Nomination odds, 7-day change"), tags$dd(change_tag(r$change_7d))
+      )
+    ),
+    div(
+      h3("Signals"),
+      tags$dl(
+        tags$dt("National polls naming them, 30 days"), tags$dd(r$n_polls_30d),
+        tags$dt("Average share in those polls"), tags$dd(if (is.na(r$avg_pct_30d)) "–" else paste0(r$avg_pct_30d, "%")),
+        tags$dt("Wikipedia views per day, 7 days"), tags$dd(compact(r$views_7d)),
+        tags$dt("Views against the week before"), tags$dd(if (is.na(r$views_change)) "–" else sprintf("%+.0f%%", 100 * r$views_change))
+      )
+    ),
+    div(
+      h3("Background"),
+      tags$dl(
+        tags$dt("Born"), tags$dd(r$birth_year),
+        tags$dt("Term-limited"), tags$dd(yes_no(r$term_limited_2028)),
+        tags$dt("Seat on the 2028 ballot"), tags$dd(yes_no(r$faces_reelection_2028)),
+        tags$dt("Ran for president before"), tags$dd(yes_no(r$prior_run)),
+        tags$dt("FEC filing"), tags$dd(fec_line)
+      )
+    ),
+    div(
+      class = "events",
+      h3("Events"),
+      if (nrow(ev) == 0) {
+        p(class = "dim", "No events logged yet.")
+      } else {
+        tags$ul(pmap(ev, \(date, description, source_url, ...) {
+          tags$li(nice_date(as.Date(date)), ": ", description, " (", a(href = source_url, "source"), ")")
+        }))
+      },
+      p(a(
+        href = paste0("https://en.wikipedia.org/wiki/", URLencode(gsub(" ", "_", r$wikipedia_title))),
+        "Wikipedia article"
+      ))
+    )
+  )
+}
+
+# one candidate row
+candidate_row <- function(r) {
+  place <- if (is.na(r$home_state)) r$office else paste(r$office, "·", r$home_state)
+  if (r$office == "None") place <- if (is.na(r$home_state)) "No office held" else paste("No office held ·", r$home_state)
+  tags$details(
+    class = "cand",
+    tags$summary(
+      span(
+        class = "who",
+        span(class = "name", r$name),
+        span(
+          class = "office",
+          span(class = paste0("sw sw-", r$party), title = party_name[[r$party]]),
+          paste(r$party, "·", place)
+        )
+      ),
+      span(class = "num price", pct(r$price)),
+      span(class = "num chg", change_tag(r$change_7d)),
+      span(class = "spark", sparkline(r$spark_prices[[1]], r$party)),
+      span(class = "num announce", pct(r$polymarket_announce_2028)),
+      span(class = "num polls", if (r$n_polls_30d == 0) span(class = "dim", "0") else paste0(r$n_polls_30d, " · ", r$avg_pct_30d, "%")),
+      span(class = "num views", compact(r$views_7d))
+    ),
+    card(r)
+  )
+}
+
+rows <- map(seq_len(nrow(page_rows)), \(i) candidate_row(page_rows[i, ]))
+
+div(
+  class = "page",
+  div(
+    class = "tiles",
+    div(class = "tile", div(class = "label", "Last updated"), div(class = "value", nice_date(as_of))),
+    div(
+      class = "tile", div(class = "label", "Candidates tracked"),
+      div(class = "value num", nrow(page_rows)),
+      div(class = "note", sprintf("%d Democratic, %d Republican", sum(page_rows$party == "D"), sum(page_rows$party == "R")))
+    ),
+    div(
+      class = "tile", div(class = "label", "Biggest mover, 7 days"),
+      div(class = "value", mover$name),
+      div(class = "note num", change_tag(mover$change_7d), " points to ", pct(mover$price))
+    )
+  ),
+  p(
+    class = "feeds", "Feeds: ",
+    HTML(paste(map_chr(seq_len(nrow(feeds)), \(i) {
+      f <- feeds[i, ]
+      if (is.na(f$last_success)) {
+        sprintf('<span class="stale">%s not connected yet</span>', f$label)
+      } else if (f$stale) {
+        sprintf('<span class="stale">%s stale since %s</span>', f$label, nice_date(as.Date(f$last_success)))
+      } else {
+        sprintf("%s current", f$label)
+      }
+    }), collapse = " · "))
+  ),
+  p(
+    class = "legend",
+    span(class = "sw sw-D"), "Democratic field",
+    span(class = "sw sw-R"), "Republican field",
+    " · Sorted by nomination odds. Select a row for details."
+  ),
+  div(
+    class = "head",
+    span("Candidate"),
+    span("Nomination odds"),
+    span(class = "chg-h", "7-day change, points"),
+    span(class = "spark-h", "Last 30 days"),
+    span(class = "announce-h", "Announces by end of 2027"),
+    span(class = "polls-h", "Polls in 30 days · average"),
+    span(class = "views-h", "Wikipedia views per day"),
+    span()
+  ),
+  head(rows, top_n),
+  if (length(rows) > top_n) {
+    tags$details(
+      class = "more",
+      tags$summary(sprintf("Show the other %d candidates", length(rows) - top_n)),
+      tail(rows, -top_n)
+    )
+  }
+)
+```
+
+## How to read this page
+
+::: {.methods}
+- **Market prices are not predictions made by this project.** They are prices set by traders on Polymarket and Kalshi, shown as they are.
+- **Nomination odds** are the average of the Polymarket and Kalshi prices for "wins the party's 2028 nomination", using the midpoint between the best buy and sell offers. The Democratic and Republican contests are separate markets, so each party's odds sum to about 100% on their own.
+- **The 30-day lines** each have their own vertical scale, so compare their shapes and not their heights. The 7-day change column gives the size of the move.
+- **Announces by end of 2027** is the Polymarket price that the person officially announces a 2028 presidential run by December 31, 2027. Not every candidate has this contract.
+- **Polls** counts national primary polls from the last 30 days, taken from Wikipedia's poll lists, that name the candidate, with the candidate's average share in those polls.
+- **Wikipedia views** is the average number of daily views of the candidate's English Wikipedia article over the last seven days.
+- **Who is listed:** anyone priced at 1% or more for a nomination on either market, or named in three or more primary polls in the past year, as of November 12, 2026.
+- **Office** is the office each person holds, or last held, once the officials elected in November 2026 are seated in January 2027.
+- **Events** are entered by hand from news coverage, each with a source link.
+:::
+
+::: {.footer}
+Data from Polymarket, Kalshi, the Wikimedia pageviews API, the Federal Election Commission, and Wikipedia (text available under CC BY-SA 4.0). The page is rebuilt once a day.
+:::

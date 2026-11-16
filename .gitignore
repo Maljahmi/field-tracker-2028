@@ -1,0 +1,10 @@
+# local API keys never go in the repository
+.Renviron
+.env
+.Rhistory
+.RData
+.Rproj.user/
+/.quarto/
+*_files/
+# poll download: reuse terms not yet confirmed
+data-raw/votehub_*

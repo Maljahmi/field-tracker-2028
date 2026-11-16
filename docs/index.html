@@ -1,0 +1,4895 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.36">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>2028 field tracker</title>
+<style>
+
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+width: 0.8em;
+margin: 0 0.8em 0.2em -1em;  vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
+
+
+
+
+<style type="text/css">:root {
+--navy: #012169;
+--terracotta: #C84E00;
+--ink: #16181d;
+--muted: #5c6270;
+--hairline: #e2e5ea;
+--wash: #f5f6f8;
+--surface: #ffffff;
+}
+* { box-sizing: border-box; }
+html { background: var(--surface); }
+body {
+max-width: 1040px;
+margin: 0 auto;
+padding: 0 16px 48px;
+background: var(--surface);
+color: var(--ink);
+font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+font-size: 16px;
+line-height: 1.45;
+}
+#title-block-header { padding: 28px 0 4px; }
+h1.title {
+margin: 0;
+color: var(--navy);
+font-size: clamp(1.7rem, 4.5vw, 2.4rem);
+letter-spacing: -0.02em;
+line-height: 1.1;
+}
+p.subtitle { margin: 6px 0 0; color: var(--muted); font-size: 1.05rem; }
+h2 {
+margin: 40px 0 10px;
+color: var(--navy);
+font-size: 1.2rem;
+letter-spacing: -0.01em;
+}
+a { color: var(--navy); }
+.num { font-variant-numeric: tabular-nums; }
+
+.tiles {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 12px;
+margin: 20px 0 10px;
+}
+.tile {
+border: 1px solid var(--hairline);
+border-radius: 8px;
+padding: 12px 14px;
+}
+.tile .label { color: var(--muted); font-size: 0.8rem; }
+.tile .value { font-size: 1.35rem; font-weight: 650; line-height: 1.25; margin-top: 2px; }
+.tile .note { color: var(--muted); font-size: 0.85rem; }
+.feeds { color: var(--muted); font-size: 0.85rem; margin: 0 0 22px; }
+.feeds .stale { color: var(--ink); font-weight: 600; }
+.legend { color: var(--muted); font-size: 0.85rem; margin: 0 0 8px; }
+.sw {
+display: inline-block;
+width: 10px; height: 10px;
+border-radius: 2px;
+margin-right: 5px;
+vertical-align: baseline;
+}
+.sw-D { background: var(--navy); }
+.sw-R { background: var(--terracotta); }
+.legend .sw { margin-left: 12px; }
+.legend .sw:first-child { margin-left: 0; }
+
+.head, .cand > summary {
+display: grid;
+grid-template-columns: minmax(190px, 2.4fr) 72px 78px 132px 92px 96px 84px 18px;
+column-gap: 12px;
+align-items: center;
+}
+.head {
+color: var(--muted);
+font-size: 0.75rem;
+padding: 6px 10px;
+border-bottom: 1px solid var(--ink);
+line-height: 1.2;
+}
+.head span:not(:first-child), .cand .num { text-align: right; }
+.head .spark-h { text-align: left; }
+.cand { border-bottom: 1px solid var(--hairline); }
+.cand > summary {
+list-style: none;
+cursor: pointer;
+padding: 9px 10px;
+min-height: 54px;
+}
+.cand > summary::-webkit-details-marker { display: none; }
+.cand > summary:hover { background: var(--wash); }
+.cand > summary:focus-visible { outline: 2px solid var(--navy); outline-offset: -2px; }
+.cand > summary::after {
+content: "";
+width: 7px; height: 7px;
+border-right: 2px solid var(--muted);
+border-bottom: 2px solid var(--muted);
+transform: rotate(45deg);
+justify-self: end;
+grid-column: -2;
+}
+.cand[open] > summary::after { transform: rotate(-135deg); }
+.cand[open] > summary { background: var(--wash); }
+.who { min-width: 0; }
+.who .name { font-weight: 650; }
+.who .party { color: var(--muted); font-size: 0.8rem; margin-left: 6px; white-space: nowrap; }
+.who .office { display: block; color: var(--muted); font-size: 0.82rem; }
+.price { font-size: 1.15rem; font-weight: 650; }
+.chg, .announce, .polls, .views { font-size: 0.92rem; }
+.chg .dir { font-size: 0.7em; margin-right: 2px; }
+.dim { color: var(--muted); }
+.spark svg { display: block; }
+
+.card {
+background: var(--wash);
+padding: 4px 10px 16px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 14px 24px;
+font-size: 0.9rem;
+}
+.card h3 {
+margin: 0 0 4px;
+font-size: 0.75rem;
+font-weight: 600;
+color: var(--muted);
+text-transform: uppercase;
+letter-spacing: 0.04em;
+}
+.card dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; }
+.card dt { color: var(--ink); }
+.card dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+.card ul { margin: 0; padding-left: 18px; }
+.card .events { grid-column: 1 / -1; }
+.card p { margin: 0; }
+.more { margin-top: 0; }
+.more > summary {
+cursor: pointer;
+padding: 14px 10px;
+color: var(--navy);
+font-weight: 600;
+}
+.methods { max-width: 70ch; }
+.methods li { margin-bottom: 6px; }
+.footer { color: var(--muted); font-size: 0.85rem; margin-top: 28px; max-width: 70ch; }
+
+@media (max-width: 920px) {
+.head, .cand > summary {
+grid-template-columns: minmax(170px, 1fr) 72px 78px 132px 92px 18px;
+}
+.head .polls-h, .head .views-h, .cand .polls, .cand .views { display: none; }
+}
+
+@media (max-width: 620px) {
+.tiles { grid-template-columns: 1fr; gap: 8px; }
+.head, .cand > summary {
+grid-template-columns: minmax(0, 1fr) 58px 132px 14px;
+column-gap: 8px;
+padding-left: 2px;
+padding-right: 2px;
+}
+.head .chg-h, .head .announce-h, .cand .chg, .cand .announce { display: none; }
+.card { padding-left: 2px; padding-right: 2px; }
+}
+</style>
+</head>
+
+<body>
+
+
+<header id="title-block-header">
+<h1 class="title">2028 field tracker</h1>
+<p class="subtitle">Who might run for president in 2028, by market odds and public signals</p>
+
+</header>
+
+
+<div class="cell">
+<div class="cell-output-display">
+<div class="page">
+<div class="tiles">
+<div class="tile">
+<div class="label">Last updated</div>
+<div class="value">November 12, 2026</div>
+</div>
+<div class="tile">
+<div class="label">Candidates tracked</div>
+<div class="value num">61</div>
+<div class="note">31 Democratic, 30 Republican</div>
+</div>
+<div class="tile">
+<div class="label">Biggest mover, 7 days</div>
+<div class="value">John McEntee</div>
+<div class="note num">
+<span aria-label="up 3.4 points">
+<span class="dir">▲</span>
+3.4
+</span>
+ points to 
+4.3%
+</div>
+</div>
+</div>
+<p class="feeds">
+Feeds: 
+Market odds current · Wikipedia views current · Polls current · <span class="stale">FEC filings not connected yet</span>
+</p>
+<p class="legend">
+<span class="sw sw-D"></span>
+Democratic field
+<span class="sw sw-R"></span>
+Republican field
+ · Sorted by nomination odds. Select a row for details.
+</p>
+<div class="head">
+<span>Candidate</span>
+<span>Nomination odds</span>
+<span class="chg-h">7-day change, points</span>
+<span class="spark-h">Last 30 days</span>
+<span class="announce-h">Announces by end of 2027</span>
+<span class="polls-h">Polls in 30 days · average</span>
+<span class="views-h">Wikipedia views per day</span>
+<span></span>
+</div>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">JD Vance</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Vice president · OH
+</span>
+</span>
+<span class="num price">35%</span>
+<span class="num chg">
+<span aria-label="down 1.5 points">
+<span class="dir">▼</span>
+1.5
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 31%, high 46%, now 35%"><title>Nomination odds over 30 days: low 31%, high 46%, now 35%</title><polyline points="5.0,5.1 9.2,5.0 13.4,6.1 17.6,9.3 21.8,6.7 26.0,8.4 30.2,8.4 34.4,9.3 38.7,10.7 42.9,9.5 47.1,9.5 51.3,12.1 55.5,14.3 59.7,15.5 63.9,17.8 68.1,15.4 72.3,17.8 76.5,16.9 80.7,18.1 84.9,19.8 89.1,21.8 93.3,25.0 97.6,18.3 101.8,19.1 106.0,20.6 110.2,23.0 114.4,22.7 118.6,24.0 122.8,22.4 127.0,20.5" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="20.5" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">75%</span>
+<span class="num polls">4 · 37.2%</span>
+<span class="num views">29.7K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>34%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>36%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>75%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 1.5 points">
+<span class="dir">▼</span>
+1.5
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>4</dd>
+<dt>Average share in those polls</dt>
+<dd>37.2%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>29.7K</dd>
+<dt>Views against the week before</dt>
+<dd>+32%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1984</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/JD_Vance">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Jon Ossoff</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Senator · GA
+</span>
+</span>
+<span class="num price">26%</span>
+<span class="num chg">
+<span aria-label="down 0.3 points">
+<span class="dir">▼</span>
+0.3
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 12%, high 26%, now 26%"><title>Nomination odds over 30 days: low 12%, high 26%, now 26%</title><polyline points="5.0,21.9 9.2,23.2 13.4,23.1 17.6,25.0 21.8,24.0 26.0,22.5 30.2,21.5 34.4,20.7 38.7,20.7 42.9,20.6 47.1,20.7 51.3,22.1 55.5,22.0 59.7,21.3 63.9,20.7 68.1,20.7 72.3,20.7 76.5,21.6 80.7,21.6 84.9,22.1 89.1,15.7 93.3,5.0 97.6,5.3 101.8,5.8 106.0,6.1 110.2,6.5 114.4,5.0 118.6,5.6 122.8,5.4 127.0,5.8" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="5.8" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">66%</span>
+<span class="num polls">5 · 8%</span>
+<span class="num views">137.6K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>26%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>26%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>66%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.3 points">
+<span class="dir">▼</span>
+0.3
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>5</dd>
+<dt>Average share in those polls</dt>
+<dd>8%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>137.6K</dd>
+<dt>Views against the week before</dt>
+<dd>+21%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1987</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Jon_Ossoff">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Marco Rubio</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Cabinet · FL
+</span>
+</span>
+<span class="num price">18%</span>
+<span class="num chg">
+<span aria-label="down 2.5 points">
+<span class="dir">▼</span>
+2.5
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 15%, high 21%, now 18%"><title>Nomination odds over 30 days: low 15%, high 21%, now 18%</title><polyline points="5.0,25.0 9.2,24.1 13.4,23.2 17.6,23.5 21.8,22.1 26.0,19.5 30.2,21.3 34.4,16.7 38.7,20.4 42.9,20.2 47.1,13.5 51.3,16.2 55.5,14.2 59.7,14.2 63.9,13.5 68.1,13.1 72.3,8.1 76.5,7.1 80.7,5.8 84.9,5.2 89.1,5.0 93.3,7.9 97.6,7.9 101.8,9.5 106.0,9.6 110.2,7.2 114.4,13.1 118.6,15.7 122.8,17.4 127.0,16.0" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="16.0" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">58%</span>
+<span class="num polls">4 · 24.9%</span>
+<span class="num views">20.5K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>18%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>18%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>58%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 2.5 points">
+<span class="dir">▼</span>
+2.5
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>4</dd>
+<dt>Average share in those polls</dt>
+<dd>24.9%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>20.5K</dd>
+<dt>Views against the week before</dt>
+<dd>+89%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1971</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Marco_Rubio">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Ron DeSantis</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Former governor · FL
+</span>
+</span>
+<span class="num price">15%</span>
+<span class="num chg">
+<span aria-label="down 0.5 points">
+<span class="dir">▼</span>
+0.5
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 3.3%, high 16%, now 15%"><title>Nomination odds over 30 days: low 3.3%, high 16%, now 15%</title><polyline points="5.0,24.2 9.2,25.0 13.4,25.0 17.6,23.3 21.8,23.8 26.0,24.3 30.2,24.3 34.4,22.6 38.7,22.6 42.9,22.6 47.1,23.8 51.3,22.6 55.5,22.6 59.7,23.6 63.9,22.6 68.1,23.6 72.3,22.6 76.5,22.6 80.7,23.3 84.9,23.9 89.1,17.2 93.3,7.8 97.6,6.0 101.8,5.6 106.0,7.9 110.2,5.7 114.4,5.9 118.6,5.0 122.8,7.7 127.0,6.8" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="6.8" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">90%</span>
+<span class="num polls">4 · 8.1%</span>
+<span class="num views">24.1K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>15%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>16%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>90%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.5 points">
+<span class="dir">▼</span>
+0.5
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>4</dd>
+<dt>Average share in those polls</dt>
+<dd>8.1%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>24.1K</dd>
+<dt>Views against the week before</dt>
+<dd>-12%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1978</dd>
+<dt>Term-limited</dt>
+<dd>Yes</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Ron_DeSantis">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Alexandria Ocasio-Cortez</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Representative · NY
+</span>
+</span>
+<span class="num price">15%</span>
+<span class="num chg">
+<span aria-label="down 0.7 points">
+<span class="dir">▼</span>
+0.7
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 14%, high 16%, now 15%"><title>Nomination odds over 30 days: low 14%, high 16%, now 15%</title><polyline points="5.0,12.2 9.2,12.8 13.4,12.9 17.6,19.9 21.8,17.0 26.0,16.8 30.2,13.2 34.4,19.9 38.7,19.9 42.9,10.1 47.1,12.5 51.3,19.9 55.5,19.9 59.7,14.3 63.9,19.9 68.1,12.5 72.3,19.9 76.5,12.9 80.7,14.0 84.9,14.0 89.1,14.0 93.3,16.2 97.6,12.0 101.8,10.8 106.0,12.6 110.2,13.1 114.4,13.8 118.6,17.0 122.8,15.9 127.0,15.2" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="15.2" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">60%</span>
+<span class="num polls">5 · 10.5%</span>
+<span class="num views">25.4K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>15%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>14%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>60%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.7 points">
+<span class="dir">▼</span>
+0.7
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>5</dd>
+<dt>Average share in those polls</dt>
+<dd>10.5%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>25.4K</dd>
+<dt>Views against the week before</dt>
+<dd>+30%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1989</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>Yes</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Alexandria_Ocasio-Cortez">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Gavin Newsom</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Former governor · CA
+</span>
+</span>
+<span class="num price">11%</span>
+<span class="num chg">
+<span aria-label="down 1.7 points">
+<span class="dir">▼</span>
+1.7
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 9.9%, high 17%, now 11%"><title>Nomination odds over 30 days: low 9.9%, high 17%, now 11%</title><polyline points="5.0,15.0 9.2,12.1 13.4,12.2 17.6,14.8 21.8,8.2 26.0,8.7 30.2,7.3 34.4,6.4 38.7,13.4 42.9,11.1 47.1,12.0 51.3,12.0 55.5,8.7 59.7,9.1 63.9,9.2 68.1,5.0 72.3,7.3 76.5,5.8 80.7,7.8 84.9,6.8 89.1,10.7 93.3,13.8 97.6,17.7 101.8,18.0 106.0,20.1 110.2,23.9 114.4,25.0 118.6,21.6 122.8,21.4 127.0,22.5" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="22.5" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">83%</span>
+<span class="num polls">5 · 11.8%</span>
+<span class="num views">22.2K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>10%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>12%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>83%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 1.7 points">
+<span class="dir">▼</span>
+1.7
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>5</dd>
+<dt>Average share in those polls</dt>
+<dd>11.8%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>22.2K</dd>
+<dt>Views against the week before</dt>
+<dd>-16%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1967</dd>
+<dt>Term-limited</dt>
+<dd>Yes</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Gavin_Newsom">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Kamala Harris</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Former vice president · CA
+</span>
+</span>
+<span class="num price">5.2%</span>
+<span class="num chg">
+<span aria-label="up 0.5 points">
+<span class="dir">▲</span>
+0.5
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 4.4%, high 7.8%, now 5.2%"><title>Nomination odds over 30 days: low 4.4%, high 7.8%, now 5.2%</title><polyline points="5.0,6.7 9.2,7.0 13.4,7.0 17.6,5.0 21.8,7.5 26.0,9.3 30.2,8.6 34.4,7.3 38.7,11.1 42.9,10.5 47.1,9.6 51.3,10.2 55.5,11.7 59.7,16.6 63.9,12.5 68.1,15.9 72.3,14.6 76.5,15.4 80.7,15.4 84.9,16.6 89.1,25.0 93.3,23.6 97.6,23.3 101.8,20.1 106.0,15.9 110.2,15.9 114.4,19.1 118.6,20.7 122.8,19.6 127.0,20.4" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="20.4" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">59%</span>
+<span class="num polls">5 · 18.7%</span>
+<span class="num views">10.9K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>5.3%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>5.1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>59%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.5 points">
+<span class="dir">▲</span>
+0.5
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>5</dd>
+<dt>Average share in those polls</dt>
+<dd>18.7%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>10.9K</dd>
+<dt>Views against the week before</dt>
+<dd>-6%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1964</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Kamala_Harris">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Pete Buttigieg</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Former cabinet · MI
+</span>
+</span>
+<span class="num price">5.2%</span>
+<span class="num chg">
+<span aria-label="up 0.5 points">
+<span class="dir">▲</span>
+0.5
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 4.5%, high 5.4%, now 5.2%"><title>Nomination odds over 30 days: low 4.5%, high 5.4%, now 5.2%</title><polyline points="5.0,14.5 9.2,16.2 13.4,15.8 17.6,16.2 21.8,15.8 26.0,16.2 30.2,16.0 34.4,18.2 38.7,17.0 42.9,16.5 47.1,18.2 51.3,18.2 55.5,16.0 59.7,16.8 63.9,18.2 68.1,16.5 72.3,19.3 76.5,16.5 80.7,16.5 84.9,17.0 89.1,18.2 93.3,16.8 97.6,17.8 101.8,14.2 106.0,12.8 110.2,11.8 114.4,10.8 118.6,11.8 122.8,11.8 127.0,12.8" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="12.8" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">98%</span>
+<span class="num polls">5 · 10.6%</span>
+<span class="num views">12.9K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>5.4%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>5.0%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>98%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.5 points">
+<span class="dir">▲</span>
+0.5
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>5</dd>
+<dt>Average share in those polls</dt>
+<dd>10.6%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>12.9K</dd>
+<dt>Views against the week before</dt>
+<dd>-11%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1982</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Pete_Buttigieg">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Josh Shapiro</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Governor · PA
+</span>
+</span>
+<span class="num price">4.7%</span>
+<span class="num chg">
+<span aria-label="up 0.2 points">
+<span class="dir">▲</span>
+0.2
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 4.5%, high 5.3%, now 4.7%"><title>Nomination odds over 30 days: low 4.5%, high 5.3%, now 4.7%</title><polyline points="5.0,11.0 9.2,12.2 13.4,12.5 17.6,13.0 21.8,13.5 26.0,13.5 30.2,13.5 34.4,18.5 38.7,15.5 42.9,14.8 47.1,18.5 51.3,17.5 55.5,14.2 59.7,13.2 63.9,15.0 68.1,14.0 72.3,14.0 76.5,14.2 80.7,14.2 84.9,13.8 89.1,17.2 93.3,14.0 97.6,18.8 101.8,18.5 106.0,19.0 110.2,19.0 114.4,18.8 118.6,17.0 122.8,17.5 127.0,16.8" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="16.8" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">86%</span>
+<span class="num polls">5 · 4.3%</span>
+<span class="num views">6.8K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>4.8%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>4.6%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>86%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.2 points">
+<span class="dir">▲</span>
+0.2
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>5</dd>
+<dt>Average share in those polls</dt>
+<dd>4.3%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>6.8K</dd>
+<dt>Views against the week before</dt>
+<dd>-30%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1973</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Josh_Shapiro">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">John McEntee</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · No office held
+</span>
+</span>
+<span class="num price">4.3%</span>
+<span class="num chg">
+<span aria-label="up 3.4 points">
+<span class="dir">▲</span>
+3.4
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high 4.4%, now 4.3%"><title>Nomination odds over 30 days: low &lt;1%, high 4.4%, now 4.3%</title><polyline points="5.0,25.0 9.9,25.0 14.8,25.0 19.6,25.0 24.5,25.0 29.4,25.0 34.3,25.0 39.2,25.0 44.0,25.0 48.9,25.0 53.8,25.0 58.7,25.0 63.6,25.0 68.4,25.0 73.3,25.0 78.2,25.0 83.1,25.0 88.0,24.1 92.8,21.7 97.7,9.1 102.6,7.8 107.5,9.1 112.4,5.1 117.2,6.4 122.1,5.0 127.0,5.7" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="5.7" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">–</span>
+<span class="num polls">
+<span class="dim">0</span>
+</span>
+<span class="num views">5.7K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>3.5%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>5.1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>–</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 3.4 points">
+<span class="dir">▲</span>
+3.4
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>0</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>5.7K</dd>
+<dt>Views against the week before</dt>
+<dd>+5297%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1990</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/John_McEntee_(political_aide)">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Andy Beshear</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Governor · KY
+</span>
+</span>
+<span class="num price">4.0%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 3.8%, high 5.4%, now 4.0%"><title>Nomination odds over 30 days: low 3.8%, high 5.4%, now 4.0%</title><polyline points="5.0,16.8 9.2,18.7 13.4,19.7 17.6,11.2 21.8,20.5 26.0,22.8 30.2,23.2 34.4,19.2 38.7,6.8 42.9,21.0 47.1,17.8 51.3,13.8 55.5,17.0 59.7,17.8 63.9,14.8 68.1,20.0 72.3,14.2 76.5,19.8 80.7,21.0 84.9,21.0 89.1,21.2 93.3,21.2 97.6,19.8 101.8,18.2 106.0,17.8 110.2,17.2 114.4,17.2 118.6,17.2 122.8,17.8 127.0,20.2" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="20.2" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">91%</span>
+<span class="num polls">5 · 2.4%</span>
+<span class="num views">7.2K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>4.0%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>4.2%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>91%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>5</dd>
+<dt>Average share in those polls</dt>
+<dd>2.4%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>7.2K</dd>
+<dt>Views against the week before</dt>
+<dd>+37%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1977</dd>
+<dt>Term-limited</dt>
+<dd>Yes</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Andy_Beshear">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Tucker Carlson</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · No office held · FL
+</span>
+</span>
+<span class="num price">4.0%</span>
+<span class="num chg">
+<span aria-label="up 0.4 points">
+<span class="dir">▲</span>
+0.4
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 2.2%, high 4.0%, now 4.0%"><title>Nomination odds over 30 days: low 2.2%, high 4.0%, now 4.0%</title><polyline points="5.0,17.5 9.2,17.8 13.4,18.0 17.6,20.0 21.8,18.5 26.0,18.5 30.2,18.5 34.4,24.0 38.7,18.5 42.9,17.5 47.1,20.0 51.3,21.0 55.5,18.0 59.7,17.2 63.9,16.0 68.1,16.2 72.3,18.8 76.5,19.0 80.7,17.5 84.9,17.2 89.1,15.5 93.3,14.5 97.6,10.5 101.8,9.5 106.0,11.0 110.2,10.5 114.4,10.5 118.6,10.5 122.8,10.5 127.0,6.0" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="6.0" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">18%</span>
+<span class="num polls">3 · 2.7%</span>
+<span class="num views">4.1K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>4.4%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>3.6%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>18%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.4 points">
+<span class="dir">▲</span>
+0.4
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>3</dd>
+<dt>Average share in those polls</dt>
+<dd>2.7%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>4.1K</dd>
+<dt>Views against the week before</dt>
+<dd>-10%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1969</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Tucker_Carlson">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Raphael Warnock</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Senator · GA
+</span>
+</span>
+<span class="num price">3.3%</span>
+<span class="num chg">
+<span aria-label="up 0.8 points">
+<span class="dir">▲</span>
+0.8
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 2.0%, high 3.8%, now 3.3%"><title>Nomination odds over 30 days: low 2.0%, high 3.8%, now 3.3%</title><polyline points="5.0,20.4 9.2,20.4 13.4,20.6 17.6,15.6 21.8,19.6 26.0,21.6 30.2,22.1 34.4,21.6 38.7,23.6 42.9,23.4 47.1,22.6 51.3,21.6 55.5,23.4 59.7,23.1 63.9,21.6 68.1,24.1 72.3,23.1 76.5,23.6 80.7,15.6 84.9,14.9 89.1,16.1 93.3,17.1 97.6,18.6 101.8,10.9 106.0,9.1 110.2,5.9 114.4,6.6 118.6,9.6 122.8,9.9 127.0,10.9" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="10.9" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">62%</span>
+<span class="num polls">2 · 1.1%</span>
+<span class="num views">9.5K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>3.2%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>3.4%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>62%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.8 points">
+<span class="dir">▲</span>
+0.8
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>2</dd>
+<dt>Average share in those polls</dt>
+<dd>1.1%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>9.5K</dd>
+<dt>Views against the week before</dt>
+<dd>+5%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1969</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>Yes</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Raphael_Warnock">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Ted Cruz</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Senator · TX
+</span>
+</span>
+<span class="num price">2.9%</span>
+<span class="num chg">
+<span aria-label="up 0.4 points">
+<span class="dir">▲</span>
+0.4
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 2.1%, high 2.9%, now 2.9%"><title>Nomination odds over 30 days: low 2.1%, high 2.9%, now 2.9%</title><polyline points="5.0,17.8 9.2,17.8 13.4,18.0 17.6,17.8 21.8,17.8 26.0,17.2 30.2,17.0 34.4,17.8 38.7,16.7 42.9,16.7 47.1,17.8 51.3,16.7 55.5,16.2 59.7,16.5 63.9,18.8 68.1,16.2 72.3,16.0 76.5,15.7 80.7,15.7 84.9,15.7 89.1,12.8 93.3,19.2 97.6,15.2 101.8,15.7 106.0,15.2 110.2,13.2 114.4,12.7 118.6,11.7 122.8,10.7 127.0,11.2" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="11.2" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">83%</span>
+<span class="num polls">4 · 2.6%</span>
+<span class="num views">24.2K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>2.8%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>2.9%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>83%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.4 points">
+<span class="dir">▲</span>
+0.4
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>4</dd>
+<dt>Average share in those polls</dt>
+<dd>2.6%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>24.2K</dd>
+<dt>Views against the week before</dt>
+<dd>+1%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1970</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Ted_Cruz">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Mark Kelly</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Senator · AZ
+</span>
+</span>
+<span class="num price">2.8%</span>
+<span class="num chg">
+<span aria-label="up 0.1 points">
+<span class="dir">▲</span>
+0.1
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 2.0%, high 3.8%, now 2.8%"><title>Nomination odds over 30 days: low 2.0%, high 3.8%, now 2.8%</title><polyline points="5.0,12.8 9.2,14.2 13.4,16.5 17.6,6.2 21.8,12.5 26.0,13.2 30.2,14.8 34.4,9.2 38.7,8.7 42.9,16.0 47.1,15.7 51.3,8.7 55.5,15.5 59.7,14.5 63.9,7.2 68.1,16.5 72.3,7.2 76.5,18.5 80.7,19.0 84.9,18.7 89.1,23.7 93.3,16.2 97.6,16.2 101.8,16.0 106.0,16.2 110.2,16.2 114.4,16.8 118.6,17.0 122.8,14.8 127.0,15.5" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="15.5" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">70%</span>
+<span class="num polls">4 · 6%</span>
+<span class="num views">7.8K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>2.1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>3.5%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>70%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.1 points">
+<span class="dir">▲</span>
+0.1
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>4</dd>
+<dt>Average share in those polls</dt>
+<dd>6%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>7.8K</dd>
+<dt>Views against the week before</dt>
+<dd>+79%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1964</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>Yes</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Mark_Kelly">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Glenn Youngkin</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Former governor · VA
+</span>
+</span>
+<span class="num price">2.7%</span>
+<span class="num chg">
+<span aria-label="down 0.0 points">
+<span class="dir">▼</span>
+0.0
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high 3.2%, now 2.7%"><title>Nomination odds over 30 days: low &lt;1%, high 3.2%, now 2.7%</title><polyline points="5.0,24.6 9.2,24.6 13.4,25.0 17.6,25.0 21.8,24.2 26.0,24.4 30.2,24.2 34.4,20.6 38.7,24.8 42.9,24.6 47.1,20.6 51.3,20.6 55.5,24.2 59.7,23.8 63.9,21.4 68.1,23.8 72.3,21.4 76.5,22.0 80.7,22.2 84.9,21.0 89.1,20.4 93.3,15.8 97.6,8.6 101.8,5.0 106.0,10.0 110.2,12.2 114.4,9.8 118.6,9.2 122.8,8.8 127.0,9.0" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="9.0" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">51%</span>
+<span class="num polls">2 · 0%</span>
+<span class="num views">2.3K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>2.4%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>2.9%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>51%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.0 points">
+<span class="dir">▼</span>
+0.0
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>2</dd>
+<dt>Average share in those polls</dt>
+<dd>0%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>2.3K</dd>
+<dt>Views against the week before</dt>
+<dd>+102%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1966</dd>
+<dt>Term-limited</dt>
+<dd>Yes</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Glenn_Youngkin">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Thomas Massie</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Former representative · KY
+</span>
+</span>
+<span class="num price">2.6%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high 3.0%, now 2.6%"><title>Nomination odds over 30 days: low &lt;1%, high 3.0%, now 2.6%</title><polyline points="5.0,24.3 9.2,24.5 13.4,24.5 17.6,24.8 21.8,24.5 26.0,24.3 30.2,24.3 34.4,23.9 38.7,24.3 42.9,24.8 47.1,23.9 51.3,23.9 55.5,24.8 59.7,24.8 63.9,23.9 68.1,24.8 72.3,25.0 76.5,25.0 80.7,24.8 84.9,24.1 89.1,21.1 93.3,8.9 97.6,8.9 101.8,5.5 106.0,5.0 110.2,9.3 114.4,8.9 118.6,7.5 122.8,8.6 127.0,8.9" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="8.9" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">–</span>
+<span class="num polls">
+<span class="dim">0</span>
+</span>
+<span class="num views">60.2K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>2.8%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>2.4%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>–</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>0</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>60.2K</dd>
+<dt>Views against the week before</dt>
+<dd>+774%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1971</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Thomas_Massie">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Brian Kemp</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Former governor · GA
+</span>
+</span>
+<span class="num price">2.6%</span>
+<span class="num chg">
+<span aria-label="up 0.7 points">
+<span class="dir">▲</span>
+0.7
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 1.0%, high 2.6%, now 2.6%"><title>Nomination odds over 30 days: low 1.0%, high 2.6%, now 2.6%</title><polyline points="5.0,22.1 9.2,22.1 13.4,22.1 17.6,22.4 21.8,22.1 26.0,22.4 30.2,22.1 34.4,17.6 38.7,22.6 42.9,22.6 47.1,18.6 51.3,11.6 55.5,16.6 59.7,16.6 63.9,16.1 68.1,20.9 72.3,16.6 76.5,16.9 80.7,17.1 84.9,17.1 89.1,16.9 93.3,15.1 97.6,14.6 101.8,13.4 106.0,13.1 110.2,13.1 114.4,9.6 118.6,7.6 122.8,7.6 127.0,7.4" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="7.4" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">44%</span>
+<span class="num polls">1 · 0.5%</span>
+<span class="num views">5.5K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>2.8%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>2.4%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>44%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.7 points">
+<span class="dir">▲</span>
+0.7
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>0.5%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>5.5K</dd>
+<dt>Views against the week before</dt>
+<dd>-39%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1963</dd>
+<dt>Term-limited</dt>
+<dd>Yes</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Brian_Kemp">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Wes Moore</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Governor · MD
+</span>
+</span>
+<span class="num price">2.4%</span>
+<span class="num chg">
+<span aria-label="up 0.0 points">
+<span class="dir">▲</span>
+0.0
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 1.9%, high 2.6%, now 2.4%"><title>Nomination odds over 30 days: low 1.9%, high 2.6%, now 2.4%</title><polyline points="5.0,17.4 9.2,17.6 13.4,17.4 17.6,17.4 21.8,18.4 26.0,17.9 30.2,17.4 34.4,16.9 38.7,17.4 42.9,17.4 47.1,15.9 51.3,15.9 55.5,16.4 59.7,16.6 63.9,14.9 68.1,16.6 72.3,15.9 76.5,15.9 80.7,15.9 84.9,15.9 89.1,15.6 93.3,17.1 97.6,14.4 101.8,13.4 106.0,13.4 110.2,11.6 114.4,12.9 118.6,13.4 122.8,12.9 127.0,13.9" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="13.9" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">74%</span>
+<span class="num polls">4 · 1%</span>
+<span class="num views">6.7K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>2.4%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>2.4%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>74%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.0 points">
+<span class="dir">▲</span>
+0.0
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>4</dd>
+<dt>Average share in those polls</dt>
+<dd>1%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>6.7K</dd>
+<dt>Views against the week before</dt>
+<dd>+18%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1978</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Wes_Moore">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Ro Khanna</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Representative · CA
+</span>
+</span>
+<span class="num price">2.2%</span>
+<span class="num chg">
+<span aria-label="up 0.8 points">
+<span class="dir">▲</span>
+0.8
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 1.3%, high 2.3%, now 2.2%"><title>Nomination odds over 30 days: low 1.3%, high 2.3%, now 2.2%</title><polyline points="5.0,15.5 9.2,18.7 13.4,18.0 17.6,16.5 21.8,17.5 26.0,18.5 30.2,19.0 34.4,19.5 38.7,19.5 42.9,19.0 47.1,19.5 51.3,20.0 55.5,19.0 59.7,19.0 63.9,17.5 68.1,16.7 72.3,18.0 76.5,18.0 80.7,17.2 84.9,17.8 89.1,17.2 93.3,19.5 97.6,18.2 101.8,15.5 106.0,13.5 110.2,10.0 114.4,11.0 118.6,10.5 122.8,10.5 127.0,10.7" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="10.7" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">–</span>
+<span class="num polls">2 · 0.7%</span>
+<span class="num views">10.0K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>2.4%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>2.0%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>–</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.8 points">
+<span class="dir">▲</span>
+0.8
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>2</dd>
+<dt>Average share in those polls</dt>
+<dd>0.7%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>10.0K</dd>
+<dt>Views against the week before</dt>
+<dd>+132%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1976</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>Yes</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Ro_Khanna">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="more">
+<summary>Show the other 41 candidates</summary>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">James Talarico</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Senator · TX
+</span>
+</span>
+<span class="num price">2.2%</span>
+<span class="num chg">
+<span aria-label="down 1.0 points">
+<span class="dir">▼</span>
+1.0
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 2.1%, high 3.6%, now 2.2%"><title>Nomination odds over 30 days: low 2.1%, high 3.6%, now 2.2%</title><polyline points="5.0,21.1 9.2,19.4 13.4,15.6 17.6,17.1 21.8,18.1 26.0,18.1 30.2,16.9 34.4,17.1 38.7,17.4 42.9,16.9 47.1,22.1 51.3,18.1 55.5,17.6 59.7,18.6 63.9,18.6 68.1,18.9 72.3,12.6 76.5,12.6 80.7,13.4 84.9,8.6 89.1,7.9 93.3,15.9 97.6,11.4 101.8,10.4 106.0,11.1 110.2,12.1 114.4,17.6 118.6,16.9 122.8,16.4 127.0,21.6" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="21.6" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">–</span>
+<span class="num polls">2 · 4%</span>
+<span class="num views">136.8K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>1.6%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>2.8%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>–</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 1.0 points">
+<span class="dir">▼</span>
+1.0
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>2</dd>
+<dt>Average share in those polls</dt>
+<dd>4%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>136.8K</dd>
+<dt>Views against the week before</dt>
+<dd>-41%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1989</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/James_Talarico">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">JB Pritzker</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Governor · IL
+</span>
+</span>
+<span class="num price">1.8%</span>
+<span class="num chg">
+<span aria-label="up 0.2 points">
+<span class="dir">▲</span>
+0.2
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 1.6%, high 3.1%, now 1.8%"><title>Nomination odds over 30 days: low 1.6%, high 3.1%, now 1.8%</title><polyline points="5.0,20.6 9.2,19.9 13.4,19.6 17.6,11.1 21.8,20.1 26.0,19.1 30.2,18.4 34.4,12.1 38.7,18.6 42.9,18.4 47.1,11.1 51.3,7.6 55.5,16.6 59.7,17.4 63.9,12.1 68.1,18.1 72.3,12.1 76.5,17.9 80.7,18.6 84.9,18.4 89.1,22.4 93.3,20.6 97.6,22.1 101.8,20.6 106.0,20.1 110.2,19.6 114.4,19.1 118.6,18.9 122.8,18.9 127.0,20.1" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="20.1" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">86%</span>
+<span class="num polls">5 · 2.9%</span>
+<span class="num views">7.9K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>1.4%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>2.2%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>86%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.2 points">
+<span class="dir">▲</span>
+0.2
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>5</dd>
+<dt>Average share in those polls</dt>
+<dd>2.9%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>7.9K</dd>
+<dt>Views against the week before</dt>
+<dd>-8%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1965</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/JB_Pritzker">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Rahm Emanuel</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Former representative · IL
+</span>
+</span>
+<span class="num price">1.4%</span>
+<span class="num chg">
+<span aria-label="down 0.1 points">
+<span class="dir">▼</span>
+0.1
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 1.4%, high 3.0%, now 1.4%"><title>Nomination odds over 30 days: low 1.4%, high 3.0%, now 1.4%</title><polyline points="5.0,15.8 9.2,16.2 13.4,16.5 17.6,11.3 21.8,16.5 26.0,16.8 30.2,16.8 34.4,11.8 38.7,15.8 42.9,14.2 47.1,7.2 51.3,7.2 55.5,22.2 59.7,15.0 63.9,11.3 68.1,16.0 72.3,15.0 76.5,15.5 80.7,16.8 84.9,15.0 89.1,17.2 93.3,19.8 97.6,22.0 101.8,22.5 106.0,22.2 110.2,22.2 114.4,21.5 118.6,21.8 122.8,21.2 127.0,22.8" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="22.8" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">84%</span>
+<span class="num polls">4 · 0.7%</span>
+<span class="num views">7.5K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>2.0%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>84%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.1 points">
+<span class="dir">▼</span>
+0.1
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>4</dd>
+<dt>Average share in those polls</dt>
+<dd>0.7%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>7.5K</dd>
+<dt>Views against the week before</dt>
+<dd>+2%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1959</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Rahm_Emanuel">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Donald Trump</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · President · FL
+</span>
+</span>
+<span class="num price">1.1%</span>
+<span class="num chg">
+<span aria-label="down 0.2 points">
+<span class="dir">▼</span>
+0.2
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 1.0%, high 2.6%, now 1.1%"><title>Nomination odds over 30 days: low 1.0%, high 2.6%, now 1.1%</title><polyline points="5.0,8.0 9.2,9.5 13.4,10.0 17.6,7.0 21.8,12.5 26.0,13.0 30.2,12.5 34.4,11.5 38.7,10.0 42.9,12.0 47.1,13.2 51.3,11.0 55.5,12.0 59.7,13.0 63.9,12.0 68.1,12.8 72.3,10.0 76.5,16.0 80.7,17.5 84.9,16.0 89.1,15.7 93.3,18.2 97.6,20.0 101.8,23.0 106.0,23.0 110.2,23.0 114.4,22.0 118.6,21.5 122.8,20.5 127.0,22.0" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="22.0" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">10%</span>
+<span class="num polls">
+<span class="dim">0</span>
+</span>
+<span class="num views">55.5K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>1.8%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>10%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.2 points">
+<span class="dir">▼</span>
+0.2
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>0</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>55.5K</dd>
+<dt>Views against the week before</dt>
+<dd>-24%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1946</dd>
+<dt>Term-limited</dt>
+<dd>Yes</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Donald_Trump">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Donald Trump Jr.</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · No office held · FL
+</span>
+</span>
+<span class="num price">1.1%</span>
+<span class="num chg">
+<span aria-label="down 0.6 points">
+<span class="dir">▼</span>
+0.6
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low 1.1%, high 3.5%, now 1.1%"><title>Nomination odds over 30 days: low 1.1%, high 3.5%, now 1.1%</title><polyline points="5.0,11.5 9.2,16.4 13.4,16.4 17.6,12.8 21.8,17.2 26.0,17.0 30.2,17.2 34.4,11.5 38.7,11.5 42.9,11.5 47.1,15.8 51.3,12.3 55.5,9.1 59.7,13.8 63.9,14.6 68.1,15.0 72.3,5.8 76.5,5.0 80.7,10.9 84.9,11.1 89.1,14.0 93.3,19.5 97.6,20.5 101.8,23.8 106.0,23.8 110.2,22.6 114.4,23.4 118.6,23.0 122.8,24.0 127.0,25.0" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="25.0" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">17%</span>
+<span class="num polls">4 · 10.1%</span>
+<span class="num views">4.2K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>1.0%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>1.1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>17%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.6 points">
+<span class="dir">▼</span>
+0.6
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>4</dd>
+<dt>Average share in those polls</dt>
+<dd>10.1%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>4.2K</dd>
+<dt>Views against the week before</dt>
+<dd>+6%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1977</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Donald_Trump_Jr.">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Abdul El-Sayed</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Senator · MI
+</span>
+</span>
+<span class="num price">1.0%</span>
+<span class="num chg">
+<span aria-label="down 0.6 points">
+<span class="dir">▼</span>
+0.6
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high 2.8%, now 1.0%"><title>Nomination odds over 30 days: low &lt;1%, high 2.8%, now 1.0%</title><polyline points="5.0,25.0 9.2,25.0 13.4,25.0 17.6,25.0 21.8,25.0 26.0,25.0 30.2,25.0 34.4,25.0 38.7,25.0 42.9,25.0 47.1,25.0 51.3,25.0 55.5,25.0 59.7,25.0 63.9,25.0 68.1,25.0 72.3,25.0 76.5,25.0 80.7,25.0 84.9,12.6 89.1,6.8 93.3,5.0 97.6,15.4 101.8,13.2 106.0,13.9 110.2,11.4 114.4,13.9 118.6,17.9 122.8,18.6 127.0,20.3" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="20.3" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">–</span>
+<span class="num polls">1 · NA%</span>
+<span class="num views">313.7K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>1.1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>–</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.6 points">
+<span class="dir">▼</span>
+0.6
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>313.7K</dd>
+<dt>Views against the week before</dt>
+<dd>-5%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1984</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Abdul_El-Sayed">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Josh Hawley</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Senator · MO
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="up 0.2 points">
+<span class="dir">▲</span>
+0.2
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,15.8 9.2,16.2 13.4,16.2 17.6,16.2 21.8,16.2 26.0,16.0 30.2,16.0 34.4,14.2 38.7,16.0 42.9,15.8 47.1,13.8 51.3,15.8 55.5,15.8 59.7,15.8 63.9,13.8 68.1,15.8 72.3,16.8 76.5,17.0 80.7,17.0 84.9,17.2 89.1,17.0 93.3,15.2 97.6,15.2 101.8,14.2 106.0,13.8 110.2,12.8 114.4,13.5 118.6,13.8 122.8,13.2 127.0,13.2" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="13.2" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">27%</span>
+<span class="num polls">2 · 2%</span>
+<span class="num views">4.3K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>27%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.2 points">
+<span class="dir">▲</span>
+0.2
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>2</dd>
+<dt>Average share in those polls</dt>
+<dd>2%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>4.3K</dd>
+<dt>Views against the week before</dt>
+<dd>+64%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1979</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Josh_Hawley">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Marjorie Taylor Greene</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Former representative · GA
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="down 0.3 points">
+<span class="dir">▼</span>
+0.3
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high 1.4%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high 1.4%, now &lt;1%</title><polyline points="5.0,19.8 9.2,20.2 13.4,20.0 17.6,18.8 21.8,19.5 26.0,19.8 30.2,19.8 34.4,18.8 38.7,20.2 42.9,20.2 47.1,19.8 51.3,19.8 55.5,18.5 59.7,15.0 63.9,9.8 68.1,15.8 72.3,16.2 76.5,15.8 80.7,15.8 84.9,16.2 89.1,15.5 93.3,14.5 97.6,14.3 101.8,16.2 106.0,15.8 110.2,16.2 114.4,16.2 118.6,16.2 122.8,17.2 127.0,17.2" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="17.2" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">26%</span>
+<span class="num polls">1 · NA%</span>
+<span class="num views">7.1K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>26%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.3 points">
+<span class="dir">▼</span>
+0.3
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>7.1K</dd>
+<dt>Views against the week before</dt>
+<dd>+49%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1974</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Marjorie_Taylor_Greene">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Cory Booker</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Senator · NJ
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,14.2 9.2,15.2 13.4,15.2 17.6,15.2 21.8,15.2 26.0,15.2 30.2,14.8 34.4,15.2 38.7,15.2 42.9,14.8 47.1,14.8 51.3,15.2 55.5,15.2 59.7,14.8 63.9,15.2 68.1,14.8 72.3,15.2 76.5,15.2 80.7,14.8 84.9,14.8 89.1,15.2 93.3,15.2 97.6,15.2 101.8,15.2 106.0,15.7 110.2,15.5 114.4,15.7 118.6,15.0 122.8,15.2 127.0,14.8" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="14.8" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">68%</span>
+<span class="num polls">4 · 1.9%</span>
+<span class="num views">6.7K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>68%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>4</dd>
+<dt>Average share in those polls</dt>
+<dd>1.9%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>6.7K</dd>
+<dt>Views against the week before</dt>
+<dd>-4%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1969</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Cory_Booker">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Gretchen Whitmer</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Former governor · MI
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,15.2 9.2,15.2 13.4,15.2 17.6,15.2 21.8,15.2 26.0,15.2 30.2,15.8 34.4,14.8 38.7,15.8 42.9,15.8 47.1,14.8 51.3,15.8 55.5,16.2 59.7,15.8 63.9,14.8 68.1,15.2 72.3,14.0 76.5,13.8 80.7,14.8 84.9,14.5 89.1,15.3 93.3,16.0 97.6,15.8 101.8,16.2 106.0,16.2 110.2,16.2 114.4,16.2 118.6,16.2 122.8,15.3 127.0,15.3" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="15.3" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">34%</span>
+<span class="num polls">3 · 1.2%</span>
+<span class="num views">5.3K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>34%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>3</dd>
+<dt>Average share in those polls</dt>
+<dd>1.2%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>5.3K</dd>
+<dt>Views against the week before</dt>
+<dd>-33%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1971</dd>
+<dt>Term-limited</dt>
+<dd>Yes</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Gretchen_Whitmer">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Nikki Haley</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Former governor · SC
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="down 0.7 points">
+<span class="dir">▼</span>
+0.7
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high 1.4%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high 1.4%, now &lt;1%</title><polyline points="5.0,20.5 9.2,20.5 13.4,20.5 17.6,19.5 21.8,20.5 26.0,20.5 30.2,20.5 34.4,19.5 38.7,19.5 42.9,20.5 47.1,20.5 51.3,19.5 55.5,19.5 59.7,20.5 63.9,19.5 68.1,20.5 72.3,19.5 76.5,20.0 80.7,19.0 84.9,19.5 89.1,19.5 93.3,11.0 97.6,9.5 101.8,12.0 106.0,12.5 110.2,13.0 114.4,13.3 118.6,12.5 122.8,14.8 127.0,16.5" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="16.5" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">20%</span>
+<span class="num polls">1 · 4%</span>
+<span class="num views">5.4K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>20%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.7 points">
+<span class="dir">▼</span>
+0.7
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>4%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>5.4K</dd>
+<dt>Views against the week before</dt>
+<dd>-50%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1972</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Nikki_Haley">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Rand Paul</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Senator · KY
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="up 0.1 points">
+<span class="dir">▲</span>
+0.1
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,15.5 9.2,15.5 13.4,15.5 17.6,15.5 21.8,15.0 26.0,15.0 30.2,15.7 34.4,15.5 38.7,16.0 42.9,16.0 47.1,15.5 51.3,15.5 55.5,16.0 59.7,16.0 63.9,15.5 68.1,16.0 72.3,16.0 76.5,16.5 80.7,15.0 84.9,15.5 89.1,15.0 93.3,14.5 97.6,14.5 101.8,14.0 106.0,14.0 110.2,13.5 114.4,13.5 118.6,13.5 122.8,13.5 127.0,13.8" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="13.8" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">62%</span>
+<span class="num polls">1 · 2%</span>
+<span class="num views">4.3K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>62%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.1 points">
+<span class="dir">▲</span>
+0.1
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>2%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>4.3K</dd>
+<dt>Views against the week before</dt>
+<dd>+72%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1963</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>Yes</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Rand_Paul">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Tom Cotton</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Senator · AR
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="down 0.1 points">
+<span class="dir">▼</span>
+0.1
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,16.6 9.4,16.6 13.7,16.6 18.1,16.6 22.4,16.6 26.8,16.6 31.1,16.6 35.5,16.1 39.9,16.1 44.2,15.6 48.6,15.6 52.9,16.1 57.3,16.1 61.6,15.6 66.0,16.1 70.4,15.6 74.7,16.1 79.1,16.1 83.4,15.6 87.8,15.4 92.1,14.1 96.5,13.4 100.9,14.6 105.2,14.6 109.6,14.6 113.9,14.1 118.3,14.6 122.6,14.9 127.0,14.4" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="14.4" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">–</span>
+<span class="num polls">2 · 0.9%</span>
+<span class="num views">3.0K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>–</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.1 points">
+<span class="dir">▼</span>
+0.1
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>2</dd>
+<dt>Average share in those polls</dt>
+<dd>0.9%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>3.0K</dd>
+<dt>Views against the week before</dt>
+<dd>-8%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1977</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Tom_Cotton">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Sarah Huckabee Sanders</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Governor · AR
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="up 0.2 points">
+<span class="dir">▲</span>
+0.2
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,15.8 9.4,15.8 13.7,16.8 18.1,14.8 22.4,16.5 26.8,17.2 31.1,17.2 35.5,14.8 39.9,16.0 44.2,15.8 48.6,13.8 52.9,15.2 57.3,15.8 61.6,12.8 66.0,15.8 70.4,15.8 74.7,15.2 79.1,15.2 83.4,15.2 87.8,15.5 92.1,14.8 96.5,15.8 100.9,14.2 105.2,14.2 109.6,14.2 113.9,13.2 118.3,13.8 122.6,13.8 127.0,13.8" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="13.8" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">30%</span>
+<span class="num polls">2 · 1%</span>
+<span class="num views">8.1K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>30%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.2 points">
+<span class="dir">▲</span>
+0.2
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>2</dd>
+<dt>Average share in those polls</dt>
+<dd>1%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>8.1K</dd>
+<dt>Views against the week before</dt>
+<dd>+102%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1982</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Sarah_Huckabee_Sanders">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Robert F. Kennedy Jr.</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Cabinet · CA
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="up 0.1 points">
+<span class="dir">▲</span>
+0.1
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,14.5 9.2,16.0 13.4,15.7 17.6,15.5 21.8,15.7 26.0,15.7 30.2,15.5 34.4,15.5 38.7,15.5 42.9,15.5 47.1,15.5 51.3,15.5 55.5,15.5 59.7,15.5 63.9,15.5 68.1,15.5 72.3,14.5 76.5,14.5 80.7,15.0 84.9,15.0 89.1,15.0 93.3,15.0 97.6,15.0 101.8,15.5 106.0,15.5 110.2,15.5 114.4,15.5 118.6,14.8 122.8,14.0 127.0,14.0" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="14.0" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">14%</span>
+<span class="num polls">2 · 3.5%</span>
+<span class="num views">8.5K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>14%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.1 points">
+<span class="dir">▲</span>
+0.1
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>2</dd>
+<dt>Average share in those polls</dt>
+<dd>3.5%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>8.5K</dd>
+<dt>Views against the week before</dt>
+<dd>+24%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1954</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Robert_F._Kennedy_Jr.">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Ruben Gallego</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Senator · AZ
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="up 0.0 points">
+<span class="dir">▲</span>
+0.0
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,15.2 9.2,16.2 13.4,16.0 17.6,15.2 21.8,15.7 26.0,16.0 30.2,16.0 34.4,15.2 38.7,15.2 42.9,15.2 47.1,16.8 51.3,15.2 55.5,15.2 59.7,16.2 63.9,15.2 68.1,14.2 72.3,14.2 76.5,13.2 80.7,14.5 84.9,14.5 89.1,15.7 93.3,15.2 97.6,15.2 101.8,15.2 106.0,14.8 110.2,14.8 114.4,14.8 118.6,14.8 122.8,14.8 127.0,14.8" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="14.8" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">–</span>
+<span class="num polls">1 · NA%</span>
+<span class="num views">3.7K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>–</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.0 points">
+<span class="dir">▲</span>
+0.0
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>3.7K</dd>
+<dt>Views against the week before</dt>
+<dd>+135%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1979</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Ruben_Gallego">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Mark Cuban</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · No office held · TX
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,14.5 9.2,16.5 13.4,16.2 17.6,13.0 21.8,15.7 26.0,15.5 30.2,15.7 34.4,13.0 38.7,13.0 42.9,13.5 47.1,16.0 51.3,13.5 55.5,14.5 59.7,15.5 63.9,13.5 68.1,16.0 72.3,13.5 76.5,14.0 80.7,16.5 84.9,16.5 89.1,16.5 93.3,16.5 97.6,16.5 101.8,16.5 106.0,16.0 110.2,16.2 114.4,17.0 118.6,17.0 122.8,17.0 127.0,17.0" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="17.0" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">16%</span>
+<span class="num polls">
+<span class="dim">0</span>
+</span>
+<span class="num views">3.0K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>16%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>0</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>3.0K</dd>
+<dt>Views against the week before</dt>
+<dd>-24%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1958</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Mark_Cuban">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Bernie Sanders</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Senator · VT
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="down 0.1 points">
+<span class="dir">▼</span>
+0.1
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high 1.2%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high 1.2%, now &lt;1%</title><polyline points="5.0,18.2 9.2,11.0 13.4,13.3 17.6,18.2 21.8,12.5 26.0,12.8 30.2,13.8 34.4,18.2 38.7,18.2 42.9,18.2 47.1,13.8 51.3,18.2 55.5,18.2 59.7,13.5 63.9,13.8 68.1,13.8 72.3,17.8 76.5,18.2 80.7,14.0 84.9,13.8 89.1,14.0 93.3,17.2 97.6,18.2 101.8,18.5 106.0,18.8 110.2,18.8 114.4,18.8 118.6,18.8 122.8,18.8 127.0,19.0" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="19.0" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">9.5%</span>
+<span class="num polls">1 · NA%</span>
+<span class="num views">27.0K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>9.5%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.1 points">
+<span class="dir">▼</span>
+0.1
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>27.0K</dd>
+<dt>Views against the week before</dt>
+<dd>+77%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1941</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Bernie_Sanders">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Tim Scott</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Senator · SC
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="up 0.1 points">
+<span class="dir">▲</span>
+0.1
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,17.2 9.5,17.2 14.0,17.2 18.6,15.0 23.1,15.0 27.6,12.8 32.1,12.8 36.6,14.8 41.1,15.0 45.7,12.8 50.2,12.8 54.7,14.5 59.2,12.8 63.7,14.5 68.3,12.8 72.8,12.8 77.3,14.5 81.8,15.7 86.3,15.7 90.9,15.2 95.4,15.2 99.9,15.2 104.4,14.8 108.9,14.2 113.4,14.2 118.0,14.2 122.5,14.2 127.0,14.2" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="14.2" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">–</span>
+<span class="num polls">2 · 1.1%</span>
+<span class="num views">4.3K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>–</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.1 points">
+<span class="dir">▲</span>
+0.1
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>2</dd>
+<dt>Average share in those polls</dt>
+<dd>1.1%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>4.3K</dd>
+<dt>Views against the week before</dt>
+<dd>+15%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1965</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>Yes</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Tim_Scott">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Roy Cooper</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Senator · NC
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="down 0.2 points">
+<span class="dir">▼</span>
+0.2
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,16.0 9.2,15.7 13.4,16.0 17.6,14.0 21.8,15.5 26.0,16.0 30.2,15.5 34.4,14.0 38.7,15.5 42.9,15.5 47.1,14.0 51.3,14.0 55.5,16.5 59.7,16.5 63.9,15.0 68.1,16.0 72.3,16.0 76.5,16.0 80.7,16.5 84.9,16.0 89.1,13.0 93.3,14.0 97.6,15.0 101.8,14.5 106.0,15.0 110.2,15.2 114.4,16.0 118.6,16.8 122.8,16.5 127.0,17.0" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="17.0" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">16%</span>
+<span class="num polls">1 · NA%</span>
+<span class="num views">10.3K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>16%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.2 points">
+<span class="dir">▼</span>
+0.2
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>10.3K</dd>
+<dt>Views against the week before</dt>
+<dd>-48%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1957</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Roy_Cooper">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Katie Britt</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Senator · AL
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="down 0.0 points">
+<span class="dir">▼</span>
+0.0
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,14.2 9.2,15.2 13.4,15.2 17.6,14.2 21.8,15.2 26.0,15.2 30.2,15.2 34.4,14.2 38.7,15.2 42.9,15.2 47.1,15.7 51.3,15.2 55.5,14.2 59.7,15.7 63.9,15.2 68.1,15.7 72.3,15.2 76.5,15.2 80.7,15.7 84.9,15.7 89.1,15.2 93.3,14.8 97.6,14.8 101.8,15.0 106.0,15.2 110.2,15.2 114.4,15.2 118.6,15.2 122.8,15.2 127.0,15.2" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="15.2" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">18%</span>
+<span class="num polls">
+<span class="dim">0</span>
+</span>
+<span class="num views">2.8K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>18%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.0 points">
+<span class="dir">▼</span>
+0.0
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>0</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>2.8K</dd>
+<dt>Views against the week before</dt>
+<dd>+68%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1982</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>Yes</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Katie_Britt">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Elise Stefanik</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Former representative · NY
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="up 0.2 points">
+<span class="dir">▲</span>
+0.2
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,15.9 9.4,15.9 13.7,15.9 18.1,15.9 22.4,15.9 26.8,15.9 31.1,15.9 35.5,15.9 39.9,15.9 44.2,15.9 48.6,15.9 52.9,15.9 57.3,15.9 61.6,15.9 66.0,15.9 70.4,15.9 74.7,15.9 79.1,15.9 83.4,15.9 87.8,15.9 92.1,15.9 96.5,15.9 100.9,15.9 105.2,15.9 109.6,15.9 113.9,15.9 118.3,15.4 122.6,15.4 127.0,14.1" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="14.1" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">24%</span>
+<span class="num polls">
+<span class="dim">0</span>
+</span>
+<span class="num views">6.2K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>24%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.2 points">
+<span class="dir">▲</span>
+0.2
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>0</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>6.2K</dd>
+<dt>Views against the week before</dt>
+<dd>+62%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1984</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Elise_Stefanik">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Mike Pence</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Former vice president · IN
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="up 0.1 points">
+<span class="dir">▲</span>
+0.1
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,14.2 9.2,15.2 13.4,15.2 17.6,14.2 21.8,15.2 26.0,15.2 30.2,15.2 34.4,14.2 38.7,15.2 42.9,15.7 47.1,15.7 51.3,15.2 55.5,15.2 59.7,15.7 63.9,15.2 68.1,15.7 72.3,15.2 76.5,15.2 80.7,15.7 84.9,15.7 89.1,15.7 93.3,15.7 97.6,15.7 101.8,15.7 106.0,15.7 110.2,15.7 114.4,15.5 118.6,15.2 122.8,15.2 127.0,14.5" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="14.5" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">24%</span>
+<span class="num polls">
+<span class="dim">0</span>
+</span>
+<span class="num views">6.8K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>24%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.1 points">
+<span class="dir">▲</span>
+0.1
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>0</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>6.8K</dd>
+<dt>Views against the week before</dt>
+<dd>+53%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1959</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Mike_Pence">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Tulsi Gabbard</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Former cabinet · HI
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,15.5 9.5,14.0 14.0,13.5 18.6,14.5 23.1,14.0 27.6,13.8 32.1,13.8 36.6,14.0 41.1,14.5 45.7,15.0 50.2,15.0 54.7,13.5 59.2,13.5 63.7,16.5 68.3,15.0 72.8,13.5 77.3,15.0 81.8,15.0 86.3,15.5 90.9,14.5 95.4,14.5 99.9,15.7 104.4,15.5 108.9,15.5 113.4,15.5 118.0,15.5 122.5,15.5 127.0,14.8" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="14.8" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">20%</span>
+<span class="num polls">
+<span class="dim">0</span>
+</span>
+<span class="num views">4.6K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>20%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>0</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>4.6K</dd>
+<dt>Views against the week before</dt>
+<dd>+60%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1981</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Tulsi_Gabbard">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Amy Klobuchar</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Governor · MN
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,15.5 9.2,15.5 13.4,15.5 17.6,15.5 21.8,15.5 26.0,15.5 30.2,15.5 34.4,15.5 38.7,15.5 42.9,15.5 47.1,15.5 51.3,15.5 55.5,15.5 59.7,15.5 63.9,15.5 68.1,15.5 72.3,15.5 76.5,15.5 80.7,15.5 84.9,15.5 89.1,15.0 93.3,14.5 97.6,14.5 101.8,14.5 106.0,14.5 110.2,14.5 114.4,14.5 118.6,14.5 122.8,14.5 127.0,14.5" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="14.5" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">–</span>
+<span class="num polls">1 · NA%</span>
+<span class="num views">14.6K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>–</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>–</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>14.6K</dd>
+<dt>Views against the week before</dt>
+<dd>+15%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1960</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Amy_Klobuchar">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Rick Scott</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Senator · FL
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="up 0.1 points">
+<span class="dir">▲</span>
+0.1
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,17.0 9.9,17.0 14.8,17.0 19.6,17.0 24.5,17.0 29.4,17.0 34.3,17.0 39.2,17.0 44.0,17.0 48.9,17.0 53.8,17.0 58.7,17.0 63.6,17.0 68.4,17.0 73.3,17.0 78.2,17.0 83.1,17.0 88.0,16.5 92.8,16.5 97.7,15.5 102.6,16.0 107.5,13.0 112.4,14.5 117.2,15.0 122.1,14.5 127.0,15.0" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="15.0" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">–</span>
+<span class="num polls">1 · NA%</span>
+<span class="num views">3.6K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>–</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>–</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.1 points">
+<span class="dir">▲</span>
+0.1
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>3.6K</dd>
+<dt>Views against the week before</dt>
+<dd>+2%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1952</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Rick_Scott">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Jon Stewart</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · No office held · NJ
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="down 0.0 points">
+<span class="dir">▼</span>
+0.0
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,12.8 9.2,12.8 13.4,13.2 17.6,13.8 21.8,13.8 26.0,14.8 30.2,15.0 34.4,17.2 38.7,15.2 42.9,15.2 47.1,16.8 51.3,16.2 55.5,15.0 59.7,14.8 63.9,16.8 68.1,15.0 72.3,15.0 76.5,15.0 80.7,15.0 84.9,14.8 89.1,14.8 93.3,15.2 97.6,16.2 101.8,16.2 106.0,16.2 110.2,16.2 114.4,16.8 118.6,16.8 122.8,16.2 127.0,16.8" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="16.8" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">10%</span>
+<span class="num polls">
+<span class="dim">0</span>
+</span>
+<span class="num views">5.7K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>10%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.0 points">
+<span class="dir">▼</span>
+0.0
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>0</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>5.7K</dd>
+<dt>Views against the week before</dt>
+<dd>+12%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1962</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Jon_Stewart">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Greg Abbott</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Former governor · TX
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,14.6 9.2,15.9 13.4,15.9 17.6,15.9 21.8,15.6 26.0,15.6 30.2,15.6 34.4,15.1 38.7,14.1 42.9,15.1 47.1,15.1 51.3,15.1 55.5,14.9 59.7,14.9 63.9,15.1 68.1,14.4 72.3,14.9 76.5,14.9 80.7,15.1 84.9,14.6 89.1,14.9 93.3,15.6 97.6,15.6 101.8,15.6 106.0,15.6 110.2,15.6 114.4,15.4 118.6,15.6 122.8,15.6 127.0,15.6" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="15.6" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">19%</span>
+<span class="num polls">2 · 0.4%</span>
+<span class="num views">26.0K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>19%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>2</dd>
+<dt>Average share in those polls</dt>
+<dd>0.4%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>26.0K</dd>
+<dt>Views against the week before</dt>
+<dd>-51%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1957</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Greg_Abbott">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Stephen A. Smith</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · No office held
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,16.8 9.2,16.8 13.4,16.8 17.6,16.8 21.8,16.8 26.0,15.5 30.2,16.0 34.4,14.2 38.7,16.0 42.9,16.0 47.1,14.2 51.3,12.8 55.5,15.2 59.7,16.0 63.9,14.2 68.1,16.0 72.3,16.2 76.5,16.2 80.7,16.2 84.9,16.5 89.1,16.8 93.3,17.2 97.6,17.2 101.8,17.2 106.0,17.2 110.2,17.2 114.4,17.2 118.6,17.2 122.8,17.2 127.0,17.2" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="17.2" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">18%</span>
+<span class="num polls">2 · 0%</span>
+<span class="num views">2.0K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>18%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>2</dd>
+<dt>Average share in those polls</dt>
+<dd>0%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>2.0K</dd>
+<dt>Views against the week before</dt>
+<dd>+28%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1967</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Stephen_A._Smith">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Chris Murphy</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Senator · CT
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="down 0.0 points">
+<span class="dir">▼</span>
+0.0
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,13.2 9.2,14.0 13.4,14.2 17.6,13.2 21.8,14.2 26.0,14.2 30.2,14.2 34.4,13.2 38.7,13.2 42.9,13.2 47.1,14.5 51.3,13.2 55.5,13.2 59.7,16.2 63.9,15.7 68.1,14.2 72.3,13.2 76.5,13.2 80.7,16.5 84.9,15.7 89.1,16.0 93.3,15.7 97.6,16.2 101.8,16.2 106.0,16.2 110.2,16.8 114.4,16.8 118.6,16.8 122.8,16.8 127.0,16.8" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="16.8" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">–</span>
+<span class="num polls">1 · NA%</span>
+<span class="num views">5.1K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>–</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.0 points">
+<span class="dir">▼</span>
+0.0
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>5.1K</dd>
+<dt>Views against the week before</dt>
+<dd>-82%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1973</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Chris_Murphy">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Steve Bannon</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · No office held
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,14.8 9.2,15.2 13.4,15.2 17.6,14.8 21.8,15.2 26.0,15.2 30.2,15.2 34.4,14.8 38.7,14.8 42.9,15.2 47.1,15.2 51.3,14.8 55.5,14.8 59.7,15.2 63.9,14.8 68.1,15.2 72.3,14.8 76.5,14.8 80.7,15.2 84.9,15.2 89.1,14.8 93.3,15.2 97.6,15.0 101.8,15.2 106.0,15.2 110.2,15.2 114.4,15.2 118.6,15.2 122.8,15.2 127.0,15.2" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="15.2" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">26%</span>
+<span class="num polls">
+<span class="dim">0</span>
+</span>
+<span class="num views">2.7K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>26%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>0</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>2.7K</dd>
+<dt>Views against the week before</dt>
+<dd>+42%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1953</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Steve_Bannon">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Vivek Ramaswamy</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · No office held · OH
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,13.9 9.2,14.4 13.4,14.4 17.6,14.4 21.8,14.4 26.0,14.6 30.2,14.9 34.4,14.9 38.7,15.6 42.9,15.9 47.1,15.9 51.3,15.9 55.5,15.9 59.7,15.4 63.9,15.9 68.1,15.4 72.3,15.9 76.5,15.9 80.7,15.9 84.9,15.9 89.1,15.9 93.3,15.4 97.6,15.4 101.8,16.1 106.0,15.6 110.2,15.9 114.4,15.9 118.6,15.9 122.8,15.9 127.0,15.6" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="15.6" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">8.5%</span>
+<span class="num polls">1 · 0%</span>
+<span class="num views">26.1K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>8.5%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>0%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>26.1K</dd>
+<dt>Views against the week before</dt>
+<dd>-52%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1985</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Vivek_Ramaswamy">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Doug Burgum</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Cabinet · ND
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,15.2 9.2,15.2 13.4,15.0 17.6,15.0 21.8,17.0 26.0,15.2 30.2,14.8 34.4,13.0 38.7,14.8 42.9,14.8 47.1,13.0 51.3,13.0 55.5,14.8 59.7,14.8 63.9,13.0 68.1,14.8 72.3,14.8 76.5,14.8 80.7,14.8 84.9,16.0 89.1,16.0 93.3,16.5 97.6,16.5 101.8,16.5 106.0,16.5 110.2,16.2 114.4,16.5 118.6,16.5 122.8,16.5 127.0,16.5" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="16.5" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">–</span>
+<span class="num polls">1 · NA%</span>
+<span class="num views">1.4K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>–</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>1.4K</dd>
+<dt>Views against the week before</dt>
+<dd>+35%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1956</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Doug_Burgum">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Elizabeth Warren</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Senator · MA
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="up 0.1 points">
+<span class="dir">▲</span>
+0.1
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,15.5 9.5,15.5 14.0,15.5 18.6,15.5 23.1,15.5 27.6,15.5 32.1,15.5 36.6,15.5 41.1,15.5 45.7,15.5 50.2,15.5 54.7,15.5 59.2,15.5 63.7,15.5 68.3,15.5 72.8,15.5 77.3,15.5 81.8,15.5 86.3,15.5 90.9,15.5 95.4,15.5 99.9,14.5 104.4,14.5 108.9,14.5 113.4,14.5 118.0,14.5 122.5,14.5 127.0,14.5" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="14.5" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">–</span>
+<span class="num polls">
+<span class="dim">0</span>
+</span>
+<span class="num views">6.0K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>–</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>–</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="up 0.1 points">
+<span class="dir">▲</span>
+0.1
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>0</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>6.0K</dd>
+<dt>Views against the week before</dt>
+<dd>+102%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1949</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>Yes</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Elizabeth_Warren">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Jared Polis</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Former governor · CO
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,15.5 9.4,15.0 13.7,15.0 18.1,14.5 22.4,15.0 26.8,15.0 31.1,15.5 35.5,15.5 39.9,15.0 44.2,15.0 48.6,14.5 52.9,14.5 57.3,14.8 61.6,15.0 66.0,14.8 70.4,14.5 74.7,14.5 79.1,14.5 83.4,14.5 87.8,15.0 92.1,15.0 96.5,15.0 100.9,15.0 105.2,15.0 109.6,15.0 113.9,15.0 118.3,15.0 122.6,15.0 127.0,15.0" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="15.0" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">26%</span>
+<span class="num polls">2 · 0%</span>
+<span class="num views">2.2K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>26%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>2</dd>
+<dt>Average share in those polls</dt>
+<dd>0%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>2.2K</dd>
+<dt>Views against the week before</dt>
+<dd>-9%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1975</dd>
+<dt>Term-limited</dt>
+<dd>Yes</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Jared_Polis">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Jasmine Crockett</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Former representative · TX
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,15.5 9.5,15.5 14.0,15.5 18.6,15.5 23.1,15.5 27.6,15.5 32.1,15.0 36.6,15.5 41.1,15.5 45.7,15.0 50.2,15.5 54.7,15.2 59.2,15.5 63.7,15.2 68.3,15.2 72.8,15.2 77.3,15.0 81.8,14.5 86.3,15.2 90.9,15.0 95.4,15.2 99.9,15.5 104.4,15.5 108.9,15.5 113.4,15.5 118.0,15.5 122.5,15.5 127.0,15.5" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="15.5" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">–</span>
+<span class="num polls">1 · NA%</span>
+<span class="num views">13.5K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>–</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>13.5K</dd>
+<dt>Views against the week before</dt>
+<dd>-10%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1981</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Jasmine_Crockett">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Kristi Noem</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Former governor · SD
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,15.0 9.4,14.5 13.7,15.0 18.1,14.5 22.4,15.0 26.8,15.0 31.1,15.0 35.5,15.5 39.9,15.0 44.2,14.5 48.6,15.5 52.9,15.0 57.3,15.0 61.6,15.5 66.0,15.0 70.4,15.0 74.7,15.0 79.1,15.0 83.4,14.5 87.8,14.5 92.1,15.0 96.5,15.0 100.9,14.5 105.2,15.0 109.6,15.0 113.9,15.0 118.3,15.0 122.6,15.0 127.0,15.0" fill="none" stroke="#C84E00" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="15.0" r="3.5" fill="#C84E00" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">16%</span>
+<span class="num polls">1 · 0.5%</span>
+<span class="num views">4.6K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>16%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>0.5%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>4.6K</dd>
+<dt>Views against the week before</dt>
+<dd>+36%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1971</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Kristi_Noem">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Phil Murphy</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Former governor · NJ
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span aria-label="down 0.0 points">
+<span class="dir">▼</span>
+0.0
+</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,15.0 9.5,15.0 14.0,15.0 18.6,15.5 23.1,15.0 27.6,14.5 32.1,15.0 36.6,15.5 41.1,15.0 45.7,15.0 50.2,15.5 54.7,14.5 59.2,15.0 63.7,15.0 68.3,15.0 72.8,15.0 77.3,15.0 81.8,15.0 86.3,15.0 90.9,15.0 95.4,14.5 99.9,14.8 104.4,15.0 108.9,15.0 113.4,15.0 118.0,15.0 122.5,15.0 127.0,15.0" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="15.0" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">25%</span>
+<span class="num polls">1 · NA%</span>
+<span class="num views">508</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>25%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span aria-label="down 0.0 points">
+<span class="dir">▼</span>
+0.0
+</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>508</dd>
+<dt>Views against the week before</dt>
+<dd>+14%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1957</dd>
+<dt>Term-limited</dt>
+<dd>Yes</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Phil_Murphy">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Tim Walz</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Former governor · MN
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,15.0 9.2,15.0 13.4,15.0 17.6,15.0 21.8,15.5 26.0,15.0 30.2,15.0 34.4,15.0 38.7,15.0 42.9,15.0 47.1,15.0 51.3,14.5 55.5,15.0 59.7,15.2 63.9,15.0 68.1,15.2 72.3,15.0 76.5,15.2 80.7,15.2 84.9,15.2 89.1,15.2 93.3,15.5 97.6,15.5 101.8,15.0 106.0,15.2 110.2,15.5 114.4,15.2 118.6,15.5 122.8,15.5 127.0,15.2" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="15.2" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">5.2%</span>
+<span class="num polls">2 · 0.6%</span>
+<span class="num views">6.6K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>5.2%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>2</dd>
+<dt>Average share in those polls</dt>
+<dd>0.6%</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>6.6K</dd>
+<dt>Views against the week before</dt>
+<dd>+11%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1964</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>No</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Tim_Walz">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">John Fetterman</span>
+<span class="office">
+<span class="sw sw-D" title="Democratic"></span>
+D · Senator · PA
+</span>
+</span>
+<span class="num price">&lt;1%</span>
+<span class="num chg">
+<span class="dim">0.0</span>
+</span>
+<span class="spark"><svg width="132" height="30" viewbox="0 0 132 30" role="img" aria-label="Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%"><title>Nomination odds over 30 days: low &lt;1%, high &lt;1%, now &lt;1%</title><polyline points="5.0,15.0 9.2,15.0 13.4,15.0 17.6,14.5 21.8,15.0 26.0,15.0 30.2,15.0 34.4,14.5 38.7,15.0 42.9,15.0 47.1,14.5 51.3,14.5 55.5,15.0 59.7,15.0 63.9,14.5 68.1,15.0 72.3,15.0 76.5,15.0 80.7,15.0 84.9,15.0 89.1,15.0 93.3,15.0 97.6,15.0 101.8,15.0 106.0,15.0 110.2,15.0 114.4,15.5 118.6,15.5 122.8,15.5 127.0,15.2" fill="none" stroke="#012169" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="127.0" cy="15.2" r="3.5" fill="#012169" stroke="#ffffff" stroke-width="2"></circle></svg></span>
+<span class="num announce">16%</span>
+<span class="num polls">
+<span class="dim">0</span>
+</span>
+<span class="num views">14.4K</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>&lt;1%</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>&lt;1%</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>16%</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">0.0</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>0</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>14.4K</dd>
+<dt>Views against the week before</dt>
+<dd>-12%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1969</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>Yes</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/John_Fetterman">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+<details class="cand">
+<summary>
+<span class="who">
+<span class="name">Spencer Cox</span>
+<span class="office">
+<span class="sw sw-R" title="Republican"></span>
+R · Governor · UT
+</span>
+</span>
+<span class="num price">–</span>
+<span class="num chg">
+<span class="dim">–</span>
+</span>
+<span class="spark"></span>
+<span class="num announce">–</span>
+<span class="num polls">1 · NA%</span>
+<span class="num views">876</span>
+</summary>
+<div class="card">
+<div>
+<h3>Markets</h3>
+<dl>
+<dt>Nomination, Polymarket</dt>
+<dd>–</dd>
+<dt>Nomination, Kalshi</dt>
+<dd>–</dd>
+<dt>Announces a run by end of 2027</dt>
+<dd>–</dd>
+<dt>Nomination odds, 7-day change</dt>
+<dd>
+<span class="dim">–</span>
+</dd>
+</dl>
+</div>
+<div>
+<h3>Signals</h3>
+<dl>
+<dt>National polls naming them, 30 days</dt>
+<dd>1</dd>
+<dt>Average share in those polls</dt>
+<dd>–</dd>
+<dt>Wikipedia views per day, 7 days</dt>
+<dd>876</dd>
+<dt>Views against the week before</dt>
+<dd>+63%</dd>
+</dl>
+</div>
+<div>
+<h3>Background</h3>
+<dl>
+<dt>Born</dt>
+<dd>1975</dd>
+<dt>Term-limited</dt>
+<dd>No</dd>
+<dt>Seat on the 2028 ballot</dt>
+<dd>Yes</dd>
+<dt>Ran for president before</dt>
+<dd>No</dd>
+<dt>FEC filing</dt>
+<dd>Not connected yet</dd>
+</dl>
+</div>
+<div class="events">
+<h3>Events</h3>
+<p class="dim">No events logged yet.</p>
+<p>
+<a href="https://en.wikipedia.org/wiki/Spencer_Cox">Wikipedia article</a>
+</p>
+</div>
+</div>
+</details>
+</details>
+</div>
+</div>
+</div>
+<h2 id="how-to-read-this-page">How to read this page</h2>
+<div class="methods">
+<ul>
+<li><strong>Market prices are not predictions made by this project.</strong> They are prices set by traders on Polymarket and Kalshi, shown as they are.</li>
+<li><strong>Nomination odds</strong> are the average of the Polymarket and Kalshi prices for “wins the party’s 2028 nomination”, using the midpoint between the best buy and sell offers. The Democratic and Republican contests are separate markets, so each party’s odds sum to about 100% on their own.</li>
+<li><strong>The 30-day lines</strong> each have their own vertical scale, so compare their shapes and not their heights. The 7-day change column gives the size of the move.</li>
+<li><strong>Announces by end of 2027</strong> is the Polymarket price that the person officially announces a 2028 presidential run by December 31, 2027. Not every candidate has this contract.</li>
+<li><strong>Polls</strong> counts national primary polls from the last 30 days, taken from Wikipedia’s poll lists, that name the candidate, with the candidate’s average share in those polls.</li>
+<li><strong>Wikipedia views</strong> is the average number of daily views of the candidate’s English Wikipedia article over the last seven days.</li>
+<li><strong>Who is listed:</strong> anyone priced at 1% or more for a nomination on either market, or named in three or more primary polls in the past year, as of November 12, 2026.</li>
+<li><strong>Office</strong> is the office each person holds, or last held, once the officials elected in November 2026 are seated in January 2027.</li>
+<li><strong>Events</strong> are entered by hand from news coverage, each with a source link.</li>
+</ul>
+</div>
+<div class="footer">
+<p>Data from Polymarket, Kalshi, the Wikimedia pageviews API, the Federal Election Commission, and Wikipedia (text available under CC BY-SA 4.0). The page is rebuilt once a day.</p>
+</div>
+
+
+
+
+
+</body></html>
