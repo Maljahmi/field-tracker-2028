@@ -2,7 +2,7 @@
 # Not yet run against the live API: it needs the FEC_API_KEY secret
 source("R/helpers.R")
 
-key <- Sys.getenv("FEC_API_KEY")
+key <- trimws(Sys.getenv("FEC_API_KEY"))
 if (key == "") stop("FEC_API_KEY is not set")
 
 cand <- load_candidates()
