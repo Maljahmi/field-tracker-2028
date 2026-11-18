@@ -1,4 +1,47 @@
 end_date,pollster,sample,party,candidate_id,pct,listed_as
+2026-11-16,Echelon Insights,531 (RV),D,alexandria_ocasio_cortez,10,column
+2026-11-16,Echelon Insights,531 (RV),D,andy_beshear,2,column
+2026-11-16,Echelon Insights,397 (RV),R,brian_kemp,NA,footnote
+2026-11-16,Echelon Insights,531 (RV),D,chris_murphy,NA,footnote
+2026-11-16,Echelon Insights,531 (RV),D,cory_booker,2,column
+2026-11-16,Echelon Insights,397 (RV),R,doug_burgum,NA,footnote
+2026-11-16,Echelon Insights,531 (RV),D,gavin_newsom,11,column
+2026-11-16,Echelon Insights,397 (RV),R,glenn_youngkin,1,footnote
+2026-11-16,Echelon Insights,531 (RV),D,gretchen_whitmer,2,footnote
+2026-11-16,Echelon Insights,531 (RV),D,jared_polis,NA,footnote
+2026-11-16,Echelon Insights,531 (RV),D,jb_pritzker,3,column
+2026-11-16,Echelon Insights,397 (RV),R,jd_vance,40,column
+2026-11-16,Echelon Insights,531 (RV),D,jon_ossoff,10,column
+2026-11-16,Echelon Insights,397 (RV),R,josh_hawley,NA,footnote
+2026-11-16,Echelon Insights,531 (RV),D,josh_shapiro,4,column
+2026-11-16,Echelon Insights,531 (RV),D,kamala_harris,19,column
+2026-11-16,Echelon Insights,397 (RV),R,marco_rubio,26,column
+2026-11-16,Echelon Insights,397 (RV),R,marjorie_taylor_greene,1,footnote
+2026-11-16,Echelon Insights,531 (RV),D,mark_kelly,5,column
+2026-11-16,Echelon Insights,531 (RV),D,pete_buttigieg,15,column
+2026-11-16,Echelon Insights,531 (RV),D,rahm_emanuel,NA,footnote
+2026-11-16,Echelon Insights,397 (RV),R,rand_paul,1,footnote
+2026-11-16,Echelon Insights,531 (RV),D,raphael_warnock,1,footnote
+2026-11-16,Echelon Insights,531 (RV),D,ro_khanna,1,footnote
+2026-11-16,Echelon Insights,397 (RV),R,robert_kennedy_jr,4,column
+2026-11-16,Echelon Insights,397 (RV),R,ron_desantis,12,column
+2026-11-16,Echelon Insights,531 (RV),D,ruben_gallego,NA,footnote
+2026-11-16,Echelon Insights,397 (RV),R,sarah_huckabee_sanders,2,footnote
+2026-11-16,Echelon Insights,397 (RV),R,steve_bannon,NA,footnote
+2026-11-16,Echelon Insights,397 (RV),R,ted_cruz,1,column
+2026-11-16,Echelon Insights,397 (RV),R,tucker_carlson,1,footnote
+2026-11-16,Echelon Insights,531 (RV),D,wes_moore,NA,footnote
+2026-11-16,On Point Polling,490 (RV),D,alexandria_ocasio_cortez,7,column
+2026-11-16,On Point Polling,490 (RV),D,andy_beshear,4,column
+2026-11-16,On Point Polling,490 (RV),D,cory_booker,2,column
+2026-11-16,On Point Polling,490 (RV),D,gavin_newsom,13,column
+2026-11-16,On Point Polling,490 (RV),D,jb_pritzker,1,column
+2026-11-16,On Point Polling,490 (RV),D,jon_ossoff,7,column
+2026-11-16,On Point Polling,490 (RV),D,josh_shapiro,5,column
+2026-11-16,On Point Polling,490 (RV),D,kamala_harris,31,column
+2026-11-16,On Point Polling,490 (RV),D,mark_kelly,7,column
+2026-11-16,On Point Polling,490 (RV),D,pete_buttigieg,7,column
+2026-11-16,On Point Polling,490 (RV),D,stephen_a_smith,1,footnote
 2026-11-11,The Economist/YouGov,489 (LV),D,alexandria_ocasio_cortez,12,column
 2026-11-11,The Economist/YouGov,489 (LV),D,andy_beshear,3,column
 2026-11-11,The Economist/YouGov,489 (LV),D,bernie_sanders,2,footnote
@@ -1420,20 +1463,20 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-12-19,Atlas Intel,"2,315 (A)",R,tim_scott,0.2,footnote
 2025-12-19,Atlas Intel,"2,315 (A)",R,tom_cotton,0.5,footnote
 2025-12-19,Atlas Intel,"2,315 (A)",R,vivek_ramaswamy,1.5,column
-2025-12-19,AtlasIntel,"2,315 (A)[bq]",D,alexandria_ocasio_cortez,16,column
-2025-12-19,AtlasIntel,"2,315 (A)[bq]",D,andy_beshear,5.8,footnote
-2025-12-19,AtlasIntel,"2,315 (A)[bq]",D,cory_booker,2.5,column
-2025-12-19,AtlasIntel,"2,315 (A)[bq]",D,gavin_newsom,35.4,column
-2025-12-19,AtlasIntel,"2,315 (A)[bq]",D,gretchen_whitmer,1.8,column
-2025-12-19,AtlasIntel,"2,315 (A)[bq]",D,josh_shapiro,6.1,column
-2025-12-19,AtlasIntel,"2,315 (A)[bq]",D,kamala_harris,7.8,column
-2025-12-19,AtlasIntel,"2,315 (A)[bq]",D,pete_buttigieg,14.5,column
-2025-12-19,AtlasIntel,"2,315 (A)[bq]",D,rahm_emanuel,1.1,footnote
-2025-12-19,AtlasIntel,"2,315 (A)[bq]",D,raphael_warnock,0.2,footnote
-2025-12-19,AtlasIntel,"2,315 (A)[bq]",D,ro_khanna,1.8,footnote
-2025-12-19,AtlasIntel,"2,315 (A)[bq]",D,stephen_a_smith,0,footnote
-2025-12-19,AtlasIntel,"2,315 (A)[bq]",D,tim_walz,4.3,column
-2025-12-19,AtlasIntel,"2,315 (A)[bq]",D,wes_moore,1.1,footnote
+2025-12-19,AtlasIntel,"2,315 (A)[bs]",D,alexandria_ocasio_cortez,16,column
+2025-12-19,AtlasIntel,"2,315 (A)[bs]",D,andy_beshear,5.8,footnote
+2025-12-19,AtlasIntel,"2,315 (A)[bs]",D,cory_booker,2.5,column
+2025-12-19,AtlasIntel,"2,315 (A)[bs]",D,gavin_newsom,35.4,column
+2025-12-19,AtlasIntel,"2,315 (A)[bs]",D,gretchen_whitmer,1.8,column
+2025-12-19,AtlasIntel,"2,315 (A)[bs]",D,josh_shapiro,6.1,column
+2025-12-19,AtlasIntel,"2,315 (A)[bs]",D,kamala_harris,7.8,column
+2025-12-19,AtlasIntel,"2,315 (A)[bs]",D,pete_buttigieg,14.5,column
+2025-12-19,AtlasIntel,"2,315 (A)[bs]",D,rahm_emanuel,1.1,footnote
+2025-12-19,AtlasIntel,"2,315 (A)[bs]",D,raphael_warnock,0.2,footnote
+2025-12-19,AtlasIntel,"2,315 (A)[bs]",D,ro_khanna,1.8,footnote
+2025-12-19,AtlasIntel,"2,315 (A)[bs]",D,stephen_a_smith,0,footnote
+2025-12-19,AtlasIntel,"2,315 (A)[bs]",D,tim_walz,4.3,column
+2025-12-19,AtlasIntel,"2,315 (A)[bs]",D,wes_moore,1.1,footnote
 2025-12-19,Daily Mail/J.L. Partners,383 (LV),D,alexandria_ocasio_cortez,3,column
 2025-12-19,Daily Mail/J.L. Partners,383 (LV),D,amy_klobuchar,1,footnote
 2025-12-19,Daily Mail/J.L. Partners,383 (LV),D,andy_beshear,2,footnote
@@ -1862,18 +1905,18 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-09-16,Atlas Intel,"1,066 (A)",R,tim_scott,1.6,footnote
 2025-09-16,Atlas Intel,"1,066 (A)",R,tom_cotton,0.3,footnote
 2025-09-16,Atlas Intel,"1,066 (A)",R,vivek_ramaswamy,5.7,column
-2025-09-16,AtlasIntel,"1,066 (A)[bq]",D,alexandria_ocasio_cortez,10.8,column
-2025-09-16,AtlasIntel,"1,066 (A)[bq]",D,andy_beshear,2.7,footnote
-2025-09-16,AtlasIntel,"1,066 (A)[bq]",D,cory_booker,2.9,column
-2025-09-16,AtlasIntel,"1,066 (A)[bq]",D,gavin_newsom,37.4,column
-2025-09-16,AtlasIntel,"1,066 (A)[bq]",D,gretchen_whitmer,0.3,column
-2025-09-16,AtlasIntel,"1,066 (A)[bq]",D,josh_shapiro,2.1,column
-2025-09-16,AtlasIntel,"1,066 (A)[bq]",D,kamala_harris,20.5,column
-2025-09-16,AtlasIntel,"1,066 (A)[bq]",D,pete_buttigieg,12.1,column
-2025-09-16,AtlasIntel,"1,066 (A)[bq]",D,raphael_warnock,0.6,footnote
-2025-09-16,AtlasIntel,"1,066 (A)[bq]",D,stephen_a_smith,0.2,footnote
-2025-09-16,AtlasIntel,"1,066 (A)[bq]",D,tim_walz,3.6,column
-2025-09-16,AtlasIntel,"1,066 (A)[bq]",D,wes_moore,0.6,footnote
+2025-09-16,AtlasIntel,"1,066 (A)[bs]",D,alexandria_ocasio_cortez,10.8,column
+2025-09-16,AtlasIntel,"1,066 (A)[bs]",D,andy_beshear,2.7,footnote
+2025-09-16,AtlasIntel,"1,066 (A)[bs]",D,cory_booker,2.9,column
+2025-09-16,AtlasIntel,"1,066 (A)[bs]",D,gavin_newsom,37.4,column
+2025-09-16,AtlasIntel,"1,066 (A)[bs]",D,gretchen_whitmer,0.3,column
+2025-09-16,AtlasIntel,"1,066 (A)[bs]",D,josh_shapiro,2.1,column
+2025-09-16,AtlasIntel,"1,066 (A)[bs]",D,kamala_harris,20.5,column
+2025-09-16,AtlasIntel,"1,066 (A)[bs]",D,pete_buttigieg,12.1,column
+2025-09-16,AtlasIntel,"1,066 (A)[bs]",D,raphael_warnock,0.6,footnote
+2025-09-16,AtlasIntel,"1,066 (A)[bs]",D,stephen_a_smith,0.2,footnote
+2025-09-16,AtlasIntel,"1,066 (A)[bs]",D,tim_walz,3.6,column
+2025-09-16,AtlasIntel,"1,066 (A)[bs]",D,wes_moore,0.6,footnote
 2025-09-08,YouGov,519 (A),D,alexandria_ocasio_cortez,8,column
 2025-09-08,YouGov,519 (A),D,amy_klobuchar,1,footnote
 2025-09-08,YouGov,519 (A),D,bernie_sanders,5,footnote
@@ -1897,14 +1940,14 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-09-08,YouGov,519 (A),D,tim_walz,5,column
 2025-09-08,YouGov,"1,114 (A)",R,tulsi_gabbard,1,footnote
 2025-09-08,YouGov,"1,114 (A)",R,vivek_ramaswamy,2,column
-2025-09-02,YouGov/Yahoo,"1,690 (A)[ck]",D,alexandria_ocasio_cortez,12,column
-2025-09-02,YouGov/Yahoo,"1,690 (A)[ck]",D,gavin_newsom,21,column
-2025-09-02,YouGov/Yahoo,"1,690 (A)[ck]",D,gretchen_whitmer,2,column
-2025-09-02,YouGov/Yahoo,"1,690 (A)[ck]",D,jb_pritzker,7,column
-2025-09-02,YouGov/Yahoo,"1,690 (A)[ck]",D,josh_shapiro,4,column
-2025-09-02,YouGov/Yahoo,"1,690 (A)[ck]",D,kamala_harris,19,column
-2025-09-02,YouGov/Yahoo,"1,690 (A)[ck]",D,pete_buttigieg,10,column
-2025-09-02,YouGov/Yahoo,"1,690 (A)[ck]",D,tim_walz,4,column
+2025-09-02,YouGov/Yahoo,"1,690 (A)[cm]",D,alexandria_ocasio_cortez,12,column
+2025-09-02,YouGov/Yahoo,"1,690 (A)[cm]",D,gavin_newsom,21,column
+2025-09-02,YouGov/Yahoo,"1,690 (A)[cm]",D,gretchen_whitmer,2,column
+2025-09-02,YouGov/Yahoo,"1,690 (A)[cm]",D,jb_pritzker,7,column
+2025-09-02,YouGov/Yahoo,"1,690 (A)[cm]",D,josh_shapiro,4,column
+2025-09-02,YouGov/Yahoo,"1,690 (A)[cm]",D,kamala_harris,19,column
+2025-09-02,YouGov/Yahoo,"1,690 (A)[cm]",D,pete_buttigieg,10,column
+2025-09-02,YouGov/Yahoo,"1,690 (A)[cm]",D,tim_walz,4,column
 2025-08-31,Leger,328 (LV),D,alexandria_ocasio_cortez,10,column
 2025-08-31,Leger,328 (LV),D,gavin_newsom,24,column
 2025-08-31,Leger,328 (LV),D,gretchen_whitmer,2,column
@@ -2027,16 +2070,16 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-07-18,Atlas Intel,"1,935 (A)",R,tim_scott,2.6,footnote
 2025-07-18,Atlas Intel,"1,935 (A)",R,tom_cotton,0.2,footnote
 2025-07-18,Atlas Intel,"1,935 (A)",R,vivek_ramaswamy,1.8,column
-2025-07-18,AtlasIntel,"1,935 (A)[bq]",D,alexandria_ocasio_cortez,18.5,column
-2025-07-18,AtlasIntel,"1,935 (A)[bq]",D,cory_booker,4.1,column
-2025-07-18,AtlasIntel,"1,935 (A)[bq]",D,gavin_newsom,15.8,column
-2025-07-18,AtlasIntel,"1,935 (A)[bq]",D,gretchen_whitmer,1.4,column
-2025-07-18,AtlasIntel,"1,935 (A)[bq]",D,josh_shapiro,3.2,column
-2025-07-18,AtlasIntel,"1,935 (A)[bq]",D,kamala_harris,14.5,column
-2025-07-18,AtlasIntel,"1,935 (A)[bq]",D,pete_buttigieg,26.7,column
-2025-07-18,AtlasIntel,"1,935 (A)[bq]",D,rahm_emanuel,0.3,footnote
-2025-07-18,AtlasIntel,"1,935 (A)[bq]",D,raphael_warnock,0.5,footnote
-2025-07-18,AtlasIntel,"1,935 (A)[bq]",D,tim_walz,8.7,column
+2025-07-18,AtlasIntel,"1,935 (A)[bs]",D,alexandria_ocasio_cortez,18.5,column
+2025-07-18,AtlasIntel,"1,935 (A)[bs]",D,cory_booker,4.1,column
+2025-07-18,AtlasIntel,"1,935 (A)[bs]",D,gavin_newsom,15.8,column
+2025-07-18,AtlasIntel,"1,935 (A)[bs]",D,gretchen_whitmer,1.4,column
+2025-07-18,AtlasIntel,"1,935 (A)[bs]",D,josh_shapiro,3.2,column
+2025-07-18,AtlasIntel,"1,935 (A)[bs]",D,kamala_harris,14.5,column
+2025-07-18,AtlasIntel,"1,935 (A)[bs]",D,pete_buttigieg,26.7,column
+2025-07-18,AtlasIntel,"1,935 (A)[bs]",D,rahm_emanuel,0.3,footnote
+2025-07-18,AtlasIntel,"1,935 (A)[bs]",D,raphael_warnock,0.5,footnote
+2025-07-18,AtlasIntel,"1,935 (A)[bs]",D,tim_walz,8.7,column
 2025-07-14,Echelon Insights,505 (LV),D,alexandria_ocasio_cortez,6,column
 2025-07-14,Echelon Insights,505 (LV),D,andy_beshear,2,footnote
 2025-07-14,Echelon Insights,505 (LV),D,chris_murphy,2,footnote
@@ -2142,16 +2185,16 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-06-25,Emerson College,416 (RV),R,tulsi_gabbard,1,footnote
 2025-06-25,Emerson College,416 (RV),R,vivek_ramaswamy,1,column
 2025-06-25,Emerson College,404 (RV),D,wes_moore,2,footnote
-2025-06-16,co/efficient,"1,035 (LV)[cw]",D,alexandria_ocasio_cortez,14,column
+2025-06-16,co/efficient,"1,035 (LV)[cy]",D,alexandria_ocasio_cortez,14,column
 2025-06-16,co/efficient,"1,035 (LV)",R,donald_trump,24,column
-2025-06-16,co/efficient,"1,035 (LV)[cw]",D,gavin_newsom,21,column
+2025-06-16,co/efficient,"1,035 (LV)[cy]",D,gavin_newsom,21,column
 2025-06-16,co/efficient,"1,035 (LV)",R,jd_vance,61,column
-2025-06-16,co/efficient,"1,035 (LV)[cw]",D,josh_shapiro,3,column
-2025-06-16,co/efficient,"1,035 (LV)[cw]",D,kamala_harris,26,column
+2025-06-16,co/efficient,"1,035 (LV)[cy]",D,josh_shapiro,3,column
+2025-06-16,co/efficient,"1,035 (LV)[cy]",D,kamala_harris,26,column
 2025-06-16,co/efficient,"1,035 (LV)",R,marco_rubio,5,column
-2025-06-16,co/efficient,"1,035 (LV)[cw]",D,pete_buttigieg,11,column
+2025-06-16,co/efficient,"1,035 (LV)[cy]",D,pete_buttigieg,11,column
 2025-06-16,co/efficient,"1,035 (LV)",R,ron_desantis,10,column
-2025-06-16,co/efficient,"1,035 (LV)[cw]",D,tim_walz,10,column
+2025-06-16,co/efficient,"1,035 (LV)[cy]",D,tim_walz,10,column
 2025-06-16,co/efficient,"1,035 (LV)",R,vivek_ramaswamy,6,column
 2025-06-15,McLaughlin & Associates,434 (LV),D,alexandria_ocasio_cortez,7,column
 2025-06-15,McLaughlin & Associates,434 (LV),D,amy_klobuchar,2,footnote
@@ -2214,20 +2257,20 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-05-27,Atlas Intel,"1,044 (A)",R,tim_scott,2.2,footnote
 2025-05-27,Atlas Intel,"1,044 (A)",R,tom_cotton,0.9,footnote
 2025-05-27,Atlas Intel,"1,044 (A)",R,vivek_ramaswamy,5.3,column
-2025-05-27,AtlasIntel,"3,469 (A)[bq]",D,alexandria_ocasio_cortez,19.4,column
-2025-05-27,AtlasIntel,"3,469 (A)[bq]",D,andy_beshear,0.2,footnote
-2025-05-27,AtlasIntel,"3,469 (A)[bq]",D,chris_murphy,0.4,footnote
-2025-05-27,AtlasIntel,"3,469 (A)[bq]",D,cory_booker,10.4,column
-2025-05-27,AtlasIntel,"3,469 (A)[bq]",D,gavin_newsom,7.1,column
-2025-05-27,AtlasIntel,"3,469 (A)[bq]",D,gretchen_whitmer,3.7,column
-2025-05-27,AtlasIntel,"3,469 (A)[bq]",D,jb_pritzker,0.1,column
-2025-05-27,AtlasIntel,"3,469 (A)[bq]",D,josh_shapiro,4.8,column
-2025-05-27,AtlasIntel,"3,469 (A)[bq]",D,kamala_harris,16.6,column
-2025-05-27,AtlasIntel,"3,469 (A)[bq]",D,pete_buttigieg,31.5,column
-2025-05-27,AtlasIntel,"3,469 (A)[bq]",D,rahm_emanuel,0.2,footnote
-2025-05-27,AtlasIntel,"3,469 (A)[bq]",D,raphael_warnock,1.4,footnote
-2025-05-27,AtlasIntel,"3,469 (A)[bq]",D,ro_khanna,0.3,footnote
-2025-05-27,AtlasIntel,"3,469 (A)[bq]",D,stephen_a_smith,0.3,footnote
+2025-05-27,AtlasIntel,"3,469 (A)[bs]",D,alexandria_ocasio_cortez,19.4,column
+2025-05-27,AtlasIntel,"3,469 (A)[bs]",D,andy_beshear,0.2,footnote
+2025-05-27,AtlasIntel,"3,469 (A)[bs]",D,chris_murphy,0.4,footnote
+2025-05-27,AtlasIntel,"3,469 (A)[bs]",D,cory_booker,10.4,column
+2025-05-27,AtlasIntel,"3,469 (A)[bs]",D,gavin_newsom,7.1,column
+2025-05-27,AtlasIntel,"3,469 (A)[bs]",D,gretchen_whitmer,3.7,column
+2025-05-27,AtlasIntel,"3,469 (A)[bs]",D,jb_pritzker,0.1,column
+2025-05-27,AtlasIntel,"3,469 (A)[bs]",D,josh_shapiro,4.8,column
+2025-05-27,AtlasIntel,"3,469 (A)[bs]",D,kamala_harris,16.6,column
+2025-05-27,AtlasIntel,"3,469 (A)[bs]",D,pete_buttigieg,31.5,column
+2025-05-27,AtlasIntel,"3,469 (A)[bs]",D,rahm_emanuel,0.2,footnote
+2025-05-27,AtlasIntel,"3,469 (A)[bs]",D,raphael_warnock,1.4,footnote
+2025-05-27,AtlasIntel,"3,469 (A)[bs]",D,ro_khanna,0.3,footnote
+2025-05-27,AtlasIntel,"3,469 (A)[bs]",D,stephen_a_smith,0.3,footnote
 2025-05-26,McLaughlin & Associates,439 (LV),D,alexandria_ocasio_cortez,9,column
 2025-05-26,McLaughlin & Associates,439 (LV),D,amy_klobuchar,3,footnote
 2025-05-26,McLaughlin & Associates,439 (LV),D,cory_booker,7,column
@@ -2357,20 +2400,20 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-04-23,YouGov/ The Times,"1,296 (A)",R,tucker_carlson,1,footnote
 2025-04-23,YouGov/ The Times,"1,296 (A)",R,tulsi_gabbard,2,footnote
 2025-04-23,YouGov/ The Times,"1,296 (A)",R,vivek_ramaswamy,4,column
-2025-04-23,YouGov/The Times,"1,296 (A)[de]",D,alexandria_ocasio_cortez,7,column
-2025-04-23,YouGov/The Times,"1,296 (A)[de]",D,andy_beshear,1,footnote
-2025-04-23,YouGov/The Times,"1,296 (A)[de]",D,cory_booker,7,column
-2025-04-23,YouGov/The Times,"1,296 (A)[de]",D,elizabeth_warren,4,footnote
-2025-04-23,YouGov/The Times,"1,296 (A)[de]",D,gavin_newsom,7,column
-2025-04-23,YouGov/The Times,"1,296 (A)[de]",D,gretchen_whitmer,1,column
-2025-04-23,YouGov/The Times,"1,296 (A)[de]",D,jb_pritzker,3,column
-2025-04-23,YouGov/The Times,"1,296 (A)[de]",D,josh_shapiro,4,column
-2025-04-23,YouGov/The Times,"1,296 (A)[de]",D,kamala_harris,28,column
-2025-04-23,YouGov/The Times,"1,296 (A)[de]",D,mark_kelly,1,footnote
-2025-04-23,YouGov/The Times,"1,296 (A)[de]",D,pete_buttigieg,9,column
-2025-04-23,YouGov/The Times,"1,296 (A)[de]",D,rahm_emanuel,1,footnote
-2025-04-23,YouGov/The Times,"1,296 (A)[de]",D,tim_walz,3,column
-2025-04-23,YouGov/The Times,"1,296 (A)[de]",D,wes_moore,1,footnote
+2025-04-23,YouGov/The Times,"1,296 (A)[dg]",D,alexandria_ocasio_cortez,7,column
+2025-04-23,YouGov/The Times,"1,296 (A)[dg]",D,andy_beshear,1,footnote
+2025-04-23,YouGov/The Times,"1,296 (A)[dg]",D,cory_booker,7,column
+2025-04-23,YouGov/The Times,"1,296 (A)[dg]",D,elizabeth_warren,4,footnote
+2025-04-23,YouGov/The Times,"1,296 (A)[dg]",D,gavin_newsom,7,column
+2025-04-23,YouGov/The Times,"1,296 (A)[dg]",D,gretchen_whitmer,1,column
+2025-04-23,YouGov/The Times,"1,296 (A)[dg]",D,jb_pritzker,3,column
+2025-04-23,YouGov/The Times,"1,296 (A)[dg]",D,josh_shapiro,4,column
+2025-04-23,YouGov/The Times,"1,296 (A)[dg]",D,kamala_harris,28,column
+2025-04-23,YouGov/The Times,"1,296 (A)[dg]",D,mark_kelly,1,footnote
+2025-04-23,YouGov/The Times,"1,296 (A)[dg]",D,pete_buttigieg,9,column
+2025-04-23,YouGov/The Times,"1,296 (A)[dg]",D,rahm_emanuel,1,footnote
+2025-04-23,YouGov/The Times,"1,296 (A)[dg]",D,tim_walz,3,column
+2025-04-23,YouGov/The Times,"1,296 (A)[dg]",D,wes_moore,1,footnote
 2025-04-14,Atlas Intel,"2,347 (A)",R,glenn_youngkin,3,footnote
 2025-04-14,Atlas Intel,"2,347 (A)",R,jd_vance,60,column
 2025-04-14,Atlas Intel,"2,347 (A)",R,kristi_noem,8,footnote
@@ -2378,15 +2421,15 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-04-14,Atlas Intel,"2,347 (A)",R,ron_desantis,9,column
 2025-04-14,Atlas Intel,"2,347 (A)",R,tucker_carlson,5,footnote
 2025-04-14,Atlas Intel,"2,347 (A)",R,vivek_ramaswamy,1,column
-2025-04-14,AtlasIntel,"2,347 (A)[bq]",D,alexandria_ocasio_cortez,15.9,column
-2025-04-14,AtlasIntel,"2,347 (A)[bq]",D,andy_beshear,2.4,footnote
-2025-04-14,AtlasIntel,"2,347 (A)[bq]",D,chris_murphy,1.6,footnote
-2025-04-14,AtlasIntel,"2,347 (A)[bq]",D,cory_booker,8.7,column
-2025-04-14,AtlasIntel,"2,347 (A)[bq]",D,gavin_newsom,6.8,column
-2025-04-14,AtlasIntel,"2,347 (A)[bq]",D,gretchen_whitmer,8.6,column
-2025-04-14,AtlasIntel,"2,347 (A)[bq]",D,kamala_harris,24.1,column
-2025-04-14,AtlasIntel,"2,347 (A)[bq]",D,pete_buttigieg,27.7,column
-2025-04-14,AtlasIntel,"2,347 (A)[bq]",D,raphael_warnock,1.9,footnote
+2025-04-14,AtlasIntel,"2,347 (A)[bs]",D,alexandria_ocasio_cortez,15.9,column
+2025-04-14,AtlasIntel,"2,347 (A)[bs]",D,andy_beshear,2.4,footnote
+2025-04-14,AtlasIntel,"2,347 (A)[bs]",D,chris_murphy,1.6,footnote
+2025-04-14,AtlasIntel,"2,347 (A)[bs]",D,cory_booker,8.7,column
+2025-04-14,AtlasIntel,"2,347 (A)[bs]",D,gavin_newsom,6.8,column
+2025-04-14,AtlasIntel,"2,347 (A)[bs]",D,gretchen_whitmer,8.6,column
+2025-04-14,AtlasIntel,"2,347 (A)[bs]",D,kamala_harris,24.1,column
+2025-04-14,AtlasIntel,"2,347 (A)[bs]",D,pete_buttigieg,27.7,column
+2025-04-14,AtlasIntel,"2,347 (A)[bs]",D,raphael_warnock,1.9,footnote
 2025-04-14,Data for Progress,745 (LV),D,alexandria_ocasio_cortez,12,column
 2025-04-14,Data for Progress,745 (LV),D,amy_klobuchar,2,footnote
 2025-04-14,Data for Progress,745 (LV),D,andy_beshear,2,footnote
@@ -2435,22 +2478,22 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-04-14,Echelon Insights,"1,014 (LV)",R,tulsi_gabbard,1,footnote
 2025-04-14,Echelon Insights,"1,014 (LV)",R,vivek_ramaswamy,5,column
 2025-04-14,Echelon Insights,449 (LV),D,wes_moore,2,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dk]",D,alexandria_ocasio_cortez,21.3,column
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dk]",D,andy_beshear,2.8,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dk]",D,gavin_newsom,6.4,column
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dk]",D,gretchen_whitmer,3,column
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dk]",D,jared_polis,0.3,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dk]",D,jb_pritzker,3.3,column
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dk]",D,john_fetterman,0.5,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dk]",D,josh_shapiro,4.6,column
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dk]",D,kamala_harris,27.5,column
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dk]",D,mark_cuban,3.2,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dk]",D,mark_kelly,3.6,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dk]",D,pete_buttigieg,14,column
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dk]",D,roy_cooper,1.3,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dk]",D,ruben_gallego,0.5,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dk]",D,stephen_a_smith,1,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dk]",D,wes_moore,0.7,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[dm]",D,alexandria_ocasio_cortez,21.3,column
+2025-04-03,Yale Youth Poll,"4,100 (RV)[dm]",D,andy_beshear,2.8,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[dm]",D,gavin_newsom,6.4,column
+2025-04-03,Yale Youth Poll,"4,100 (RV)[dm]",D,gretchen_whitmer,3,column
+2025-04-03,Yale Youth Poll,"4,100 (RV)[dm]",D,jared_polis,0.3,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[dm]",D,jb_pritzker,3.3,column
+2025-04-03,Yale Youth Poll,"4,100 (RV)[dm]",D,john_fetterman,0.5,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[dm]",D,josh_shapiro,4.6,column
+2025-04-03,Yale Youth Poll,"4,100 (RV)[dm]",D,kamala_harris,27.5,column
+2025-04-03,Yale Youth Poll,"4,100 (RV)[dm]",D,mark_cuban,3.2,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[dm]",D,mark_kelly,3.6,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[dm]",D,pete_buttigieg,14,column
+2025-04-03,Yale Youth Poll,"4,100 (RV)[dm]",D,roy_cooper,1.3,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[dm]",D,ruben_gallego,0.5,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[dm]",D,stephen_a_smith,1,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[dm]",D,wes_moore,0.7,footnote
 2025-04-01,YouGov/Economist,691 (A),D,alexandria_ocasio_cortez,8,column
 2025-04-01,YouGov/Economist,691 (A),D,bernie_sanders,8,footnote
 2025-04-01,YouGov/Economist,691 (A),D,cory_booker,1,column
