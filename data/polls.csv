@@ -1,91 +1,107 @@
 end_date,pollster,sample,party,candidate_id,pct,listed_as
-2026-11-16,Echelon Insights,531 (RV),D,alexandria_ocasio_cortez,10,column
-2026-11-16,Echelon Insights,531 (RV),D,andy_beshear,2,column
+2026-11-16,Echelon Insights,531 (LV),D,alexandria_ocasio_cortez,10,column
+2026-11-16,Echelon Insights,531 (LV),D,andy_beshear,2,column
 2026-11-16,Echelon Insights,397 (RV),R,brian_kemp,NA,footnote
-2026-11-16,Echelon Insights,531 (RV),D,chris_murphy,NA,footnote
-2026-11-16,Echelon Insights,531 (RV),D,cory_booker,2,column
+2026-11-16,Echelon Insights,531 (LV),D,cory_booker,2,column
 2026-11-16,Echelon Insights,397 (RV),R,doug_burgum,NA,footnote
-2026-11-16,Echelon Insights,531 (RV),D,gavin_newsom,11,column
+2026-11-16,Echelon Insights,531 (LV),D,gavin_newsom,11,column
 2026-11-16,Echelon Insights,397 (RV),R,glenn_youngkin,1,footnote
-2026-11-16,Echelon Insights,531 (RV),D,gretchen_whitmer,2,footnote
-2026-11-16,Echelon Insights,531 (RV),D,jared_polis,NA,footnote
-2026-11-16,Echelon Insights,531 (RV),D,jb_pritzker,3,column
+2026-11-16,Echelon Insights,531 (LV),D,gretchen_whitmer,2,footnote
+2026-11-16,Echelon Insights,531 (LV),D,jb_pritzker,3,column
 2026-11-16,Echelon Insights,397 (RV),R,jd_vance,40,column
-2026-11-16,Echelon Insights,531 (RV),D,jon_ossoff,10,column
+2026-11-16,Echelon Insights,531 (LV),D,jon_ossoff,10,column
 2026-11-16,Echelon Insights,397 (RV),R,josh_hawley,NA,footnote
-2026-11-16,Echelon Insights,531 (RV),D,josh_shapiro,4,column
-2026-11-16,Echelon Insights,531 (RV),D,kamala_harris,19,column
+2026-11-16,Echelon Insights,531 (LV),D,josh_shapiro,4,column
+2026-11-16,Echelon Insights,531 (LV),D,kamala_harris,19,column
 2026-11-16,Echelon Insights,397 (RV),R,marco_rubio,26,column
 2026-11-16,Echelon Insights,397 (RV),R,marjorie_taylor_greene,1,footnote
-2026-11-16,Echelon Insights,531 (RV),D,mark_kelly,5,column
-2026-11-16,Echelon Insights,531 (RV),D,pete_buttigieg,15,column
-2026-11-16,Echelon Insights,531 (RV),D,rahm_emanuel,NA,footnote
+2026-11-16,Echelon Insights,531 (LV),D,mark_kelly,5,column
+2026-11-16,Echelon Insights,531 (LV),D,pete_buttigieg,15,column
 2026-11-16,Echelon Insights,397 (RV),R,rand_paul,1,footnote
-2026-11-16,Echelon Insights,531 (RV),D,raphael_warnock,1,footnote
-2026-11-16,Echelon Insights,531 (RV),D,ro_khanna,1,footnote
+2026-11-16,Echelon Insights,531 (LV),D,raphael_warnock,1,footnote
+2026-11-16,Echelon Insights,531 (LV),D,ro_khanna,1,footnote
 2026-11-16,Echelon Insights,397 (RV),R,robert_kennedy_jr,4,column
 2026-11-16,Echelon Insights,397 (RV),R,ron_desantis,12,column
-2026-11-16,Echelon Insights,531 (RV),D,ruben_gallego,NA,footnote
 2026-11-16,Echelon Insights,397 (RV),R,sarah_huckabee_sanders,2,footnote
 2026-11-16,Echelon Insights,397 (RV),R,steve_bannon,NA,footnote
 2026-11-16,Echelon Insights,397 (RV),R,ted_cruz,1,column
 2026-11-16,Echelon Insights,397 (RV),R,tucker_carlson,1,footnote
-2026-11-16,Echelon Insights,531 (RV),D,wes_moore,NA,footnote
-2026-11-16,Emerson College,499 (V),D,abdul_el_sayed,1,footnote
-2026-11-16,Emerson College,499 (V),D,alexandria_ocasio_cortez,12,column
-2026-11-16,Emerson College,499 (V),D,andy_beshear,4,column
-2026-11-16,Emerson College,499 (V),D,bernie_sanders,0,footnote
-2026-11-16,Emerson College,499 (V),D,cory_booker,1,column
+2026-11-16,Emerson College,499 (RV),D,abdul_el_sayed,0.8,footnote
+2026-11-16,Emerson College,499 (RV),D,alexandria_ocasio_cortez,12.1,column
+2026-11-16,Emerson College,499 (RV),D,andy_beshear,4,column
+2026-11-16,Emerson College,499 (RV),D,bernie_sanders,0.2,footnote
+2026-11-16,Emerson College,499 (RV),D,cory_booker,0.6,column
 2026-11-16,Emerson College,418 (V),R,donald_trump,7,footnote
 2026-11-16,Emerson College,418 (V),R,donald_trump_jr,0,column
-2026-11-16,Emerson College,499 (V),D,gavin_newsom,8,column
-2026-11-16,Emerson College,499 (V),D,james_talarico,1,footnote
-2026-11-16,Emerson College,499 (V),D,jb_pritzker,1,column
+2026-11-16,Emerson College,499 (RV),D,gavin_newsom,8.4,column
+2026-11-16,Emerson College,499 (RV),D,james_talarico,1.1,footnote
+2026-11-16,Emerson College,499 (RV),D,jb_pritzker,1.2,column
 2026-11-16,Emerson College,418 (V),R,jd_vance,20,column
-2026-11-16,Emerson College,499 (V),D,jon_ossoff,17,column
-2026-11-16,Emerson College,499 (V),D,josh_shapiro,2,column
-2026-11-16,Emerson College,499 (V),D,kamala_harris,6,column
+2026-11-16,Emerson College,499 (RV),D,jon_ossoff,16.5,column
+2026-11-16,Emerson College,499 (RV),D,josh_shapiro,2,column
+2026-11-16,Emerson College,499 (RV),D,kamala_harris,6.1,column
 2026-11-16,Emerson College,418 (V),R,marco_rubio,36,column
-2026-11-16,Emerson College,499 (V),D,mark_kelly,3,column
+2026-11-16,Emerson College,499 (RV),D,mark_kelly,2.6,column
 2026-11-16,Emerson College,418 (V),R,nikki_haley,0,column
-2026-11-16,Emerson College,499 (V),D,pete_buttigieg,6,column
+2026-11-16,Emerson College,499 (RV),D,pete_buttigieg,6,column
 2026-11-16,Emerson College,418 (V),R,ron_desantis,7,column
 2026-11-16,Emerson College,418 (V),R,spencer_cox,1,footnote
 2026-11-16,Emerson College,418 (V),R,ted_cruz,0,column
 2026-11-16,Emerson College,418 (V),R,thomas_massie,7,footnote
-2026-11-16,Emerson College,499 (V),D,wes_moore,0,footnote
-2026-11-13,Verasight,726 (A),D,alexandria_ocasio_cortez,17,column
-2026-11-13,Verasight,726 (A),D,andy_beshear,1,column
+2026-11-16,Emerson College,499 (RV),D,wes_moore,0.2,footnote
+2026-11-13,Strength in Numbers/Verasight,726 (A),D,alexandria_ocasio_cortez,17,column
+2026-11-13,Strength in Numbers/Verasight,726 (A),D,andy_beshear,1,column
+2026-11-13,Strength in Numbers/Verasight,726 (A),D,gavin_newsom,10,column
+2026-11-13,Strength in Numbers/Verasight,726 (A),D,jb_pritzker,3,column
+2026-11-13,Strength in Numbers/Verasight,726 (A),D,jon_ossoff,12,column
+2026-11-13,Strength in Numbers/Verasight,726 (A),D,josh_shapiro,4,column
+2026-11-13,Strength in Numbers/Verasight,726 (A),D,kamala_harris,18,column
+2026-11-13,Strength in Numbers/Verasight,726 (A),D,pete_buttigieg,15,column
+2026-11-13,Strength in Numbers/Verasight,726 (A),D,raphael_warnock,1,footnote
+2026-11-13,Strength in Numbers/Verasight,726 (A),D,ro_khanna,1,footnote
+2026-11-13,Strength in Numbers/Verasight,726 (A),D,wes_moore,1,footnote
 2026-11-13,Verasight,632 (A),R,donald_trump_jr,3,column
-2026-11-13,Verasight,726 (A),D,gavin_newsom,10,column
 2026-11-13,Verasight,632 (A),R,glenn_youngkin,1,footnote
-2026-11-13,Verasight,726 (A),D,jb_pritzker,3,column
 2026-11-13,Verasight,632 (A),R,jd_vance,27,column
-2026-11-13,Verasight,726 (A),D,jon_ossoff,12,column
-2026-11-13,Verasight,726 (A),D,josh_shapiro,4,column
-2026-11-13,Verasight,726 (A),D,kamala_harris,18,column
 2026-11-13,Verasight,632 (A),R,marco_rubio,33,column
-2026-11-13,Verasight,726 (A),D,pete_buttigieg,15,column
-2026-11-13,Verasight,726 (A),D,raphael_warnock,1,footnote
-2026-11-13,Verasight,726 (A),D,ro_khanna,1,footnote
 2026-11-13,Verasight,632 (A),R,ron_desantis,19,column
 2026-11-13,Verasight,632 (A),R,ted_cruz,3,column
-2026-11-13,Verasight,726 (A),D,wes_moore,1,footnote
-2026-11-11,The Economist/YouGov,489 (LV),D,alexandria_ocasio_cortez,12,column
-2026-11-11,The Economist/YouGov,489 (LV),D,andy_beshear,3,column
-2026-11-11,The Economist/YouGov,489 (LV),D,bernie_sanders,2,footnote
-2026-11-11,The Economist/YouGov,489 (LV),D,cory_booker,2,column
-2026-11-11,The Economist/YouGov,489 (LV),D,gavin_newsom,13,column
-2026-11-11,The Economist/YouGov,489 (LV),D,james_talarico,1,footnote
-2026-11-11,The Economist/YouGov,489 (LV),D,jb_pritzker,3,column
+2026-11-12,Rainey Center,518 (LV),D,alexandria_ocasio_cortez,6,column
+2026-11-12,Rainey Center,518 (LV),D,amy_klobuchar,0,footnote
+2026-11-12,Rainey Center,518 (LV),D,andy_beshear,5,column
+2026-11-12,Rainey Center,518 (LV),D,chris_murphy,0,footnote
+2026-11-12,Rainey Center,518 (LV),D,cory_booker,3,column
+2026-11-12,Rainey Center,518 (LV),D,gavin_newsom,16,column
+2026-11-12,Rainey Center,518 (LV),D,gretchen_whitmer,1,footnote
+2026-11-12,Rainey Center,518 (LV),D,james_talarico,6,footnote
+2026-11-12,Rainey Center,518 (LV),D,jb_pritzker,3,column
+2026-11-12,Rainey Center,518 (LV),D,jon_ossoff,10,column
+2026-11-12,Rainey Center,518 (LV),D,josh_shapiro,7,column
+2026-11-12,Rainey Center,518 (LV),D,kamala_harris,17,column
+2026-11-12,Rainey Center,518 (LV),D,mark_cuban,1,footnote
+2026-11-12,Rainey Center,518 (LV),D,mark_kelly,4,column
+2026-11-12,Rainey Center,518 (LV),D,pete_buttigieg,8,column
+2026-11-12,Rainey Center,518 (LV),D,rahm_emanuel,1,footnote
+2026-11-12,Rainey Center,518 (LV),D,raphael_warnock,1,footnote
+2026-11-12,Rainey Center,518 (LV),D,ro_khanna,0,footnote
+2026-11-12,Rainey Center,518 (LV),D,ruben_gallego,0,footnote
+2026-11-12,Rainey Center,518 (LV),D,stephen_a_smith,1,footnote
+2026-11-12,Rainey Center,518 (LV),D,wes_moore,1,footnote
+2026-11-11,Economist/YouGov,489 (A),D,alexandria_ocasio_cortez,12,column
+2026-11-11,Economist/YouGov,489 (A),D,andy_beshear,3,column
+2026-11-11,Economist/YouGov,489 (A),D,bernie_sanders,2,footnote
+2026-11-11,Economist/YouGov,489 (A),D,cory_booker,2,column
+2026-11-11,Economist/YouGov,489 (A),D,gavin_newsom,13,column
+2026-11-11,Economist/YouGov,489 (A),D,james_talarico,1,footnote
+2026-11-11,Economist/YouGov,489 (A),D,jb_pritzker,3,column
+2026-11-11,Economist/YouGov,489 (A),D,jon_ossoff,15,column
+2026-11-11,Economist/YouGov,489 (A),D,josh_shapiro,3,column
+2026-11-11,Economist/YouGov,489 (A),D,kamala_harris,20,column
+2026-11-11,Economist/YouGov,489 (A),D,mark_kelly,4,column
+2026-11-11,Economist/YouGov,489 (A),D,pete_buttigieg,10,column
 2026-11-11,The Economist/YouGov,366 (LV),R,jd_vance,40,column
-2026-11-11,The Economist/YouGov,489 (LV),D,jon_ossoff,15,column
-2026-11-11,The Economist/YouGov,489 (LV),D,josh_shapiro,3,column
-2026-11-11,The Economist/YouGov,489 (LV),D,kamala_harris,20,column
 2026-11-11,The Economist/YouGov,366 (LV),R,marco_rubio,33,column
-2026-11-11,The Economist/YouGov,489 (LV),D,mark_kelly,4,column
 2026-11-11,The Economist/YouGov,366 (LV),R,nikki_haley,1,column
-2026-11-11,The Economist/YouGov,489 (LV),D,pete_buttigieg,10,column
 2026-11-11,The Economist/YouGov,366 (LV),R,ron_desantis,14,column
 2026-11-11,The Economist/YouGov,366 (LV),R,thomas_massie,1,footnote
 2026-11-09,Rasmussen Reports,384 (LV),R,donald_trump_jr,4,column
@@ -96,74 +112,91 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-11-09,Rasmussen Reports,384 (LV),R,ron_desantis,13,column
 2026-11-09,Rasmussen Reports,384 (LV),R,ted_cruz,5,column
 2026-11-09,Rasmussen Reports,384 (LV),R,tulsi_gabbard,1,footnote
+2026-11-05,Cygnal,"3,000 (RV)[l]",D,alexandria_ocasio_cortez,17.9,column
+2026-11-05,Cygnal,"3,000 (RV)[l]",D,andy_beshear,3.6,column
+2026-11-05,Cygnal,"3,000 (RV)[l]",D,gavin_newsom,12.1,column
+2026-11-05,Cygnal,"3,000 (RV)[l]",D,gretchen_whitmer,1.5,footnote
+2026-11-05,Cygnal,"3,000 (RV)[l]",D,jb_pritzker,2.8,column
+2026-11-05,Cygnal,"3,000 (RV)[l]",D,josh_shapiro,6.4,column
+2026-11-05,Cygnal,"3,000 (RV)[l]",D,kamala_harris,13.6,column
+2026-11-05,Cygnal,"3,000 (RV)[l]",D,pete_buttigieg,18.5,column
+2026-11-05,Cygnal,"3,000 (RV)[l]",D,wes_moore,2.3,footnote
 2026-11-05,McLaughlin & Associates,471 (LV),D,alexandria_ocasio_cortez,9,column
-2026-11-05,McLaughlin & Associates,471 (LV),D,amy_klobuchar,NA,footnote
 2026-11-05,McLaughlin & Associates,471 (LV),D,andy_beshear,3,column
-2026-11-05,McLaughlin & Associates,471 (LV),D,cory_booker,3,column
+2026-11-05,McLaughlin & Associates,471 (LV),D,cory_booker,4,column
 2026-11-05,McLaughlin & Associates,427 (LV),R,donald_trump_jr,14,column
 2026-11-05,McLaughlin & Associates,471 (LV),D,gavin_newsom,16,column
 2026-11-05,McLaughlin & Associates,427 (LV),R,greg_abbott,NA,footnote
 2026-11-05,McLaughlin & Associates,471 (LV),D,gretchen_whitmer,2,footnote
 2026-11-05,McLaughlin & Associates,471 (LV),D,jared_polis,0,footnote
-2026-11-05,McLaughlin & Associates,471 (LV),D,jasmine_crockett,NA,footnote
 2026-11-05,McLaughlin & Associates,471 (LV),D,jb_pritzker,3,column
 2026-11-05,McLaughlin & Associates,427 (LV),R,jd_vance,38,column
 2026-11-05,McLaughlin & Associates,471 (LV),D,jon_ossoff,7,column
 2026-11-05,McLaughlin & Associates,427 (LV),R,josh_hawley,NA,footnote
-2026-11-05,McLaughlin & Associates,471 (LV),D,josh_shapiro,6,column
+2026-11-05,McLaughlin & Associates,471 (LV),D,josh_shapiro,3,column
 2026-11-05,McLaughlin & Associates,471 (LV),D,kamala_harris,28,column
 2026-11-05,McLaughlin & Associates,427 (LV),R,marco_rubio,17,column
 2026-11-05,McLaughlin & Associates,471 (LV),D,mark_kelly,5,column
 2026-11-05,McLaughlin & Associates,427 (LV),R,nikki_haley,4,column
 2026-11-05,McLaughlin & Associates,471 (LV),D,pete_buttigieg,9,column
-2026-11-05,McLaughlin & Associates,471 (LV),D,phil_murphy,NA,footnote
 2026-11-05,McLaughlin & Associates,471 (LV),D,rahm_emanuel,1,footnote
 2026-11-05,McLaughlin & Associates,427 (LV),R,rand_paul,2,footnote
 2026-11-05,McLaughlin & Associates,427 (LV),R,rick_scott,NA,footnote
 2026-11-05,McLaughlin & Associates,427 (LV),R,ron_desantis,7,column
-2026-11-05,McLaughlin & Associates,471 (LV),D,roy_cooper,NA,footnote
 2026-11-05,McLaughlin & Associates,427 (LV),R,sarah_huckabee_sanders,1,footnote
 2026-11-05,McLaughlin & Associates,427 (LV),R,spencer_cox,NA,footnote
 2026-11-05,McLaughlin & Associates,471 (LV),D,stephen_a_smith,0,footnote
 2026-11-05,McLaughlin & Associates,427 (LV),R,ted_cruz,3,column
-2026-11-05,McLaughlin & Associates,471 (LV),D,tim_walz,NA,footnote
 2026-11-05,McLaughlin & Associates,427 (LV),R,tom_cotton,NA,footnote
-2026-11-05,McLaughlin & Associates,471 (LV),D,wes_moore,1,footnote
-2026-11-01,AtlasIntel,"3,566 (LV)",D,alexandria_ocasio_cortez,17.6,column
-2026-11-01,AtlasIntel,"3,566 (LV)",D,andy_beshear,3.9,column
+2026-11-05,McLaughlin & Associates,471 (LV),D,wes_moore,2,footnote
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,alexandria_ocasio_cortez,17.6,column
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,andy_beshear,3.9,column
 2026-11-01,AtlasIntel,"3,566 (LV)",R,brian_kemp,0.5,footnote
-2026-11-01,AtlasIntel,"3,566 (LV)",D,cory_booker,1.5,column
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,cory_booker,1.5,column
 2026-11-01,AtlasIntel,"3,566 (LV)",R,donald_trump_jr,2.3,column
-2026-11-01,AtlasIntel,"3,566 (LV)",D,gavin_newsom,9,column
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,gavin_newsom,9,column
 2026-11-01,AtlasIntel,"3,566 (LV)",R,glenn_youngkin,NA,footnote
 2026-11-01,AtlasIntel,"3,566 (LV)",R,greg_abbott,0.4,footnote
-2026-11-01,AtlasIntel,"3,566 (LV)",D,gretchen_whitmer,0.4,footnote
-2026-11-01,AtlasIntel,"3,566 (LV)",D,jb_pritzker,2.5,column
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,gretchen_whitmer,0.4,footnote
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,jb_pritzker,2.5,column
 2026-11-01,AtlasIntel,"3,566 (LV)",R,jd_vance,32.9,column
-2026-11-01,AtlasIntel,"3,566 (LV)",D,jon_ossoff,18.2,column
-2026-11-01,AtlasIntel,"3,566 (LV)",D,josh_shapiro,3.4,column
-2026-11-01,AtlasIntel,"3,566 (LV)",D,kamala_harris,12.6,column
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,jon_ossoff,18.2,column
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,josh_shapiro,3.4,column
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,kamala_harris,12.6,column
 2026-11-01,AtlasIntel,"3,566 (LV)",R,marco_rubio,45.6,column
-2026-11-01,AtlasIntel,"3,566 (LV)",D,mark_kelly,9.1,column
-2026-11-01,AtlasIntel,"3,566 (LV)",D,pete_buttigieg,15.8,column
-2026-11-01,AtlasIntel,"3,566 (LV)",D,rahm_emanuel,0.3,footnote
-2026-11-01,AtlasIntel,"3,566 (LV)",D,raphael_warnock,1.1,footnote
-2026-11-01,AtlasIntel,"3,566 (LV)",D,ro_khanna,0.7,footnote
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,mark_kelly,9.1,column
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,pete_buttigieg,15.8,column
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,rahm_emanuel,0.3,footnote
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,raphael_warnock,1.1,footnote
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,ro_khanna,0.7,footnote
 2026-11-01,AtlasIntel,"3,566 (LV)",R,ron_desantis,4.5,column
-2026-11-01,AtlasIntel,"3,566 (LV)",D,stephen_a_smith,0,footnote
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,stephen_a_smith,0,footnote
 2026-11-01,AtlasIntel,"3,566 (LV)",R,ted_cruz,1.4,column
 2026-11-01,AtlasIntel,"3,566 (LV)",R,tim_scott,1.1,footnote
-2026-11-01,AtlasIntel,"3,566 (LV)",D,tim_walz,0.6,footnote
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,tim_walz,0.6,footnote
 2026-11-01,AtlasIntel,"3,566 (LV)",R,tom_cotton,0.9,footnote
 2026-11-01,AtlasIntel,"3,566 (LV)",R,tucker_carlson,2.7,footnote
-2026-11-01,AtlasIntel,"3,566 (LV)",D,wes_moore,1,footnote
+2026-11-01,AtlasIntel,"3,566 (LV)[o]",D,wes_moore,1,footnote
+2026-10-26,Harvard CAPS/Harris,"2,700 (RV)[q]",D,alexandria_ocasio_cortez,11,column
+2026-10-26,Harvard CAPS/Harris,"2,700 (RV)[q]",D,andy_beshear,2,column
+2026-10-26,Harvard CAPS/Harris,"2,700 (RV)[q]",D,gavin_newsom,20,column
+2026-10-26,Harvard CAPS/Harris,"2,700 (RV)[q]",D,jb_pritzker,4,column
+2026-10-26,Harvard CAPS/Harris,"2,700 (RV)[q]",D,jon_ossoff,7,column
+2026-10-26,Harvard CAPS/Harris,"2,700 (RV)[q]",D,josh_shapiro,8,column
+2026-10-26,Harvard CAPS/Harris,"2,700 (RV)[q]",D,kamala_harris,34,column
+2026-10-26,Harvard CAPS/Harris,"2,700 (RV)[q]",D,pete_buttigieg,10,column
 2026-10-25,Leger,375 (A),D,alexandria_ocasio_cortez,7,column
+2026-10-25,Leger,375 (A),D,amy_klobuchar,1,footnote
 2026-10-25,Leger,375 (A),D,andy_beshear,2,column
-2026-10-25,Leger,375 (A),D,gavin_newsom,11,column
-2026-10-25,Leger,375 (A),D,jb_pritzker,5,column
+2026-10-25,Leger,375 (A),D,cory_booker,6,column
+2026-10-25,Leger,375 (A),D,gavin_newsom,14,column
+2026-10-25,Leger,375 (A),D,gretchen_whitmer,1,footnote
+2026-10-25,Leger,375 (A),D,james_talarico,3,footnote
+2026-10-25,Leger,375 (A),D,jb_pritzker,2,column
 2026-10-25,Leger,375 (A),D,jon_ossoff,6,column
-2026-10-25,Leger,375 (A),D,josh_shapiro,7,column
+2026-10-25,Leger,375 (A),D,josh_shapiro,4,column
 2026-10-25,Leger,375 (A),D,kamala_harris,22,column
+2026-10-25,Leger,375 (A),D,mark_kelly,7,column
 2026-10-25,Leger,375 (A),D,pete_buttigieg,8,column
 2026-10-21,Clarity Campaign Labs,413 (LV),R,donald_trump_jr,17,column
 2026-10-21,Clarity Campaign Labs,413 (LV),R,jd_vance,40,column
@@ -174,15 +207,14 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-10-21,Clarity Campaign Labs,413 (LV),R,tucker_carlson,NA,footnote
 2026-10-19,Echelon Insights,522 (LV),D,alexandria_ocasio_cortez,13,column
 2026-10-19,Echelon Insights,522 (LV),D,andy_beshear,2,column
-2026-10-19,Echelon Insights,522 (LV),D,chris_murphy,NA,footnote
+2026-10-19,Echelon Insights,522 (LV),D,chris_murphy,1,footnote
 2026-10-19,Echelon Insights,522 (LV),D,cory_booker,3,column
 2026-10-19,Echelon Insights,417 (LV),R,donald_trump_jr,7,column
 2026-10-19,Echelon Insights,417 (LV),R,doug_burgum,NA,footnote
 2026-10-19,Echelon Insights,522 (LV),D,gavin_newsom,14,column
 2026-10-19,Echelon Insights,417 (LV),R,glenn_youngkin,0,footnote
-2026-10-19,Echelon Insights,522 (LV),D,gretchen_whitmer,NA,footnote
+2026-10-19,Echelon Insights,522 (LV),D,gretchen_whitmer,1,footnote
 2026-10-19,Echelon Insights,522 (LV),D,james_talarico,4,footnote
-2026-10-19,Echelon Insights,522 (LV),D,jared_polis,NA,footnote
 2026-10-19,Echelon Insights,522 (LV),D,jb_pritzker,2,column
 2026-10-19,Echelon Insights,417 (LV),R,jd_vance,38,column
 2026-10-19,Echelon Insights,522 (LV),D,jon_ossoff,5,column
@@ -194,78 +226,82 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-10-19,Echelon Insights,417 (LV),R,marjorie_taylor_greene,NA,footnote
 2026-10-19,Echelon Insights,522 (LV),D,mark_kelly,7,column
 2026-10-19,Echelon Insights,522 (LV),D,pete_buttigieg,13,column
-2026-10-19,Echelon Insights,522 (LV),D,rahm_emanuel,NA,footnote
-2026-10-19,Echelon Insights,522 (LV),D,raphael_warnock,NA,footnote
-2026-10-19,Echelon Insights,522 (LV),D,ro_khanna,NA,footnote
+2026-10-19,Echelon Insights,522 (LV),D,rahm_emanuel,1,footnote
+2026-10-19,Echelon Insights,522 (LV),D,raphael_warnock,1,footnote
 2026-10-19,Echelon Insights,417 (LV),R,robert_kennedy_jr,2,column
 2026-10-19,Echelon Insights,417 (LV),R,ron_desantis,12,column
-2026-10-19,Echelon Insights,522 (LV),D,ruben_gallego,NA,footnote
 2026-10-19,Echelon Insights,417 (LV),R,sarah_huckabee_sanders,NA,footnote
 2026-10-19,Echelon Insights,417 (LV),R,ted_cruz,4,column
 2026-10-19,Echelon Insights,417 (LV),R,tim_scott,NA,footnote
 2026-10-19,Echelon Insights,417 (LV),R,tucker_carlson,NA,footnote
 2026-10-19,Echelon Insights,417 (LV),R,vivek_ramaswamy,0,column
-2026-10-19,Echelon Insights,522 (LV),D,wes_moore,NA,footnote
-2026-10-19,New York Times/Siena,"1,170 (RV)",D,abdul_el_sayed,NA,footnote
-2026-10-19,New York Times/Siena,"1,170 (RV)",D,alexandria_ocasio_cortez,6,column
-2026-10-19,New York Times/Siena,"1,170 (RV)",D,andy_beshear,1,column
-2026-10-19,New York Times/Siena,"1,170 (RV)",D,bernie_sanders,NA,footnote
-2026-10-19,New York Times/Siena,"1,170 (RV)",D,cory_booker,0,column
-2026-10-19,New York Times/Siena,"1,170 (RV)",D,gavin_newsom,9,column
-2026-10-19,New York Times/Siena,"1,170 (RV)",D,james_talarico,NA,footnote
-2026-10-19,New York Times/Siena,"1,170 (RV)",D,jb_pritzker,2,column
-2026-10-19,New York Times/Siena,"1,170 (RV)",D,jon_ossoff,4,column
-2026-10-19,New York Times/Siena,"1,170 (RV)",D,josh_shapiro,1,column
-2026-10-19,New York Times/Siena,"1,170 (RV)",D,kamala_harris,12,column
-2026-10-19,New York Times/Siena,"1,170 (RV)",D,mark_kelly,3,column
-2026-10-19,New York Times/Siena,"1,170 (RV)",D,pete_buttigieg,7,column
-2026-10-19,New York Times/Siena,"1,170 (RV)",D,rahm_emanuel,NA,footnote
-2026-10-19,New York Times/Siena,"1,170 (RV)",D,wes_moore,1,footnote
-2026-10-07,Noble Predictive Insights/The Center Square,"1,171 (RV)",D,alexandria_ocasio_cortez,9,column
-2026-10-07,Noble Predictive Insights/The Center Square,"1,171 (RV)",D,amy_klobuchar,NA,footnote
-2026-10-07,Noble Predictive Insights/The Center Square,"1,171 (RV)",D,andy_beshear,3,column
-2026-10-07,Noble Predictive Insights/The Center Square,"1,171 (RV)",D,chris_murphy,NA,footnote
-2026-10-07,Noble Predictive Insights/The Center Square,"1,171 (RV)",D,cory_booker,3,column
-2026-10-07,Noble Predictive Insights/The Center Square,"1,171 (RV)",D,gavin_newsom,14,column
+2026-10-19,Echelon Insights,522 (LV),D,wes_moore,1,footnote
+2026-10-19,New York Times/Siena College,"1,170 (LV)",D,abdul_el_sayed,1,footnote
+2026-10-19,New York Times/Siena College,"1,170 (LV)",D,alexandria_ocasio_cortez,6,column
+2026-10-19,New York Times/Siena College,"1,170 (LV)",D,andy_beshear,1,column
+2026-10-19,New York Times/Siena College,"1,170 (LV)",D,bernie_sanders,2,footnote
+2026-10-19,New York Times/Siena College,"1,170 (LV)",D,cory_booker,1,column
+2026-10-19,New York Times/Siena College,"1,170 (LV)",D,gavin_newsom,11,column
+2026-10-19,New York Times/Siena College,"1,170 (LV)",D,james_talarico,1,footnote
+2026-10-19,New York Times/Siena College,"1,170 (LV)",D,jb_pritzker,1,column
+2026-10-19,New York Times/Siena College,"1,170 (LV)",D,jon_ossoff,5,column
+2026-10-19,New York Times/Siena College,"1,170 (LV)",D,josh_shapiro,2,column
+2026-10-19,New York Times/Siena College,"1,170 (LV)",D,kamala_harris,11,column
+2026-10-19,New York Times/Siena College,"1,170 (LV)",D,mark_kelly,3,column
+2026-10-19,New York Times/Siena College,"1,170 (LV)",D,pete_buttigieg,8,column
+2026-10-19,New York Times/Siena College,"1,170 (LV)",D,rahm_emanuel,0.5,footnote
+2026-10-19,New York Times/Siena College,"1,170 (LV)",D,wes_moore,1,footnote
 2026-10-07,Noble Predictive Insights/The Center Square,"1,137 (RV)",R,glenn_youngkin,2,footnote
 2026-10-07,Noble Predictive Insights/The Center Square,"1,137 (RV)",R,greg_abbott,3,footnote
-2026-10-07,Noble Predictive Insights/The Center Square,"1,171 (RV)",D,jb_pritzker,3,column
 2026-10-07,Noble Predictive Insights/The Center Square,"1,137 (RV)",R,jd_vance,44,column
-2026-10-07,Noble Predictive Insights/The Center Square,"1,171 (RV)",D,jon_ossoff,8,column
 2026-10-07,Noble Predictive Insights/The Center Square,"1,137 (RV)",R,josh_hawley,NA,footnote
-2026-10-07,Noble Predictive Insights/The Center Square,"1,171 (RV)",D,josh_shapiro,5,column
-2026-10-07,Noble Predictive Insights/The Center Square,"1,171 (RV)",D,kamala_harris,29,column
 2026-10-07,Noble Predictive Insights/The Center Square,"1,137 (RV)",R,katie_britt,0,footnote
 2026-10-07,Noble Predictive Insights/The Center Square,"1,137 (RV)",R,kristi_noem,NA,footnote
 2026-10-07,Noble Predictive Insights/The Center Square,"1,137 (RV)",R,marco_rubio,18,column
-2026-10-07,Noble Predictive Insights/The Center Square,"1,171 (RV)",D,mark_kelly,6,column
 2026-10-07,Noble Predictive Insights/The Center Square,"1,137 (RV)",R,nikki_haley,3,column
-2026-10-07,Noble Predictive Insights/The Center Square,"1,171 (RV)",D,pete_buttigieg,10,column
 2026-10-07,Noble Predictive Insights/The Center Square,"1,137 (RV)",R,rand_paul,NA,footnote
-2026-10-07,Noble Predictive Insights/The Center Square,"1,171 (RV)",D,ro_khanna,NA,footnote
 2026-10-07,Noble Predictive Insights/The Center Square,"1,137 (RV)",R,ron_desantis,8,column
 2026-10-07,Noble Predictive Insights/The Center Square,"1,137 (RV)",R,ted_cruz,5,column
 2026-10-07,Noble Predictive Insights/The Center Square,"1,137 (RV)",R,tim_scott,NA,footnote
 2026-10-07,Noble Predictive Insights/The Center Square,"1,137 (RV)",R,vivek_ramaswamy,2,column
-2026-10-07,Noble Predictive Insights/The Center Square,"1,171 (RV)",D,wes_moore,NA,footnote
+2026-10-07,The Center Square/Noble Predictive Insights,"1,171 (RV)",D,alexandria_ocasio_cortez,9,column
+2026-10-07,The Center Square/Noble Predictive Insights,"1,171 (RV)",D,amy_klobuchar,1,footnote
+2026-10-07,The Center Square/Noble Predictive Insights,"1,171 (RV)",D,andy_beshear,3,column
+2026-10-07,The Center Square/Noble Predictive Insights,"1,171 (RV)",D,chris_murphy,1,footnote
+2026-10-07,The Center Square/Noble Predictive Insights,"1,171 (RV)",D,cory_booker,3,column
+2026-10-07,The Center Square/Noble Predictive Insights,"1,171 (RV)",D,gavin_newsom,14,column
+2026-10-07,The Center Square/Noble Predictive Insights,"1,171 (RV)",D,jb_pritzker,3,column
+2026-10-07,The Center Square/Noble Predictive Insights,"1,171 (RV)",D,josh_shapiro,5,column
+2026-10-07,The Center Square/Noble Predictive Insights,"1,171 (RV)",D,kamala_harris,29,column
+2026-10-07,The Center Square/Noble Predictive Insights,"1,171 (RV)",D,mark_kelly,6,column
+2026-10-07,The Center Square/Noble Predictive Insights,"1,171 (RV)",D,pete_buttigieg,10,column
+2026-10-07,The Center Square/Noble Predictive Insights,"1,171 (RV)",D,ro_khanna,1,footnote
+2026-10-07,The Center Square/Noble Predictive Insights,"1,171 (RV)",D,wes_moore,1,footnote
+2026-10-05,Focaldata/Financial Times,778 (LV),D,alexandria_ocasio_cortez,9,column
+2026-10-05,Focaldata/Financial Times,778 (LV),D,andy_beshear,3,column
 2026-10-05,Focaldata/Financial Times,803 (LV),R,donald_trump_jr,7,column
+2026-10-05,Focaldata/Financial Times,778 (LV),D,gavin_newsom,15,column
 2026-10-05,Focaldata/Financial Times,803 (LV),R,jd_vance,38,column
+2026-10-05,Focaldata/Financial Times,778 (LV),D,jon_ossoff,8,column
+2026-10-05,Focaldata/Financial Times,778 (LV),D,josh_shapiro,5,column
+2026-10-05,Focaldata/Financial Times,778 (LV),D,kamala_harris,30,column
 2026-10-05,Focaldata/Financial Times,803 (LV),R,marco_rubio,24,column
+2026-10-05,Focaldata/Financial Times,778 (LV),D,mark_kelly,5,column
+2026-10-05,Focaldata/Financial Times,778 (LV),D,pete_buttigieg,9,column
+2026-10-05,Focaldata/Financial Times,778 (LV),D,rahm_emanuel,0,footnote
+2026-10-05,Focaldata/Financial Times,778 (LV),D,ro_khanna,0,footnote
 2026-10-05,Focaldata/Financial Times,803 (LV),R,robert_kennedy_jr,4,column
 2026-10-05,Focaldata/Financial Times,803 (LV),R,ron_desantis,9,column
 2026-10-05,Focaldata/Financial Times,803 (LV),R,ted_cruz,2,column
 2026-10-05,Focaldata/Financial Times,803 (LV),R,tucker_carlson,1,footnote
 2026-10-05,Focaldata/Financial Times,803 (LV),R,vivek_ramaswamy,1,column
-2026-09-28,Focaldata/Financial Times,778 (LV),D,alexandria_ocasio_cortez,9,column
-2026-09-28,Focaldata/Financial Times,778 (LV),D,andy_beshear,3,column
-2026-09-28,Focaldata/Financial Times,778 (LV),D,gavin_newsom,15,column
-2026-09-28,Focaldata/Financial Times,778 (LV),D,jon_ossoff,8,column
-2026-09-28,Focaldata/Financial Times,778 (LV),D,josh_shapiro,5,column
-2026-09-28,Focaldata/Financial Times,778 (LV),D,kamala_harris,30,column
-2026-09-28,Focaldata/Financial Times,778 (LV),D,mark_kelly,5,column
-2026-09-28,Focaldata/Financial Times,778 (LV),D,pete_buttigieg,9,column
-2026-09-28,Focaldata/Financial Times,778 (LV),D,rahm_emanuel,NA,footnote
-2026-09-28,Focaldata/Financial Times,778 (LV),D,ro_khanna,0,footnote
+2026-09-28,Harvard CAPS/Harris,"2,200 (RV)[q]",D,alexandria_ocasio_cortez,12,column
+2026-09-28,Harvard CAPS/Harris,"2,200 (RV)[q]",D,gavin_newsom,17,column
+2026-09-28,Harvard CAPS/Harris,"2,200 (RV)[q]",D,jb_pritzker,5,column
+2026-09-28,Harvard CAPS/Harris,"2,200 (RV)[q]",D,jon_ossoff,6,column
+2026-09-28,Harvard CAPS/Harris,"2,200 (RV)[q]",D,josh_shapiro,7,column
+2026-09-28,Harvard CAPS/Harris,"2,200 (RV)[q]",D,kamala_harris,38,column
+2026-09-28,Harvard CAPS/Harris,"2,200 (RV)[q]",D,pete_buttigieg,11,column
 2026-09-22,McLaughlin & Associates,463 (LV),D,alexandria_ocasio_cortez,8,column
 2026-09-22,McLaughlin & Associates,463 (LV),D,cory_booker,4,column
 2026-09-22,McLaughlin & Associates,430 (LV),R,donald_trump_jr,14,column
@@ -284,29 +320,28 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-09-22,McLaughlin & Associates,463 (LV),D,mark_kelly,8,column
 2026-09-22,McLaughlin & Associates,430 (LV),R,nikki_haley,3,column
 2026-09-22,McLaughlin & Associates,463 (LV),D,pete_buttigieg,9,column
-2026-09-22,McLaughlin & Associates,463 (LV),D,rahm_emanuel,NA,footnote
+2026-09-22,McLaughlin & Associates,463 (LV),D,rahm_emanuel,1,footnote
 2026-09-22,McLaughlin & Associates,430 (LV),R,rand_paul,NA,footnote
 2026-09-22,McLaughlin & Associates,430 (LV),R,rick_scott,NA,footnote
 2026-09-22,McLaughlin & Associates,430 (LV),R,ron_desantis,6,column
 2026-09-22,McLaughlin & Associates,430 (LV),R,sarah_huckabee_sanders,2,footnote
 2026-09-22,McLaughlin & Associates,430 (LV),R,spencer_cox,NA,footnote
-2026-09-22,McLaughlin & Associates,463 (LV),D,stephen_a_smith,NA,footnote
+2026-09-22,McLaughlin & Associates,463 (LV),D,stephen_a_smith,2,footnote
 2026-09-22,McLaughlin & Associates,430 (LV),R,ted_cruz,3,column
 2026-09-22,McLaughlin & Associates,430 (LV),R,tim_scott,1,footnote
 2026-09-22,McLaughlin & Associates,430 (LV),R,tom_cotton,NA,footnote
 2026-09-22,McLaughlin & Associates,430 (LV),R,tulsi_gabbard,NA,footnote
 2026-09-22,McLaughlin & Associates,430 (LV),R,vivek_ramaswamy,2,column
-2026-09-22,McLaughlin & Associates,463 (LV),D,wes_moore,NA,footnote
+2026-09-22,McLaughlin & Associates,463 (LV),D,wes_moore,1,footnote
 2026-09-21,Echelon Insights,491 (LV),D,alexandria_ocasio_cortez,7,column
 2026-09-21,Echelon Insights,491 (LV),D,andy_beshear,2,column
-2026-09-21,Echelon Insights,491 (LV),D,chris_murphy,NA,footnote
 2026-09-21,Echelon Insights,491 (LV),D,cory_booker,3,column
 2026-09-21,Echelon Insights,424 (LV),R,donald_trump_jr,6,column
 2026-09-21,Echelon Insights,424 (LV),R,doug_burgum,NA,footnote
 2026-09-21,Echelon Insights,491 (LV),D,gavin_newsom,14,column
 2026-09-21,Echelon Insights,424 (LV),R,glenn_youngkin,1,footnote
 2026-09-21,Echelon Insights,491 (LV),D,gretchen_whitmer,2,footnote
-2026-09-21,Echelon Insights,491 (LV),D,jared_polis,1,footnote
+2026-09-21,Echelon Insights,491 (LV),D,jb_pritzker,2,column
 2026-09-21,Echelon Insights,424 (LV),R,jd_vance,38,column
 2026-09-21,Echelon Insights,491 (LV),D,jon_ossoff,8,column
 2026-09-21,Echelon Insights,424 (LV),R,josh_hawley,NA,footnote
@@ -317,19 +352,16 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-09-21,Echelon Insights,424 (LV),R,marjorie_taylor_greene,NA,footnote
 2026-09-21,Echelon Insights,491 (LV),D,mark_kelly,7,column
 2026-09-21,Echelon Insights,491 (LV),D,pete_buttigieg,10,column
-2026-09-21,Echelon Insights,491 (LV),D,rahm_emanuel,NA,footnote
-2026-09-21,Echelon Insights,491 (LV),D,raphael_warnock,NA,footnote
-2026-09-21,Echelon Insights,491 (LV),D,ro_khanna,NA,footnote
+2026-09-21,Echelon Insights,491 (LV),D,raphael_warnock,1,footnote
 2026-09-21,Echelon Insights,424 (LV),R,robert_kennedy_jr,3,column
 2026-09-21,Echelon Insights,424 (LV),R,ron_desantis,8,column
-2026-09-21,Echelon Insights,491 (LV),D,ruben_gallego,0,footnote
 2026-09-21,Echelon Insights,424 (LV),R,sarah_huckabee_sanders,NA,footnote
 2026-09-21,Echelon Insights,424 (LV),R,steve_bannon,NA,footnote
 2026-09-21,Echelon Insights,424 (LV),R,ted_cruz,3,column
 2026-09-21,Echelon Insights,424 (LV),R,tim_scott,NA,footnote
 2026-09-21,Echelon Insights,424 (LV),R,tucker_carlson,NA,footnote
 2026-09-21,Echelon Insights,424 (LV),R,vivek_ramaswamy,2,column
-2026-09-21,Echelon Insights,491 (LV),D,wes_moore,NA,footnote
+2026-09-21,Echelon Insights,491 (LV),D,wes_moore,1,footnote
 2026-09-16,Clarity Campaign Labs,406 (LV),R,donald_trump_jr,12,column
 2026-09-16,Clarity Campaign Labs,406 (LV),R,jd_vance,35,column
 2026-09-16,Clarity Campaign Labs,406 (LV),R,marco_rubio,16,column
@@ -337,20 +369,20 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-09-16,Clarity Campaign Labs,406 (LV),R,ron_desantis,12,column
 2026-09-16,Clarity Campaign Labs,406 (LV),R,ted_cruz,3,column
 2026-09-16,Clarity Campaign Labs,406 (LV),R,tucker_carlson,2,footnote
-2026-09-15,Big Data Poll,"1,329 (LV)",D,alexandria_ocasio_cortez,10,column
-2026-09-15,Big Data Poll,"1,329 (LV)",D,andy_beshear,4,column
+2026-09-15,Big Data Poll,"1,329 (LV)",D,alexandria_ocasio_cortez,10.3,column
+2026-09-15,Big Data Poll,"1,329 (LV)",D,andy_beshear,3.5,column
 2026-09-15,Big Data Poll,"1,110 (LV)",R,brian_kemp,NA,footnote
-2026-09-15,Big Data Poll,"1,329 (LV)",D,gavin_newsom,16,column
+2026-09-15,Big Data Poll,"1,329 (LV)",D,gavin_newsom,16.1,column
 2026-09-15,Big Data Poll,"1,110 (LV)",R,glenn_youngkin,1,footnote
 2026-09-15,Big Data Poll,"1,329 (LV)",D,gretchen_whitmer,2.5,footnote
 2026-09-15,Big Data Poll,"1,110 (LV)",R,jd_vance,38,column
-2026-09-15,Big Data Poll,"1,329 (LV)",D,jon_ossoff,6,column
-2026-09-15,Big Data Poll,"1,329 (LV)",D,josh_shapiro,5,column
-2026-09-15,Big Data Poll,"1,329 (LV)",D,kamala_harris,27,column
+2026-09-15,Big Data Poll,"1,329 (LV)",D,jon_ossoff,6.4,column
+2026-09-15,Big Data Poll,"1,329 (LV)",D,josh_shapiro,5.5,column
+2026-09-15,Big Data Poll,"1,329 (LV)",D,kamala_harris,26.7,column
 2026-09-15,Big Data Poll,"1,110 (LV)",R,marco_rubio,16,column
-2026-09-15,Big Data Poll,"1,329 (LV)",D,mark_kelly,5,column
+2026-09-15,Big Data Poll,"1,329 (LV)",D,mark_kelly,5.4,column
 2026-09-15,Big Data Poll,"1,110 (LV)",R,nikki_haley,6,column
-2026-09-15,Big Data Poll,"1,329 (LV)",D,pete_buttigieg,10,column
+2026-09-15,Big Data Poll,"1,329 (LV)",D,pete_buttigieg,10.3,column
 2026-09-15,Big Data Poll,"1,110 (LV)",R,rand_paul,2,footnote
 2026-09-15,Big Data Poll,"1,110 (LV)",R,robert_kennedy_jr,6,column
 2026-09-15,Big Data Poll,"1,110 (LV)",R,ron_desantis,8,column
@@ -364,78 +396,76 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-09-13,Veteran Action/The Honest Poll,626 (LV),D,josh_shapiro,5,column
 2026-09-13,Veteran Action/The Honest Poll,626 (LV),D,kamala_harris,32,column
 2026-09-13,Veteran Action/The Honest Poll,626 (LV),D,pete_buttigieg,13,column
-2026-09-10,Liberal Currents/Center for Strategic Politics,683 (V),D,alexandria_ocasio_cortez,8,column
-2026-09-10,Liberal Currents/Center for Strategic Politics,683 (V),D,andy_beshear,3,column
-2026-09-10,Liberal Currents/Center for Strategic Politics,683 (V),D,gavin_newsom,15,column
-2026-09-10,Liberal Currents/Center for Strategic Politics,683 (V),D,jb_pritzker,4,column
-2026-09-10,Liberal Currents/Center for Strategic Politics,683 (V),D,jon_ossoff,10,column
-2026-09-10,Liberal Currents/Center for Strategic Politics,683 (V),D,josh_shapiro,6,column
-2026-09-10,Liberal Currents/Center for Strategic Politics,683 (V),D,kamala_harris,25,column
-2026-09-10,Liberal Currents/Center for Strategic Politics,683 (V),D,mark_kelly,9,column
-2026-09-10,Liberal Currents/Center for Strategic Politics,683 (V),D,pete_buttigieg,13,column
-2026-09-10,Liberal Currents/Center for Strategic Politics,683 (V),D,ro_khanna,1,footnote
-2026-09-02,Focaldata,614 (LV),D,alexandria_ocasio_cortez,11,column
-2026-09-02,Focaldata,614 (LV),D,andy_beshear,3,column
+2026-09-10,Liberal Currents/Center for Strategic Politics,683 (RV),D,alexandria_ocasio_cortez,8,column
+2026-09-10,Liberal Currents/Center for Strategic Politics,683 (RV),D,andy_beshear,3,column
+2026-09-10,Liberal Currents/Center for Strategic Politics,683 (RV),D,gavin_newsom,15,column
+2026-09-10,Liberal Currents/Center for Strategic Politics,683 (RV),D,jb_pritzker,4,column
+2026-09-10,Liberal Currents/Center for Strategic Politics,683 (RV),D,jon_ossoff,10,column
+2026-09-10,Liberal Currents/Center for Strategic Politics,683 (RV),D,josh_shapiro,6,column
+2026-09-10,Liberal Currents/Center for Strategic Politics,683 (RV),D,kamala_harris,25,column
+2026-09-10,Liberal Currents/Center for Strategic Politics,683 (RV),D,mark_kelly,9,column
+2026-09-10,Liberal Currents/Center for Strategic Politics,683 (RV),D,pete_buttigieg,13,column
+2026-09-10,Liberal Currents/Center for Strategic Politics,683 (RV),D,ro_khanna,1,footnote
 2026-09-02,Focaldata,662 (LV),R,donald_trump_jr,7,column
-2026-09-02,Focaldata,614 (LV),D,gavin_newsom,14,column
 2026-09-02,Focaldata,662 (LV),R,jd_vance,43,column
-2026-09-02,Focaldata,614 (LV),D,jon_ossoff,7,column
-2026-09-02,Focaldata,614 (LV),D,josh_shapiro,8,column
-2026-09-02,Focaldata,614 (LV),D,kamala_harris,29,column
 2026-09-02,Focaldata,662 (LV),R,marco_rubio,21,column
-2026-09-02,Focaldata,614 (LV),D,mark_kelly,6,column
-2026-09-02,Focaldata,614 (LV),D,pete_buttigieg,9,column
-2026-09-02,Focaldata,614 (LV),D,rahm_emanuel,1,footnote
-2026-09-02,Focaldata,614 (LV),D,ro_khanna,1,footnote
 2026-09-02,Focaldata,662 (LV),R,robert_kennedy_jr,4,column
 2026-09-02,Focaldata,662 (LV),R,ron_desantis,9,column
 2026-09-02,Focaldata,662 (LV),R,ted_cruz,4,column
 2026-09-02,Focaldata,662 (LV),R,tucker_carlson,1,footnote
 2026-09-02,Focaldata,662 (LV),R,vivek_ramaswamy,2,column
-2026-09-01,Bowling Green State University/YouGov,566 (LV),D,alexandria_ocasio_cortez,14,column
-2026-09-01,Bowling Green State University/YouGov,566 (LV),D,amy_klobuchar,NA,footnote
-2026-09-01,Bowling Green State University/YouGov,566 (LV),D,andy_beshear,3,column
-2026-09-01,Bowling Green State University/YouGov,566 (LV),D,cory_booker,4,column
+2026-09-02,Focaldata/Financial Times,614 (LV),D,alexandria_ocasio_cortez,11,column
+2026-09-02,Focaldata/Financial Times,614 (LV),D,andy_beshear,3,column
+2026-09-02,Focaldata/Financial Times,614 (LV),D,gavin_newsom,14,column
+2026-09-02,Focaldata/Financial Times,614 (LV),D,jon_ossoff,7,column
+2026-09-02,Focaldata/Financial Times,614 (LV),D,josh_shapiro,8,column
+2026-09-02,Focaldata/Financial Times,614 (LV),D,kamala_harris,29,column
+2026-09-02,Focaldata/Financial Times,614 (LV),D,mark_kelly,6,column
+2026-09-02,Focaldata/Financial Times,614 (LV),D,pete_buttigieg,9,column
+2026-09-02,Focaldata/Financial Times,614 (LV),D,rahm_emanuel,1,footnote
+2026-09-02,Focaldata/Financial Times,614 (LV),D,ro_khanna,1,footnote
+2026-09-01,BGSU/YouGov,566 (LV),D,alexandria_ocasio_cortez,14,column
+2026-09-01,BGSU/YouGov,566 (LV),D,amy_klobuchar,1,footnote
+2026-09-01,BGSU/YouGov,566 (LV),D,andy_beshear,3,column
+2026-09-01,BGSU/YouGov,566 (LV),D,cory_booker,4,column
+2026-09-01,BGSU/YouGov,566 (LV),D,elizabeth_warren,3,footnote
+2026-09-01,BGSU/YouGov,566 (LV),D,gavin_newsom,14,column
+2026-09-01,BGSU/YouGov,566 (LV),D,gretchen_whitmer,1,footnote
+2026-09-01,BGSU/YouGov,566 (LV),D,jb_pritzker,2,column
+2026-09-01,BGSU/YouGov,566 (LV),D,josh_shapiro,3,column
+2026-09-01,BGSU/YouGov,566 (LV),D,kamala_harris,17,column
+2026-09-01,BGSU/YouGov,566 (LV),D,mark_kelly,10,column
+2026-09-01,BGSU/YouGov,566 (LV),D,pete_buttigieg,16,column
+2026-09-01,BGSU/YouGov,566 (LV),D,rahm_emanuel,0,footnote
+2026-09-01,BGSU/YouGov,566 (LV),D,tim_walz,2,footnote
 2026-09-01,Bowling Green State University/YouGov,499 (LV),R,donald_trump_jr,8,column
-2026-09-01,Bowling Green State University/YouGov,566 (LV),D,elizabeth_warren,3,footnote
-2026-09-01,Bowling Green State University/YouGov,566 (LV),D,gavin_newsom,14,column
-2026-09-01,Bowling Green State University/YouGov,566 (LV),D,gretchen_whitmer,1,footnote
-2026-09-01,Bowling Green State University/YouGov,566 (LV),D,jb_pritzker,2,column
 2026-09-01,Bowling Green State University/YouGov,499 (LV),R,jd_vance,44,column
-2026-09-01,Bowling Green State University/YouGov,566 (LV),D,jon_ossoff,7,column
 2026-09-01,Bowling Green State University/YouGov,499 (LV),R,josh_hawley,NA,footnote
-2026-09-01,Bowling Green State University/YouGov,566 (LV),D,josh_shapiro,3,column
-2026-09-01,Bowling Green State University/YouGov,566 (LV),D,kamala_harris,17,column
 2026-09-01,Bowling Green State University/YouGov,499 (LV),R,marco_rubio,21,column
-2026-09-01,Bowling Green State University/YouGov,566 (LV),D,mark_kelly,6,column
 2026-09-01,Bowling Green State University/YouGov,499 (LV),R,nikki_haley,1,column
-2026-09-01,Bowling Green State University/YouGov,566 (LV),D,pete_buttigieg,16,column
-2026-09-01,Bowling Green State University/YouGov,566 (LV),D,rahm_emanuel,0,footnote
 2026-09-01,Bowling Green State University/YouGov,499 (LV),R,rand_paul,NA,footnote
 2026-09-01,Bowling Green State University/YouGov,499 (LV),R,robert_kennedy_jr,2,column
 2026-09-01,Bowling Green State University/YouGov,499 (LV),R,ron_desantis,7,column
 2026-09-01,Bowling Green State University/YouGov,499 (LV),R,ted_cruz,3,column
-2026-09-01,Bowling Green State University/YouGov,566 (LV),D,tim_walz,2,footnote
 2026-09-01,Bowling Green State University/YouGov,499 (LV),R,tucker_carlson,NA,footnote
-2026-08-30,Harvard Harris,"2,100 (RV)",D,alexandria_ocasio_cortez,9,column
-2026-08-30,Harvard Harris,"2,100 (RV)",D,gavin_newsom,18,column
-2026-08-30,Harvard Harris,"2,100 (RV)",D,jb_pritzker,4,column
-2026-08-30,Harvard Harris,"2,100 (RV)",D,jon_ossoff,7,column
-2026-08-30,Harvard Harris,"2,100 (RV)",D,josh_shapiro,7,column
-2026-08-30,Harvard Harris,"2,100 (RV)",D,kamala_harris,42,column
-2026-08-30,Harvard Harris,"2,100 (RV)",D,pete_buttigieg,9,column
-2026-08-28,Quantus Insights,551 (LV),D,alexandria_ocasio_cortez,15.3,column
+2026-08-30,Harvard CAPS/Harris,"2,100 (RV)[q]",D,alexandria_ocasio_cortez,9,column
+2026-08-30,Harvard CAPS/Harris,"2,100 (RV)[q]",D,gavin_newsom,18,column
+2026-08-30,Harvard CAPS/Harris,"2,100 (RV)[q]",D,jb_pritzker,4,column
+2026-08-30,Harvard CAPS/Harris,"2,100 (RV)[q]",D,jon_ossoff,7,column
+2026-08-30,Harvard CAPS/Harris,"2,100 (RV)[q]",D,josh_shapiro,7,column
+2026-08-30,Harvard CAPS/Harris,"2,100 (RV)[q]",D,kamala_harris,42,column
+2026-08-30,Harvard CAPS/Harris,"2,100 (RV)[q]",D,pete_buttigieg,9,column
+2026-08-28,Quantus Insights,515 (LV),D,alexandria_ocasio_cortez,15.3,column
 2026-08-28,Quantus Insights,473 (LV),R,donald_trump_jr,9,column
-2026-08-28,Quantus Insights,551 (LV),D,gavin_newsom,7.1,column
+2026-08-28,Quantus Insights,515 (LV),D,gavin_newsom,7.1,column
 2026-08-28,Quantus Insights,473 (LV),R,jd_vance,41,column
-2026-08-28,Quantus Insights,551 (LV),D,jon_ossoff,21.3,column
-2026-08-28,Quantus Insights,551 (LV),D,kamala_harris,8.1,column
+2026-08-28,Quantus Insights,515 (LV),D,jon_ossoff,21.3,column
+2026-08-28,Quantus Insights,515 (LV),D,kamala_harris,8.1,column
 2026-08-28,Quantus Insights,473 (LV),R,marco_rubio,29,column
-2026-08-28,Quantus Insights,551 (LV),D,pete_buttigieg,25.7,column
+2026-08-28,Quantus Insights,515 (LV),D,pete_buttigieg,25.7,column
 2026-08-28,Quantus Insights,473 (LV),R,ron_desantis,6,column
 2026-08-28,Quantus Insights,473 (LV),R,tucker_carlson,0,footnote
 2026-08-24,McLaughlin & Associates,474 (LV),D,alexandria_ocasio_cortez,9,column
-2026-08-24,McLaughlin & Associates,474 (LV),D,amy_klobuchar,NA,footnote
 2026-08-24,McLaughlin & Associates,474 (LV),D,cory_booker,3,column
 2026-08-24,McLaughlin & Associates,433 (LV),R,donald_trump_jr,19,column
 2026-08-24,McLaughlin & Associates,474 (LV),D,gavin_newsom,16,column
@@ -443,7 +473,6 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-08-24,McLaughlin & Associates,433 (LV),R,greg_abbott,NA,footnote
 2026-08-24,McLaughlin & Associates,474 (LV),D,gretchen_whitmer,2,footnote
 2026-08-24,McLaughlin & Associates,474 (LV),D,jared_polis,0,footnote
-2026-08-24,McLaughlin & Associates,474 (LV),D,jasmine_crockett,NA,footnote
 2026-08-24,McLaughlin & Associates,474 (LV),D,jb_pritzker,3,column
 2026-08-24,McLaughlin & Associates,433 (LV),R,jd_vance,32,column
 2026-08-24,McLaughlin & Associates,433 (LV),R,josh_hawley,NA,footnote
@@ -454,18 +483,15 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-08-24,McLaughlin & Associates,474 (LV),D,mark_kelly,7,column
 2026-08-24,McLaughlin & Associates,433 (LV),R,nikki_haley,5,column
 2026-08-24,McLaughlin & Associates,474 (LV),D,pete_buttigieg,10,column
-2026-08-24,McLaughlin & Associates,474 (LV),D,phil_murphy,NA,footnote
 2026-08-24,McLaughlin & Associates,474 (LV),D,rahm_emanuel,1,footnote
 2026-08-24,McLaughlin & Associates,433 (LV),R,rand_paul,NA,footnote
 2026-08-24,McLaughlin & Associates,433 (LV),R,rick_scott,NA,footnote
 2026-08-24,McLaughlin & Associates,433 (LV),R,ron_desantis,6,column
-2026-08-24,McLaughlin & Associates,474 (LV),D,roy_cooper,NA,footnote
 2026-08-24,McLaughlin & Associates,433 (LV),R,sarah_huckabee_sanders,0,footnote
 2026-08-24,McLaughlin & Associates,433 (LV),R,spencer_cox,NA,footnote
 2026-08-24,McLaughlin & Associates,474 (LV),D,stephen_a_smith,0,footnote
 2026-08-24,McLaughlin & Associates,433 (LV),R,ted_cruz,2,column
 2026-08-24,McLaughlin & Associates,433 (LV),R,tim_scott,NA,footnote
-2026-08-24,McLaughlin & Associates,474 (LV),D,tim_walz,NA,footnote
 2026-08-24,McLaughlin & Associates,433 (LV),R,tom_cotton,NA,footnote
 2026-08-24,McLaughlin & Associates,433 (LV),R,tulsi_gabbard,NA,footnote
 2026-08-24,McLaughlin & Associates,433 (LV),R,vivek_ramaswamy,3,column
@@ -473,11 +499,9 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-08-17,Echelon Insights,483 (LV),D,abdul_el_sayed,1,footnote
 2026-08-17,Echelon Insights,483 (LV),D,alexandria_ocasio_cortez,11,column
 2026-08-17,Echelon Insights,483 (LV),D,andy_beshear,2,column
-2026-08-17,Echelon Insights,483 (LV),D,chris_murphy,NA,footnote
 2026-08-17,Echelon Insights,483 (LV),D,cory_booker,3,column
 2026-08-17,Echelon Insights,483 (LV),D,gavin_newsom,12,column
 2026-08-17,Echelon Insights,483 (LV),D,gretchen_whitmer,2,footnote
-2026-08-17,Echelon Insights,483 (LV),D,jared_polis,NA,footnote
 2026-08-17,Echelon Insights,483 (LV),D,jb_pritzker,3,column
 2026-08-17,Echelon Insights,483 (LV),D,john_fetterman,1,footnote
 2026-08-17,Echelon Insights,483 (LV),D,jon_ossoff,5,column
@@ -485,19 +509,22 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-08-17,Echelon Insights,483 (LV),D,kamala_harris,18,column
 2026-08-17,Echelon Insights,483 (LV),D,mark_kelly,7,column
 2026-08-17,Echelon Insights,483 (LV),D,pete_buttigieg,13,column
-2026-08-17,Echelon Insights,483 (LV),D,rahm_emanuel,NA,footnote
 2026-08-17,Echelon Insights,483 (LV),D,raphael_warnock,1,footnote
 2026-08-17,Echelon Insights,483 (LV),D,ro_khanna,1,footnote
 2026-08-17,Echelon Insights,483 (LV),D,wes_moore,1,footnote
-2026-08-16,Noble Predictive Insights,930 (RV),D,alexandria_ocasio_cortez,7,column
-2026-08-16,Noble Predictive Insights,930 (RV),D,andy_beshear,3,column
-2026-08-16,Noble Predictive Insights,930 (RV),D,cory_booker,3,column
-2026-08-16,Noble Predictive Insights,930 (RV),D,gavin_newsom,14,column
-2026-08-16,Noble Predictive Insights,930 (RV),D,jb_pritzker,3,column
-2026-08-16,Noble Predictive Insights,930 (RV),D,josh_shapiro,5,column
-2026-08-16,Noble Predictive Insights,930 (RV),D,kamala_harris,28,column
-2026-08-16,Noble Predictive Insights,930 (RV),D,mark_kelly,3,column
-2026-08-16,Noble Predictive Insights,930 (RV),D,pete_buttigieg,12,column
+2026-08-16,The Center Square/Noble Predictive Insights,930 (RV),D,alexandria_ocasio_cortez,7,column
+2026-08-16,The Center Square/Noble Predictive Insights,930 (RV),D,amy_klobuchar,1,footnote
+2026-08-16,The Center Square/Noble Predictive Insights,930 (RV),D,andy_beshear,3,column
+2026-08-16,The Center Square/Noble Predictive Insights,930 (RV),D,chris_murphy,2,footnote
+2026-08-16,The Center Square/Noble Predictive Insights,930 (RV),D,cory_booker,3,column
+2026-08-16,The Center Square/Noble Predictive Insights,930 (RV),D,gavin_newsom,14,column
+2026-08-16,The Center Square/Noble Predictive Insights,930 (RV),D,jb_pritzker,3,column
+2026-08-16,The Center Square/Noble Predictive Insights,930 (RV),D,josh_shapiro,5,column
+2026-08-16,The Center Square/Noble Predictive Insights,930 (RV),D,kamala_harris,28,column
+2026-08-16,The Center Square/Noble Predictive Insights,930 (RV),D,mark_kelly,5,column
+2026-08-16,The Center Square/Noble Predictive Insights,930 (RV),D,pete_buttigieg,12,column
+2026-08-16,The Center Square/Noble Predictive Insights,930 (RV),D,ro_khanna,1,footnote
+2026-08-16,The Center Square/Noble Predictive Insights,930 (RV),D,wes_moore,1,footnote
 2026-08-11,Focal Data,874 (A),R,donald_trump_jr,10,column
 2026-08-11,Focal Data,874 (A),R,jd_vance,42,column
 2026-08-11,Focal Data,874 (A),R,marco_rubio,18,column
@@ -505,65 +532,74 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-08-11,Focal Data,874 (A),R,ron_desantis,8,column
 2026-08-11,Focal Data,874 (A),R,ted_cruz,3,column
 2026-08-11,Focal Data,874 (A),R,vivek_ramaswamy,3,column
-2026-08-11,Focaldata,616 (LV),D,alexandria_ocasio_cortez,9,column
-2026-08-11,Focaldata,616 (LV),D,andy_beshear,1,column
-2026-08-11,Focaldata,616 (LV),D,gavin_newsom,15,column
-2026-08-11,Focaldata,616 (LV),D,jon_ossoff,7,column
-2026-08-11,Focaldata,616 (LV),D,josh_shapiro,8,column
-2026-08-11,Focaldata,616 (LV),D,kamala_harris,26,column
-2026-08-11,Focaldata,616 (LV),D,mark_kelly,6,column
-2026-08-11,Focaldata,616 (LV),D,pete_buttigieg,13,column
-2026-08-11,Focaldata,616 (LV),D,rahm_emanuel,1,footnote
-2026-08-11,Focaldata,616 (LV),D,ro_khanna,1,footnote
-2026-08-04,Rasmussen Reports,"1,222 (LV)",D,alexandria_ocasio_cortez,9,column
-2026-08-04,Rasmussen Reports,"1,222 (LV)",D,gavin_newsom,14,column
-2026-08-04,Rasmussen Reports,"1,222 (LV)",D,josh_shapiro,6,column
-2026-08-04,Rasmussen Reports,"1,222 (LV)",D,kamala_harris,37,column
-2026-08-04,Rasmussen Reports,"1,222 (LV)",D,mark_kelly,9,column
-2026-08-04,Rasmussen Reports,"1,222 (LV)",D,pete_buttigieg,10,column
-2026-07-27,Big Data Poll,"1,338 (LV)",D,alexandria_ocasio_cortez,8.6,column
-2026-07-27,Big Data Poll,"1,338 (LV)",D,andy_beshear,4,column
-2026-07-27,Big Data Poll,"1,338 (LV)",D,gavin_newsom,14.3,column
-2026-07-27,Big Data Poll,"1,338 (LV)",D,gretchen_whitmer,2.6,footnote
-2026-07-27,Big Data Poll,"1,338 (LV)",D,jon_ossoff,6.2,column
-2026-07-27,Big Data Poll,"1,338 (LV)",D,josh_shapiro,6.5,column
-2026-07-27,Big Data Poll,"1,338 (LV)",D,kamala_harris,29.7,column
-2026-07-27,Big Data Poll,"1,338 (LV)",D,mark_kelly,5,column
-2026-07-27,Big Data Poll,"1,338 (LV)",D,pete_buttigieg,7.4,column
-2026-07-27,Big Data Poll,"1,338 (LV)",D,stephen_a_smith,1.5,footnote
-2026-07-21,McLauglin & Associates,472 (LV),D,alexandria_ocasio_cortez,10,column
-2026-07-21,McLauglin & Associates,472 (LV),D,cory_booker,5,column
-2026-07-21,McLauglin & Associates,472 (LV),D,gavin_newsom,18,column
-2026-07-21,McLauglin & Associates,472 (LV),D,gretchen_whitmer,2,footnote
-2026-07-21,McLauglin & Associates,472 (LV),D,jb_pritzker,5,column
-2026-07-21,McLauglin & Associates,472 (LV),D,josh_shapiro,5,column
-2026-07-21,McLauglin & Associates,472 (LV),D,kamala_harris,28,column
-2026-07-21,McLauglin & Associates,472 (LV),D,mark_kelly,3,column
-2026-07-21,McLauglin & Associates,472 (LV),D,pete_buttigieg,8,column
-2026-07-21,McLauglin & Associates,472 (LV),D,rahm_emanuel,1,footnote
-2026-07-21,McLauglin & Associates,472 (LV),D,wes_moore,2,footnote
-2026-07-20,Emerson College,574 (V),D,alexandria_ocasio_cortez,13,column
-2026-07-20,Emerson College,574 (V),D,andy_beshear,7,column
-2026-07-20,Emerson College,574 (V),D,gavin_newsom,17,column
-2026-07-20,Emerson College,574 (V),D,jb_pritzker,3,column
-2026-07-20,Emerson College,574 (V),D,jon_ossoff,13,column
-2026-07-20,Emerson College,574 (V),D,josh_shapiro,5,column
-2026-07-20,Emerson College,574 (V),D,kamala_harris,8,column
-2026-07-20,Emerson College,574 (V),D,pete_buttigieg,19,column
-2026-07-20,Emerson College,574 (V),D,ro_khanna,2,footnote
-2026-07-20,J.L. Partners,517 (RV),D,alexandria_ocasio_cortez,7,column
-2026-07-20,J.L. Partners,517 (RV),D,gavin_newsom,15,column
-2026-07-20,J.L. Partners,517 (RV),D,jb_pritzker,3,column
-2026-07-20,J.L. Partners,517 (RV),D,jon_ossoff,4,column
-2026-07-20,J.L. Partners,517 (RV),D,josh_shapiro,5,column
-2026-07-20,J.L. Partners,517 (RV),D,kamala_harris,31,column
-2026-07-20,J.L. Partners,517 (RV),D,mark_kelly,4,column
-2026-07-20,J.L. Partners,517 (RV),D,pete_buttigieg,9,column
+2026-08-11,Focaldata/Financial Times,616 (LV),D,alexandria_ocasio_cortez,9,column
+2026-08-11,Focaldata/Financial Times,616 (LV),D,andy_beshear,1,column
+2026-08-11,Focaldata/Financial Times,616 (LV),D,gavin_newsom,15,column
+2026-08-11,Focaldata/Financial Times,616 (LV),D,jon_ossoff,5,column
+2026-08-11,Focaldata/Financial Times,616 (LV),D,josh_shapiro,8,column
+2026-08-11,Focaldata/Financial Times,616 (LV),D,kamala_harris,26,column
+2026-08-11,Focaldata/Financial Times,616 (LV),D,mark_kelly,6,column
+2026-08-11,Focaldata/Financial Times,616 (LV),D,pete_buttigieg,13,column
+2026-08-11,Focaldata/Financial Times,616 (LV),D,rahm_emanuel,1,footnote
+2026-08-11,Focaldata/Financial Times,616 (LV),D,ro_khanna,1,footnote
+2026-07-29,Big Data Poll,"1,338 (LV)",D,alexandria_ocasio_cortez,8.6,column
+2026-07-29,Big Data Poll,"1,338 (LV)",D,andy_beshear,4,column
+2026-07-29,Big Data Poll,"1,338 (LV)",D,gavin_newsom,14.3,column
+2026-07-29,Big Data Poll,"1,338 (LV)",D,gretchen_whitmer,2.6,footnote
+2026-07-29,Big Data Poll,"1,338 (LV)",D,jon_ossoff,6.2,column
+2026-07-29,Big Data Poll,"1,338 (LV)",D,josh_shapiro,6.5,column
+2026-07-29,Big Data Poll,"1,338 (LV)",D,kamala_harris,29.7,column
+2026-07-29,Big Data Poll,"1,338 (LV)",D,mark_kelly,5,column
+2026-07-29,Big Data Poll,"1,338 (LV)",D,pete_buttigieg,7.4,column
+2026-07-29,Big Data Poll,"1,338 (LV)",D,stephen_a_smith,1.5,footnote
+2026-07-21,McLaughlin & Associates,472 (LV),D,alexandria_ocasio_cortez,10,column
+2026-07-21,McLaughlin & Associates,472 (LV),D,cory_booker,2,column
+2026-07-21,McLaughlin & Associates,472 (LV),D,gavin_newsom,17,column
+2026-07-21,McLaughlin & Associates,472 (LV),D,jared_polis,2,footnote
+2026-07-21,McLaughlin & Associates,472 (LV),D,jb_pritzker,3,column
+2026-07-21,McLaughlin & Associates,472 (LV),D,josh_shapiro,4,column
+2026-07-21,McLaughlin & Associates,472 (LV),D,kamala_harris,28,column
+2026-07-21,McLaughlin & Associates,472 (LV),D,mark_kelly,7,column
+2026-07-21,McLaughlin & Associates,472 (LV),D,pete_buttigieg,8,column
+2026-07-21,McLaughlin & Associates,472 (LV),D,rahm_emanuel,1,footnote
+2026-07-21,McLaughlin & Associates,472 (LV),D,stephen_a_smith,2,footnote
+2026-07-21,McLaughlin & Associates,472 (LV),D,wes_moore,1,footnote
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,alexandria_ocasio_cortez,7,column
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,amy_klobuchar,1,footnote
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,andy_beshear,2,column
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,cory_booker,3,column
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,gavin_newsom,14,column
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,gretchen_whitmer,1,footnote
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,jb_pritzker,3,column
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,john_fetterman,0,footnote
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,jon_ossoff,4,column
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,josh_shapiro,5,column
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,kamala_harris,31,column
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,mark_kelly,3,column
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,pete_buttigieg,9,column
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,ro_khanna,1,footnote
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,ruben_gallego,0,footnote
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,tim_walz,3,footnote
+2026-07-20,Daily Mail/J.L. Partners,516 (RV),D,wes_moore,2,footnote
+2026-07-20,Emerson College,574 (LV),D,alexandria_ocasio_cortez,12.5,column
+2026-07-20,Emerson College,574 (LV),D,andy_beshear,6.7,column
+2026-07-20,Emerson College,574 (LV),D,gavin_newsom,16.9,column
+2026-07-20,Emerson College,574 (LV),D,jb_pritzker,2.7,column
+2026-07-20,Emerson College,574 (LV),D,jon_ossoff,12.6,column
+2026-07-20,Emerson College,574 (LV),D,josh_shapiro,5,column
+2026-07-20,Emerson College,574 (LV),D,kamala_harris,8.1,column
+2026-07-20,Emerson College,574 (LV),D,pete_buttigieg,18.8,column
+2026-07-20,Emerson College,574 (LV),D,ro_khanna,1.5,footnote
 2026-07-13,Echelon Insights,496 (LV),D,alexandria_ocasio_cortez,9,column
+2026-07-13,Echelon Insights,496 (LV),D,andy_beshear,3,column
+2026-07-13,Echelon Insights,496 (LV),D,cory_booker,2,column
 2026-07-13,Echelon Insights,"1,004 (LV)",R,donald_trump_jr,8,column
 2026-07-13,Echelon Insights,496 (LV),D,gavin_newsom,14,column
+2026-07-13,Echelon Insights,496 (LV),D,gretchen_whitmer,2,footnote
 2026-07-13,Echelon Insights,496 (LV),D,jb_pritzker,3,column
 2026-07-13,Echelon Insights,"1,004 (LV)",R,jd_vance,38,column
+2026-07-13,Echelon Insights,496 (LV),D,john_fetterman,1,footnote
+2026-07-13,Echelon Insights,496 (LV),D,jon_ossoff,3,column
 2026-07-13,Echelon Insights,"1,004 (LV)",R,josh_hawley,1,footnote
 2026-07-13,Echelon Insights,496 (LV),D,josh_shapiro,7,column
 2026-07-13,Echelon Insights,496 (LV),D,kamala_harris,21,column
@@ -571,6 +607,8 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-07-13,Echelon Insights,"1,004 (LV)",R,marjorie_taylor_greene,1,footnote
 2026-07-13,Echelon Insights,496 (LV),D,mark_kelly,4,column
 2026-07-13,Echelon Insights,496 (LV),D,pete_buttigieg,13,column
+2026-07-13,Echelon Insights,496 (LV),D,raphael_warnock,1,footnote
+2026-07-13,Echelon Insights,496 (LV),D,ro_khanna,1,footnote
 2026-07-13,Echelon Insights,"1,004 (LV)",R,robert_kennedy_jr,3,column
 2026-07-13,Echelon Insights,"1,004 (LV)",R,ron_desantis,9,column
 2026-07-13,Echelon Insights,"1,004 (LV)",R,sarah_huckabee_sanders,2,footnote
@@ -578,20 +616,21 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-07-13,Echelon Insights,"1,004 (LV)",R,tim_scott,1,footnote
 2026-07-13,Echelon Insights,"1,004 (LV)",R,tucker_carlson,2,footnote
 2026-07-13,Echelon Insights,"1,004 (LV)",R,vivek_ramaswamy,3,column
-2026-07-12,Harvard Harris,"1,776 (RV)",D,alexandria_ocasio_cortez,9,column
+2026-07-13,Echelon Insights,496 (LV),D,wes_moore,1,footnote
+2026-07-12,Harvard CAPS/Harris,"1,776 (RV)[q]",D,alexandria_ocasio_cortez,9,column
+2026-07-12,Harvard CAPS/Harris,"1,776 (RV)[q]",D,gavin_newsom,24,column
+2026-07-12,Harvard CAPS/Harris,"1,776 (RV)[q]",D,jb_pritzker,5,column
+2026-07-12,Harvard CAPS/Harris,"1,776 (RV)[q]",D,josh_shapiro,9,column
+2026-07-12,Harvard CAPS/Harris,"1,776 (RV)[q]",D,kamala_harris,37,column
+2026-07-12,Harvard CAPS/Harris,"1,776 (RV)[q]",D,pete_buttigieg,10,column
 2026-07-12,Harvard Harris,"1,776 (RV)",R,donald_trump_jr,18,column
-2026-07-12,Harvard Harris,"1,776 (RV)",D,gavin_newsom,24,column
-2026-07-12,Harvard Harris,"1,776 (RV)",D,jb_pritzker,5,column
 2026-07-12,Harvard Harris,"1,776 (RV)",R,jd_vance,42,column
-2026-07-12,Harvard Harris,"1,776 (RV)",D,josh_shapiro,9,column
-2026-07-12,Harvard Harris,"1,776 (RV)",D,kamala_harris,37,column
 2026-07-12,Harvard Harris,"1,776 (RV)",R,marco_rubio,22,column
 2026-07-12,Harvard Harris,"1,776 (RV)",R,nikki_haley,6,column
-2026-07-12,Harvard Harris,"1,776 (RV)",D,pete_buttigieg,10,column
 2026-07-12,Harvard Harris,"1,776 (RV)",R,robert_kennedy_jr,6,column
 2026-07-12,Harvard Harris,"1,776 (RV)",R,tucker_carlson,3,footnote
 2026-07-10,YouGov,485 (A),D,alexandria_ocasio_cortez,10,column
-2026-07-10,YouGov,485 (A),D,amy_klobuchar,NA,footnote
+2026-07-10,YouGov,485 (A),D,amy_klobuchar,1,footnote
 2026-07-10,YouGov,485 (A),D,andy_beshear,2,column
 2026-07-10,YouGov,485 (A),D,bernie_sanders,7,footnote
 2026-07-10,YouGov,369 (A),R,brian_kemp,NA,footnote
@@ -616,42 +655,46 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-07-10,YouGov,369 (A),R,ron_desantis,4,column
 2026-07-10,YouGov,369 (A),R,ted_cruz,2,column
 2026-07-10,YouGov,369 (A),R,tim_scott,NA,footnote
+2026-07-10,YouGov,485 (A),D,tim_walz,3,footnote
 2026-07-10,YouGov,369 (A),R,tucker_carlson,NA,footnote
 2026-07-10,YouGov,369 (A),R,tulsi_gabbard,1,footnote
 2026-07-10,YouGov,369 (A),R,vivek_ramaswamy,2,column
-2026-07-07,Quantus Insights,"1,140 (LV)",D,alexandria_ocasio_cortez,11.1,column
-2026-07-07,Quantus Insights,"1,140 (LV)",D,gavin_newsom,17.7,column
+2026-07-07,Quantus Insights,503 (LV),D,alexandria_ocasio_cortez,11.1,column
+2026-07-07,Quantus Insights,503 (LV),D,gavin_newsom,17.7,column
 2026-07-07,Quantus Insights,480 (LV),R,jd_vance,42,column
-2026-07-07,Quantus Insights,"1,140 (LV)",D,josh_shapiro,7.1,column
-2026-07-07,Quantus Insights,"1,140 (LV)",D,kamala_harris,35.3,column
+2026-07-07,Quantus Insights,503 (LV),D,josh_shapiro,7.1,column
+2026-07-07,Quantus Insights,503 (LV),D,kamala_harris,35.3,column
 2026-07-07,Quantus Insights,480 (LV),R,marco_rubio,26,column
 2026-07-07,Quantus Insights,480 (LV),R,nikki_haley,3,column
-2026-07-07,Quantus Insights,"1,140 (LV)",D,pete_buttigieg,12.9,column
+2026-07-07,Quantus Insights,503 (LV),D,pete_buttigieg,12.9,column
 2026-07-07,Quantus Insights,480 (LV),R,ron_desantis,9,column
 2026-07-07,Quantus Insights,480 (LV),R,ted_cruz,4,column
-2026-07-06,Manhattan Institute,"1,121 (LV)",D,alexandria_ocasio_cortez,12,column
-2026-07-06,Manhattan Institute,"1,121 (LV)",D,cory_booker,3,column
-2026-07-06,Manhattan Institute,"1,121 (LV)",D,gavin_newsom,15,column
-2026-07-06,Manhattan Institute,"1,121 (LV)",D,jon_ossoff,3,column
-2026-07-06,Manhattan Institute,"1,121 (LV)",D,josh_shapiro,4,column
-2026-07-06,Manhattan Institute,"1,121 (LV)",D,kamala_harris,19,column
-2026-07-06,Manhattan Institute,"1,121 (LV)",D,mark_kelly,6,column
-2026-07-06,Manhattan Institute,"1,121 (LV)",D,pete_buttigieg,13,column
-2026-07-04,Zogby,391 (LV),D,alexandria_ocasio_cortez,12,column
-2026-07-04,Zogby,391 (LV),D,gavin_newsom,19,column
+2026-07-06,Manhattan Institute,"1,121 (LV)[at]",D,alexandria_ocasio_cortez,12,column
+2026-07-06,Manhattan Institute,"1,121 (LV)[at]",D,andy_beshear,2,column
+2026-07-06,Manhattan Institute,"1,121 (LV)[at]",D,cory_booker,3,column
+2026-07-06,Manhattan Institute,"1,121 (LV)[at]",D,gavin_newsom,15,column
+2026-07-06,Manhattan Institute,"1,121 (LV)[at]",D,jb_pritzker,1,column
+2026-07-06,Manhattan Institute,"1,121 (LV)[at]",D,jon_ossoff,3,column
+2026-07-06,Manhattan Institute,"1,121 (LV)[at]",D,jon_stewart,1,footnote
+2026-07-06,Manhattan Institute,"1,121 (LV)[at]",D,josh_shapiro,4,column
+2026-07-06,Manhattan Institute,"1,121 (LV)[at]",D,kamala_harris,19,column
+2026-07-06,Manhattan Institute,"1,121 (LV)[at]",D,mark_kelly,6,column
+2026-07-06,Manhattan Institute,"1,121 (LV)[at]",D,pete_buttigieg,13,column
 2026-07-04,Zogby,375 (LV),R,glenn_youngkin,1,footnote
-2026-07-04,Zogby,391 (LV),D,jb_pritzker,5,column
 2026-07-04,Zogby,375 (LV),R,jd_vance,51,column
-2026-07-04,Zogby,391 (LV),D,josh_shapiro,7,column
-2026-07-04,Zogby,391 (LV),D,kamala_harris,38,column
 2026-07-04,Zogby,375 (LV),R,marco_rubio,13,column
 2026-07-04,Zogby,375 (LV),R,marjorie_taylor_greene,3,footnote
-2026-07-04,Zogby,391 (LV),D,mark_kelly,6,column
-2026-07-04,Zogby,391 (LV),D,pete_buttigieg,9,column
 2026-07-04,Zogby,375 (LV),R,ron_desantis,13,column
-2026-07-04,Zogby,391 (LV),D,ruben_gallego,1,footnote
 2026-07-04,Zogby,375 (LV),R,sarah_huckabee_sanders,3,footnote
 2026-07-04,Zogby,375 (LV),R,ted_cruz,5,column
+2026-07-04,Zogby Analytics,391 (LV),D,alexandria_ocasio_cortez,12.3,column
+2026-07-04,Zogby Analytics,391 (LV),D,gavin_newsom,19.1,column
+2026-07-04,Zogby Analytics,391 (LV),D,jb_pritzker,5.3,column
+2026-07-04,Zogby Analytics,391 (LV),D,josh_shapiro,7,column
+2026-07-04,Zogby Analytics,391 (LV),D,kamala_harris,37.5,column
+2026-07-04,Zogby Analytics,391 (LV),D,mark_kelly,5.9,column
+2026-07-04,Zogby Analytics,391 (LV),D,pete_buttigieg,9.2,column
+2026-07-04,Zogby Analytics,391 (LV),D,ruben_gallego,0.6,footnote
 2026-06-30,Focal Data,727 (LV),R,donald_trump_jr,9,column
 2026-06-30,Focal Data,727 (LV),R,jd_vance,40,column
 2026-06-30,Focal Data,727 (LV),R,marco_rubio,18,column
@@ -661,24 +704,34 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-06-30,Focal Data,727 (LV),R,thomas_massie,2,footnote
 2026-06-30,Focal Data,727 (LV),R,tucker_carlson,2,footnote
 2026-06-30,Focal Data,727 (LV),R,vivek_ramaswamy,2,column
-2026-06-30,Focaldata,755 (LV),D,alexandria_ocasio_cortez,9,column
-2026-06-30,Focaldata,755 (LV),D,andy_beshear,2,column
-2026-06-30,Focaldata,755 (LV),D,gavin_newsom,15,column
-2026-06-30,Focaldata,755 (LV),D,jb_pritzker,3,column
-2026-06-30,Focaldata,755 (LV),D,jon_ossoff,2,column
-2026-06-30,Focaldata,755 (LV),D,jon_stewart,1,footnote
-2026-06-30,Focaldata,755 (LV),D,josh_shapiro,7,column
-2026-06-30,Focaldata,755 (LV),D,kamala_harris,33,column
-2026-06-30,Focaldata,755 (LV),D,mark_kelly,5,column
-2026-06-30,Focaldata,755 (LV),D,pete_buttigieg,8,column
+2026-06-30,Focaldata/Financial Times,755 (LV),D,alexandria_ocasio_cortez,9,column
+2026-06-30,Focaldata/Financial Times,755 (LV),D,andy_beshear,2,column
+2026-06-30,Focaldata/Financial Times,755 (LV),D,gavin_newsom,15,column
+2026-06-30,Focaldata/Financial Times,755 (LV),D,jb_pritzker,3,column
+2026-06-30,Focaldata/Financial Times,755 (LV),D,jon_ossoff,2,column
+2026-06-30,Focaldata/Financial Times,755 (LV),D,jon_stewart,1,footnote
+2026-06-30,Focaldata/Financial Times,755 (LV),D,josh_shapiro,7,column
+2026-06-30,Focaldata/Financial Times,755 (LV),D,kamala_harris,33,column
+2026-06-30,Focaldata/Financial Times,755 (LV),D,mark_kelly,5,column
+2026-06-30,Focaldata/Financial Times,755 (LV),D,pete_buttigieg,8,column
+2026-06-28,Big Data Poll,"1,256 (LV)",D,alexandria_ocasio_cortez,8.3,column
+2026-06-28,Big Data Poll,"1,256 (LV)",D,andy_beshear,2.2,column
 2026-06-28,Big Data Poll,"1,166 (LV)",R,brian_kemp,2,footnote
+2026-06-28,Big Data Poll,"1,256 (LV)",D,gavin_newsom,15.6,column
 2026-06-28,Big Data Poll,"1,166 (LV)",R,glenn_youngkin,2,footnote
+2026-06-28,Big Data Poll,"1,256 (LV)",D,gretchen_whitmer,3.8,footnote
 2026-06-28,Big Data Poll,"1,166 (LV)",R,jd_vance,37,column
+2026-06-28,Big Data Poll,"1,256 (LV)",D,jon_ossoff,3.5,column
+2026-06-28,Big Data Poll,"1,256 (LV)",D,josh_shapiro,6.9,column
+2026-06-28,Big Data Poll,"1,256 (LV)",D,kamala_harris,28.8,column
 2026-06-28,Big Data Poll,"1,166 (LV)",R,marco_rubio,18,column
+2026-06-28,Big Data Poll,"1,256 (LV)",D,mark_kelly,6.4,column
 2026-06-28,Big Data Poll,"1,166 (LV)",R,nikki_haley,4,column
+2026-06-28,Big Data Poll,"1,256 (LV)",D,pete_buttigieg,9.5,column
 2026-06-28,Big Data Poll,"1,166 (LV)",R,rand_paul,3,footnote
 2026-06-28,Big Data Poll,"1,166 (LV)",R,robert_kennedy_jr,7,column
 2026-06-28,Big Data Poll,"1,166 (LV)",R,ron_desantis,8,column
+2026-06-28,Big Data Poll,"1,256 (LV)",D,stephen_a_smith,1.2,footnote
 2026-06-28,Big Data Poll,"1,166 (LV)",R,steve_bannon,2,footnote
 2026-06-28,Big Data Poll,"1,166 (LV)",R,ted_cruz,5,column
 2026-06-28,Big Data Poll,"1,166 (LV)",R,tucker_carlson,2,footnote
@@ -690,12 +743,14 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-06-26,Daily Mail/J.L. Partners,"1,040 (RV)",D,gavin_newsom,15,column
 2026-06-26,Daily Mail/J.L. Partners,"1,040 (RV)",D,gretchen_whitmer,2,footnote
 2026-06-26,Daily Mail/J.L. Partners,"1,040 (RV)",D,jb_pritzker,3,column
+2026-06-26,Daily Mail/J.L. Partners,"1,040 (RV)",D,john_fetterman,0,footnote
 2026-06-26,Daily Mail/J.L. Partners,"1,040 (RV)",D,jon_ossoff,2,column
-2026-06-26,Daily Mail/J.L. Partners,"1,040 (RV)",D,josh_shapiro,3,column
+2026-06-26,Daily Mail/J.L. Partners,"1,040 (RV)",D,josh_shapiro,4,column
 2026-06-26,Daily Mail/J.L. Partners,"1,040 (RV)",D,kamala_harris,29,column
 2026-06-26,Daily Mail/J.L. Partners,"1,040 (RV)",D,mark_kelly,5,column
 2026-06-26,Daily Mail/J.L. Partners,"1,040 (RV)",D,pete_buttigieg,11,column
 2026-06-26,Daily Mail/J.L. Partners,"1,040 (RV)",D,ro_khanna,1,footnote
+2026-06-26,Daily Mail/J.L. Partners,"1,040 (RV)",D,ruben_gallego,0,footnote
 2026-06-26,Daily Mail/J.L. Partners,"1,040 (RV)",D,tim_walz,3,footnote
 2026-06-26,Daily Mail/J.L. Partners,"1,040 (RV)",D,wes_moore,1,footnote
 2026-06-26,JL Partners/Daily Mail,517 (LV),R,brian_kemp,1,footnote
@@ -710,32 +765,34 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-06-26,JL Partners/Daily Mail,517 (LV),R,ted_cruz,6,column
 2026-06-26,JL Partners/Daily Mail,517 (LV),R,tim_scott,1,footnote
 2026-06-26,JL Partners/Daily Mail,517 (LV),R,vivek_ramaswamy,2,column
+2026-06-23,McLaughlin & Associates,464 (LV),D,alexandria_ocasio_cortez,9,column
+2026-06-23,McLaughlin & Associates,464 (LV),D,cory_booker,5,column
 2026-06-23,McLaughlin & Associates,440 (RV),R,donald_trump_jr,14,column
+2026-06-23,McLaughlin & Associates,464 (LV),D,gavin_newsom,16,column
 2026-06-23,McLaughlin & Associates,440 (RV),R,glenn_youngkin,1,footnote
+2026-06-23,McLaughlin & Associates,464 (LV),D,gretchen_whitmer,2,footnote
+2026-06-23,McLaughlin & Associates,464 (LV),D,jared_polis,0,footnote
+2026-06-23,McLaughlin & Associates,464 (LV),D,jb_pritzker,5,column
 2026-06-23,McLaughlin & Associates,440 (RV),R,jd_vance,35,column
 2026-06-23,McLaughlin & Associates,440 (RV),R,josh_hawley,1,footnote
+2026-06-23,McLaughlin & Associates,464 (LV),D,josh_shapiro,5,column
+2026-06-23,McLaughlin & Associates,464 (LV),D,kamala_harris,26,column
 2026-06-23,McLaughlin & Associates,440 (RV),R,marco_rubio,15,column
+2026-06-23,McLaughlin & Associates,464 (LV),D,mark_kelly,3,column
 2026-06-23,McLaughlin & Associates,440 (RV),R,nikki_haley,3,column
+2026-06-23,McLaughlin & Associates,464 (LV),D,pete_buttigieg,8,column
+2026-06-23,McLaughlin & Associates,464 (LV),D,rahm_emanuel,1,footnote
 2026-06-23,McLaughlin & Associates,440 (RV),R,rand_paul,2,footnote
 2026-06-23,McLaughlin & Associates,440 (RV),R,rick_scott,1,footnote
 2026-06-23,McLaughlin & Associates,440 (RV),R,ron_desantis,5,column
 2026-06-23,McLaughlin & Associates,440 (RV),R,sarah_huckabee_sanders,1,footnote
+2026-06-23,McLaughlin & Associates,464 (LV),D,stephen_a_smith,0,footnote
 2026-06-23,McLaughlin & Associates,440 (RV),R,ted_cruz,3,column
 2026-06-23,McLaughlin & Associates,440 (RV),R,tim_scott,1,footnote
 2026-06-23,McLaughlin & Associates,440 (RV),R,tom_cotton,1,footnote
 2026-06-23,McLaughlin & Associates,440 (RV),R,tulsi_gabbard,2,footnote
 2026-06-23,McLaughlin & Associates,440 (RV),R,vivek_ramaswamy,4,column
-2026-06-23,McLauglin & Associates,464 (LV),D,alexandria_ocasio_cortez,9,column
-2026-06-23,McLauglin & Associates,464 (LV),D,cory_booker,5,column
-2026-06-23,McLauglin & Associates,464 (LV),D,gavin_newsom,16,column
-2026-06-23,McLauglin & Associates,464 (LV),D,gretchen_whitmer,2,footnote
-2026-06-23,McLauglin & Associates,464 (LV),D,jb_pritzker,5,column
-2026-06-23,McLauglin & Associates,464 (LV),D,josh_shapiro,5,column
-2026-06-23,McLauglin & Associates,464 (LV),D,kamala_harris,26,column
-2026-06-23,McLauglin & Associates,464 (LV),D,mark_kelly,3,column
-2026-06-23,McLauglin & Associates,464 (LV),D,pete_buttigieg,8,column
-2026-06-23,McLauglin & Associates,464 (LV),D,rahm_emanuel,1,footnote
-2026-06-23,McLauglin & Associates,464 (LV),D,wes_moore,2,footnote
+2026-06-23,McLaughlin & Associates,464 (LV),D,wes_moore,2,footnote
 2026-06-14,Echelon Insights,515 (LV),D,alexandria_ocasio_cortez,12,column
 2026-06-14,Echelon Insights,515 (LV),D,andy_beshear,2,column
 2026-06-14,Echelon Insights,515 (LV),D,chris_murphy,1,footnote
@@ -786,12 +843,12 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-06-04,Noble Predictive Insight,1046 (RV),R,ted_cruz,5,column
 2026-06-04,Noble Predictive Insight,1046 (RV),R,tim_scott,2,footnote
 2026-06-04,Noble Predictive Insight,1046 (RV),R,vivek_ramaswamy,3,column
-2026-06-04,Noble Predictive Insights,"1,013 (RV)",D,alexandria_ocasio_cortez,8,column
-2026-06-04,Noble Predictive Insights,"1,013 (RV)",D,andy_beshear,2,column
-2026-06-04,Noble Predictive Insights,"1,013 (RV)",D,gavin_newsom,14,column
-2026-06-04,Noble Predictive Insights,"1,013 (RV)",D,jb_pritzker,2,column
-2026-06-04,Noble Predictive Insights,"1,013 (RV)",D,kamala_harris,27,column
-2026-06-04,Noble Predictive Insights,"1,013 (RV)",D,pete_buttigieg,11,column
+2026-06-04,The Center Square/Noble Predictive Insights,"1,013 (RV)",D,alexandria_ocasio_cortez,8,column
+2026-06-04,The Center Square/Noble Predictive Insights,"1,013 (RV)",D,andy_beshear,2,column
+2026-06-04,The Center Square/Noble Predictive Insights,"1,013 (RV)",D,gavin_newsom,14,column
+2026-06-04,The Center Square/Noble Predictive Insights,"1,013 (RV)",D,jb_pritzker,2,column
+2026-06-04,The Center Square/Noble Predictive Insights,"1,013 (RV)",D,kamala_harris,27,column
+2026-06-04,The Center Square/Noble Predictive Insights,"1,013 (RV)",D,pete_buttigieg,11,column
 2026-06-01,Focal Data,667 (A),R,donald_trump_jr,10,column
 2026-06-01,Focal Data,667 (A),R,jd_vance,37,column
 2026-06-01,Focal Data,667 (A),R,marco_rubio,18,column
@@ -801,23 +858,23 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-06-01,Focal Data,667 (A),R,thomas_massie,2,footnote
 2026-06-01,Focal Data,667 (A),R,tucker_carlson,2,footnote
 2026-06-01,Focal Data,667 (A),R,vivek_ramaswamy,3,column
-2026-06-01,Focaldata,685 (RV),D,alexandria_ocasio_cortez,7,column
-2026-06-01,Focaldata,685 (RV),D,andy_beshear,3,column
-2026-06-01,Focaldata,685 (RV),D,gavin_newsom,17,column
-2026-06-01,Focaldata,685 (RV),D,jb_pritzker,2,column
-2026-06-01,Focaldata,685 (RV),D,jon_ossoff,2,column
-2026-06-01,Focaldata,685 (RV),D,jon_stewart,1,footnote
-2026-06-01,Focaldata,685 (RV),D,josh_shapiro,3,column
-2026-06-01,Focaldata,685 (RV),D,kamala_harris,37,column
-2026-06-01,Focaldata,685 (RV),D,mark_kelly,5,column
-2026-06-01,Focaldata,685 (RV),D,pete_buttigieg,8,column
-2026-05-31,Harvard Harris,"1,725 (RV)",D,alexandria_ocasio_cortez,8,column
+2026-06-01,Focaldata/Financial Times,646 (RV),D,alexandria_ocasio_cortez,7,column
+2026-06-01,Focaldata/Financial Times,646 (RV),D,andy_beshear,3,column
+2026-06-01,Focaldata/Financial Times,646 (RV),D,gavin_newsom,17,column
+2026-06-01,Focaldata/Financial Times,646 (RV),D,jb_pritzker,2,column
+2026-06-01,Focaldata/Financial Times,646 (RV),D,jon_ossoff,2,column
+2026-06-01,Focaldata/Financial Times,646 (RV),D,jon_stewart,1,footnote
+2026-06-01,Focaldata/Financial Times,646 (RV),D,josh_shapiro,3,column
+2026-06-01,Focaldata/Financial Times,646 (RV),D,kamala_harris,37,column
+2026-06-01,Focaldata/Financial Times,646 (RV),D,mark_kelly,5,column
+2026-06-01,Focaldata/Financial Times,646 (RV),D,pete_buttigieg,8,column
+2026-05-31,Harvard CAPS/Harris,"1,725 (RV)[q]",D,alexandria_ocasio_cortez,8,column
+2026-05-31,Harvard CAPS/Harris,"1,725 (RV)[q]",D,gavin_newsom,26,column
+2026-05-31,Harvard CAPS/Harris,"1,725 (RV)[q]",D,jb_pritzker,7,column
+2026-05-31,Harvard CAPS/Harris,"1,725 (RV)[q]",D,josh_shapiro,10,column
+2026-05-31,Harvard CAPS/Harris,"1,725 (RV)[q]",D,kamala_harris,44,column
 2026-05-31,Harvard Harris,"1,725 (RV)",R,donald_trump_jr,21,column
-2026-05-31,Harvard Harris,"1,725 (RV)",D,gavin_newsom,26,column
-2026-05-31,Harvard Harris,"1,725 (RV)",D,jb_pritzker,7,column
 2026-05-31,Harvard Harris,"1,725 (RV)",R,jd_vance,45,column
-2026-05-31,Harvard Harris,"1,725 (RV)",D,josh_shapiro,10,column
-2026-05-31,Harvard Harris,"1,725 (RV)",D,kamala_harris,44,column
 2026-05-31,Harvard Harris,"1,725 (RV)",R,marco_rubio,21,column
 2026-05-31,Harvard Harris,"1,725 (RV)",R,tucker_carlson,5,footnote
 2026-05-28,I&I/TIPP,593 (RV),D,alexandria_ocasio_cortez,5,column
@@ -862,44 +919,36 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-05-27,Big Data Poll,"1,148 (LV)",R,ted_cruz,3.3,column
 2026-05-27,Big Data Poll,"1,148 (LV)",R,tucker_carlson,2.5,footnote
 2026-05-27,Big Data Poll,"1,148 (LV)",R,tulsi_gabbard,2.3,footnote
-2026-05-25,Emerson College,432 (LV),D,alexandria_ocasio_cortez,11.1,column
-2026-05-25,Emerson College,432 (LV),D,andy_beshear,8.5,column
-2026-05-25,Emerson College,432 (LV),D,gavin_newsom,15.9,column
-2026-05-25,Emerson College,432 (LV),D,jb_pritzker,4.4,column
+2026-05-25,Emerson College,485 (LV),D,alexandria_ocasio_cortez,11.1,column
+2026-05-25,Emerson College,485 (LV),D,andy_beshear,8.5,column
+2026-05-25,Emerson College,485 (LV),D,gavin_newsom,15.9,column
+2026-05-25,Emerson College,485 (LV),D,jb_pritzker,4.4,column
 2026-05-25,Emerson College,432 (LV),R,jd_vance,35.5,column
-2026-05-25,Emerson College,432 (LV),D,josh_shapiro,10,column
-2026-05-25,Emerson College,432 (LV),D,kamala_harris,17.9,column
+2026-05-25,Emerson College,485 (LV),D,josh_shapiro,10,column
+2026-05-25,Emerson College,485 (LV),D,kamala_harris,9.9,column
 2026-05-25,Emerson College,432 (LV),R,marco_rubio,34.6,column
 2026-05-25,Emerson College,432 (LV),R,nikki_haley,4.6,column
-2026-05-25,Emerson College,432 (LV),D,pete_buttigieg,9.9,column
-2026-05-25,Emerson College,432 (LV),D,ro_khanna,1,footnote
+2026-05-25,Emerson College,485 (LV),D,pete_buttigieg,17.9,column
+2026-05-25,Emerson College,485 (LV),D,ro_khanna,1,footnote
 2026-05-25,Emerson College,432 (LV),R,robert_kennedy_jr,3.1,column
 2026-05-25,Emerson College,432 (LV),R,ron_desantis,5.4,column
 2026-05-25,Emerson College,432 (LV),R,ted_cruz,0.7,column
-2026-05-20,Overton Insights,661 (LV),D,alexandria_ocasio_cortez,12,column
-2026-05-20,Overton Insights,661 (LV),D,andy_beshear,3,column
-2026-05-20,Overton Insights,661 (LV),D,bernie_sanders,9,footnote
-2026-05-20,Overton Insights,661 (LV),D,cory_booker,7,column
-2026-05-20,Overton Insights,661 (LV),D,gavin_newsom,13,column
-2026-05-20,Overton Insights,661 (LV),D,gretchen_whitmer,0,footnote
-2026-05-20,Overton Insights,661 (LV),D,jb_pritzker,1,column
+2026-05-20,Overton Insights,"1,337 (LV)[bf]",D,alexandria_ocasio_cortez,12,column
+2026-05-20,Overton Insights,"1,337 (LV)[bf]",D,andy_beshear,3,column
+2026-05-20,Overton Insights,"1,337 (LV)[bf]",D,bernie_sanders,9,footnote
+2026-05-20,Overton Insights,"1,337 (LV)[bf]",D,cory_booker,7,column
+2026-05-20,Overton Insights,"1,337 (LV)[bf]",D,gavin_newsom,13,column
+2026-05-20,Overton Insights,"1,337 (LV)[bf]",D,gretchen_whitmer,0,footnote
+2026-05-20,Overton Insights,"1,337 (LV)[bf]",D,jb_pritzker,1,column
 2026-05-20,Overton Insights,509,R,jd_vance,39,column
-2026-05-20,Overton Insights,661 (LV),D,josh_shapiro,8,column
-2026-05-20,Overton Insights,661 (LV),D,kamala_harris,9,column
+2026-05-20,Overton Insights,"1,337 (LV)[bf]",D,josh_shapiro,8,column
+2026-05-20,Overton Insights,"1,337 (LV)[bf]",D,kamala_harris,9,column
 2026-05-20,Overton Insights,509,R,marco_rubio,32,column
-2026-05-20,Overton Insights,661 (LV),D,mark_kelly,4,column
+2026-05-20,Overton Insights,"1,337 (LV)[bf]",D,mark_kelly,4,column
 2026-05-20,Overton Insights,509,R,nikki_haley,4,column
-2026-05-20,Overton Insights,661 (LV),D,pete_buttigieg,16,column
+2026-05-20,Overton Insights,"1,337 (LV)[bf]",D,pete_buttigieg,16,column
 2026-05-20,Overton Insights,509,R,ron_desantis,9,column
-2026-05-20,Overton Insights,661 (LV),D,wes_moore,2,footnote
-2026-05-20,Rasmussen Reports,433 (LV),D,alexandria_ocasio_cortez,11,column
-2026-05-20,Rasmussen Reports,433 (LV),D,andy_beshear,4,column
-2026-05-20,Rasmussen Reports,433 (LV),D,gavin_newsom,12,column
-2026-05-20,Rasmussen Reports,433 (LV),D,jb_pritzker,2,column
-2026-05-20,Rasmussen Reports,433 (LV),D,josh_shapiro,9,column
-2026-05-20,Rasmussen Reports,433 (LV),D,kamala_harris,34,column
-2026-05-20,Rasmussen Reports,433 (LV),D,mark_kelly,9,column
-2026-05-20,Rasmussen Reports,433 (LV),D,pete_buttigieg,10,column
+2026-05-20,Overton Insights,"1,337 (LV)[bf]",D,wes_moore,2,footnote
 2026-05-19,Daily Mail/JL Partners,496 (LV),R,jd_vance,47,column
 2026-05-19,Daily Mail/JL Partners,496 (LV),R,kristi_noem,1,footnote
 2026-05-19,Daily Mail/JL Partners,496 (LV),R,marco_rubio,18,column
@@ -940,7 +989,6 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-05-18,McLaughlin & Associates,431 (LV),R,greg_abbott,2,footnote
 2026-05-18,McLaughlin & Associates,459 (LV),D,gretchen_whitmer,2,footnote
 2026-05-18,McLaughlin & Associates,459 (LV),D,jared_polis,0,footnote
-2026-05-18,McLaughlin & Associates,459 (LV),D,jasmine_crockett,NA,footnote
 2026-05-18,McLaughlin & Associates,459 (LV),D,jb_pritzker,2,column
 2026-05-18,McLaughlin & Associates,431 (LV),R,jd_vance,32,column
 2026-05-18,McLaughlin & Associates,431 (LV),R,josh_hawley,1,footnote
@@ -972,7 +1020,7 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-05-17,Lord Ashcroft Polls,3804 (A),R,ted_cruz,3,column
 2026-05-17,Lord Ashcroft Polls,3804 (A),R,tucker_carlson,2,footnote
 2026-05-11,Lake Research Partners,800 (LV),D,alexandria_ocasio_cortez,10,column
-2026-05-11,Lake Research Partners,800 (LV),D,andy_beshear,2,column
+2026-05-11,Lake Research Partners,800 (LV),D,andy_beshear,3,column
 2026-05-11,Lake Research Partners,800 (LV),D,cory_booker,5,column
 2026-05-11,Lake Research Partners,800 (LV),D,gavin_newsom,17,column
 2026-05-11,Lake Research Partners,800 (LV),D,gretchen_whitmer,3,footnote
@@ -984,41 +1032,42 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-05-11,Lake Research Partners,800 (LV),D,rahm_emanuel,1,footnote
 2026-05-11,Lake Research Partners,800 (LV),D,ro_khanna,0,footnote
 2026-05-11,Lake Research Partners,800 (LV),D,ruben_gallego,0,footnote
-2026-05-07,AtlasIntel,"2,069 (A)",D,alexandria_ocasio_cortez,26,column
-2026-05-07,AtlasIntel,"2,069 (A)",D,andy_beshear,4.1,column
+2026-05-07,AtlasIntel,"2,069 (A)[o]",D,alexandria_ocasio_cortez,26,column
+2026-05-07,AtlasIntel,"2,069 (A)[o]",D,andy_beshear,4.1,column
 2026-05-07,AtlasIntel,"2,069 (A)",R,brian_kemp,0.4,footnote
-2026-05-07,AtlasIntel,"2,069 (A)",D,cory_booker,3.9,column
+2026-05-07,AtlasIntel,"2,069 (A)[o]",D,cory_booker,3.9,column
 2026-05-07,AtlasIntel,"2,069 (A)",R,donald_trump_jr,0.4,column
-2026-05-07,AtlasIntel,"2,069 (A)",D,gavin_newsom,21.2,column
+2026-05-07,AtlasIntel,"2,069 (A)[o]",D,gavin_newsom,21.2,column
 2026-05-07,AtlasIntel,"2,069 (A)",R,greg_abbott,0.7,footnote
-2026-05-07,AtlasIntel,"2,069 (A)",D,gretchen_whitmer,1.1,footnote
+2026-05-07,AtlasIntel,"2,069 (A)[o]",D,gretchen_whitmer,1.1,footnote
 2026-05-07,AtlasIntel,"2,069 (A)",R,jd_vance,29.6,column
-2026-05-07,AtlasIntel,"2,069 (A)",D,josh_shapiro,2.4,column
-2026-05-07,AtlasIntel,"2,069 (A)",D,kamala_harris,12.9,column
+2026-05-07,AtlasIntel,"2,069 (A)[o]",D,josh_shapiro,2.4,column
+2026-05-07,AtlasIntel,"2,069 (A)[o]",D,kamala_harris,12.9,column
 2026-05-07,AtlasIntel,"2,069 (A)",R,marco_rubio,45.4,column
-2026-05-07,AtlasIntel,"2,069 (A)",D,pete_buttigieg,22.4,column
-2026-05-07,AtlasIntel,"2,069 (A)",D,rahm_emanuel,0.6,footnote
-2026-05-07,AtlasIntel,"2,069 (A)",D,raphael_warnock,0.1,footnote
-2026-05-07,AtlasIntel,"2,069 (A)",D,ro_khanna,0.9,footnote
+2026-05-07,AtlasIntel,"2,069 (A)[o]",D,pete_buttigieg,22.4,column
+2026-05-07,AtlasIntel,"2,069 (A)[o]",D,rahm_emanuel,0.6,footnote
+2026-05-07,AtlasIntel,"2,069 (A)[o]",D,raphael_warnock,0,footnote
+2026-05-07,AtlasIntel,"2,069 (A)[o]",D,ro_khanna,0.9,footnote
 2026-05-07,AtlasIntel,"2,069 (A)",R,ron_desantis,11.2,column
 2026-05-07,AtlasIntel,"2,069 (A)",R,tim_scott,0.7,footnote
+2026-05-07,AtlasIntel,"2,069 (A)[o]",D,tim_walz,1,footnote
 2026-05-07,AtlasIntel,"2,069 (A)",R,vivek_ramaswamy,1.4,column
-2026-05-07,AtlasIntel,"2,069 (A)",D,wes_moore,0.4,footnote
-2026-05-05,Focaldata,"1,339 (LV)",D,alexandria_ocasio_cortez,9,column
-2026-05-05,Focaldata,"1,339 (LV)",D,andy_beshear,2,column
-2026-05-05,Focaldata,"1,339 (LV)",D,gavin_newsom,16,column
-2026-05-05,Focaldata,"1,339 (LV)",D,jb_pritzker,3,column
-2026-05-05,Focaldata,"1,339 (LV)",D,jon_ossoff,1,column
-2026-05-05,Focaldata,"1,339 (LV)",D,jon_stewart,1,footnote
-2026-05-05,Focaldata,"1,339 (LV)",D,josh_shapiro,5,column
-2026-05-05,Focaldata,"1,339 (LV)",D,kamala_harris,38,column
-2026-05-05,Focaldata,"1,339 (LV)",D,mark_kelly,5,column
-2026-05-05,Focaldata,"1,339 (LV)",D,pete_buttigieg,9,column
-2026-04-26,Harvard Harris,"2,745 (RV)",D,alexandria_ocasio_cortez,8,column
-2026-04-26,Harvard Harris,"2,745 (RV)",D,gavin_newsom,22,column
-2026-04-26,Harvard Harris,"2,745 (RV)",D,jb_pritzker,6,column
-2026-04-26,Harvard Harris,"2,745 (RV)",D,josh_shapiro,9,column
-2026-04-26,Harvard Harris,"2,745 (RV)",D,kamala_harris,50,column
+2026-05-07,AtlasIntel,"2,069 (A)[o]",D,wes_moore,0.4,footnote
+2026-05-05,Focaldata/Financial Times,"1,339 (LV)",D,alexandria_ocasio_cortez,9,column
+2026-05-05,Focaldata/Financial Times,"1,339 (LV)",D,andy_beshear,2,column
+2026-05-05,Focaldata/Financial Times,"1,339 (LV)",D,gavin_newsom,16,column
+2026-05-05,Focaldata/Financial Times,"1,339 (LV)",D,jb_pritzker,3,column
+2026-05-05,Focaldata/Financial Times,"1,339 (LV)",D,jon_ossoff,1,column
+2026-05-05,Focaldata/Financial Times,"1,339 (LV)",D,jon_stewart,1,footnote
+2026-05-05,Focaldata/Financial Times,"1,339 (LV)",D,josh_shapiro,5,column
+2026-05-05,Focaldata/Financial Times,"1,339 (LV)",D,kamala_harris,38,column
+2026-05-05,Focaldata/Financial Times,"1,339 (LV)",D,mark_kelly,6,column
+2026-05-05,Focaldata/Financial Times,"1,339 (LV)",D,pete_buttigieg,9,column
+2026-04-26,Harvard CAPS/Harris,"2,745 (RV)[q]",D,alexandria_ocasio_cortez,8,column
+2026-04-26,Harvard CAPS/Harris,"2,745 (RV)[q]",D,gavin_newsom,22,column
+2026-04-26,Harvard CAPS/Harris,"2,745 (RV)[q]",D,jb_pritzker,6,column
+2026-04-26,Harvard CAPS/Harris,"2,745 (RV)[q]",D,josh_shapiro,9,column
+2026-04-26,Harvard CAPS/Harris,"2,745 (RV)[q]",D,kamala_harris,50,column
 2026-04-23,Verasight,864 (A),D,alexandria_ocasio_cortez,13,column
 2026-04-23,Verasight,864 (A),D,amy_klobuchar,2,footnote
 2026-04-23,Verasight,864 (A),D,bernie_sanders,11,footnote
@@ -1043,30 +1092,27 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-04-23,Verasight,802 (A),R,tucker_carlson,2.4,footnote
 2026-04-23,Verasight,802 (A),R,tulsi_gabbard,0.5,footnote
 2026-04-23,Verasight,802 (A),R,vivek_ramaswamy,2.7,column
-2026-04-20,Echelon Insights,525 (RV),D,alexandria_ocasio_cortez,10,column
-2026-04-20,Echelon Insights,525 (RV),D,andy_beshear,2,column
-2026-04-20,Echelon Insights,525 (RV),D,chris_murphy,NA,footnote
-2026-04-20,Echelon Insights,525 (RV),D,cory_booker,4,column
+2026-04-20,Echelon Insights,525 (LV),D,alexandria_ocasio_cortez,10,column
+2026-04-20,Echelon Insights,525 (LV),D,andy_beshear,2,column
+2026-04-20,Echelon Insights,525 (LV),D,cory_booker,4,column
 2026-04-20,Echelon Insights,409 (RV),R,donald_trump_jr,10,column
-2026-04-20,Echelon Insights,525 (RV),D,gavin_newsom,21,column
+2026-04-20,Echelon Insights,525 (LV),D,gavin_newsom,21,column
 2026-04-20,Echelon Insights,409 (RV),R,glenn_youngkin,1,footnote
-2026-04-20,Echelon Insights,525 (RV),D,gretchen_whitmer,2,footnote
-2026-04-20,Echelon Insights,525 (RV),D,jb_pritzker,3,column
+2026-04-20,Echelon Insights,525 (LV),D,gretchen_whitmer,2,footnote
+2026-04-20,Echelon Insights,525 (LV),D,jb_pritzker,3,column
 2026-04-20,Echelon Insights,409 (RV),R,jd_vance,42,column
-2026-04-20,Echelon Insights,525 (RV),D,jon_ossoff,2,column
-2026-04-20,Echelon Insights,525 (RV),D,josh_shapiro,5,column
-2026-04-20,Echelon Insights,525 (RV),D,kamala_harris,22,column
+2026-04-20,Echelon Insights,525 (LV),D,jon_ossoff,2,column
+2026-04-20,Echelon Insights,525 (LV),D,josh_shapiro,5,column
+2026-04-20,Echelon Insights,525 (LV),D,kamala_harris,22,column
 2026-04-20,Echelon Insights,409 (RV),R,kristi_noem,NA,footnote
 2026-04-20,Echelon Insights,409 (RV),R,marco_rubio,14,column
 2026-04-20,Echelon Insights,409 (RV),R,marjorie_taylor_greene,1,footnote
-2026-04-20,Echelon Insights,525 (RV),D,mark_kelly,3,column
-2026-04-20,Echelon Insights,525 (RV),D,pete_buttigieg,12,column
-2026-04-20,Echelon Insights,525 (RV),D,rahm_emanuel,NA,footnote
-2026-04-20,Echelon Insights,525 (RV),D,raphael_warnock,1,footnote
-2026-04-20,Echelon Insights,525 (RV),D,ro_khanna,1,footnote
+2026-04-20,Echelon Insights,525 (LV),D,mark_kelly,3,column
+2026-04-20,Echelon Insights,525 (LV),D,pete_buttigieg,12,column
+2026-04-20,Echelon Insights,525 (LV),D,raphael_warnock,1,footnote
+2026-04-20,Echelon Insights,525 (LV),D,ro_khanna,1,footnote
 2026-04-20,Echelon Insights,409 (RV),R,robert_kennedy_jr,2,column
 2026-04-20,Echelon Insights,409 (RV),R,ron_desantis,8,column
-2026-04-20,Echelon Insights,525 (RV),D,ruben_gallego,2,footnote
 2026-04-20,Echelon Insights,409 (RV),R,sarah_huckabee_sanders,1,footnote
 2026-04-20,Echelon Insights,409 (RV),R,steve_bannon,1,footnote
 2026-04-20,Echelon Insights,409 (RV),R,ted_cruz,1,column
@@ -1074,93 +1120,85 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-04-20,Echelon Insights,409 (RV),R,tucker_carlson,1,footnote
 2026-04-20,Echelon Insights,409 (RV),R,tulsi_gabbard,2,footnote
 2026-04-20,Echelon Insights,409 (RV),R,vivek_ramaswamy,2,column
-2026-04-20,Echelon Insights,525 (RV),D,wes_moore,1,footnote
-2026-04-15,McLaughlin & Associates,457 (RV),D,alexandria_ocasio_cortez,4,column
-2026-04-15,McLaughlin & Associates,457 (RV),D,amy_klobuchar,1,footnote
-2026-04-15,McLaughlin & Associates,457 (RV),D,cory_booker,4,column
+2026-04-20,Echelon Insights,525 (LV),D,wes_moore,1,footnote
+2026-04-15,McLaughlin & Associates,457 (LV),D,alexandria_ocasio_cortez,4,column
+2026-04-15,McLaughlin & Associates,457 (LV),D,amy_klobuchar,1,footnote
+2026-04-15,McLaughlin & Associates,457 (LV),D,cory_booker,4,column
 2026-04-15,McLaughlin & Associates,457 (RV),R,donald_trump_jr,13,column
-2026-04-15,McLaughlin & Associates,457 (RV),D,gavin_newsom,15,column
-2026-04-15,McLaughlin & Associates,457 (RV),D,gretchen_whitmer,4,footnote
-2026-04-15,McLaughlin & Associates,457 (RV),D,jared_polis,1,footnote
-2026-04-15,McLaughlin & Associates,457 (RV),D,jasmine_crockett,NA,footnote
-2026-04-15,McLaughlin & Associates,457 (RV),D,jb_pritzker,3,column
+2026-04-15,McLaughlin & Associates,457 (LV),D,gavin_newsom,15,column
+2026-04-15,McLaughlin & Associates,457 (LV),D,gretchen_whitmer,4,footnote
+2026-04-15,McLaughlin & Associates,457 (LV),D,jared_polis,1,footnote
+2026-04-15,McLaughlin & Associates,457 (LV),D,jb_pritzker,3,column
 2026-04-15,McLaughlin & Associates,457 (RV),R,jd_vance,35,column
-2026-04-15,McLaughlin & Associates,457 (RV),D,josh_shapiro,4,column
-2026-04-15,McLaughlin & Associates,457 (RV),D,kamala_harris,29,column
+2026-04-15,McLaughlin & Associates,457 (LV),D,josh_shapiro,4,column
+2026-04-15,McLaughlin & Associates,457 (LV),D,kamala_harris,29,column
 2026-04-15,McLaughlin & Associates,457 (RV),R,marco_rubio,15,column
-2026-04-15,McLaughlin & Associates,457 (RV),D,pete_buttigieg,10,column
-2026-04-15,McLaughlin & Associates,457 (RV),D,phil_murphy,1,footnote
-2026-04-15,McLaughlin & Associates,457 (RV),D,rahm_emanuel,1,footnote
+2026-04-15,McLaughlin & Associates,457 (LV),D,pete_buttigieg,10,column
+2026-04-15,McLaughlin & Associates,457 (LV),D,phil_murphy,1,footnote
+2026-04-15,McLaughlin & Associates,457 (LV),D,rahm_emanuel,1,footnote
 2026-04-15,McLaughlin & Associates,457 (RV),R,ron_desantis,7,column
-2026-04-15,McLaughlin & Associates,457 (RV),D,roy_cooper,3,footnote
-2026-04-15,McLaughlin & Associates,457 (RV),D,stephen_a_smith,2,footnote
-2026-04-15,McLaughlin & Associates,457 (RV),D,tim_walz,2,footnote
-2026-04-15,McLaughlin & Associates,457 (RV),D,wes_moore,2,footnote
+2026-04-15,McLaughlin & Associates,457 (LV),D,roy_cooper,3,footnote
+2026-04-15,McLaughlin & Associates,457 (LV),D,stephen_a_smith,2,footnote
+2026-04-15,McLaughlin & Associates,457 (LV),D,tim_walz,2,footnote
+2026-04-15,McLaughlin & Associates,457 (LV),D,wes_moore,2,footnote
 2026-04-13,Rasmussen Reports,385 (LV),R,jd_vance,47,column
 2026-04-13,Rasmussen Reports,385 (LV),R,marco_rubio,20,column
 2026-04-13,Rasmussen Reports,385 (LV),R,ron_desantis,7,column
-2026-04-13,YouGov,968 (RV),D,alexandria_ocasio_cortez,9,column
-2026-04-13,YouGov,968 (RV),D,cory_booker,2,column
+2026-04-13,YouGov,968 (A),D,alexandria_ocasio_cortez,9,column
+2026-04-13,YouGov,968 (A),D,amy_klobuchar,1,footnote
+2026-04-13,YouGov,968 (A),D,andy_beshear,2,column
+2026-04-13,YouGov,968 (A),D,bernie_sanders,7,footnote
+2026-04-13,YouGov,968 (A),D,cory_booker,2,column
 2026-04-13,YouGov,968 (RV),R,donald_trump_jr,13,column
-2026-04-13,YouGov,968 (RV),D,gavin_newsom,12,column
-2026-04-13,YouGov,968 (RV),D,jb_pritzker,3,column
+2026-04-13,YouGov,968 (A),D,elizabeth_warren,3,footnote
+2026-04-13,YouGov,968 (A),D,gavin_newsom,12,column
+2026-04-13,YouGov,968 (A),D,gretchen_whitmer,1,footnote
+2026-04-13,YouGov,968 (A),D,jb_pritzker,3,column
 2026-04-13,YouGov,968 (RV),R,jd_vance,36,column
-2026-04-13,YouGov,968 (RV),D,josh_shapiro,5,column
-2026-04-13,YouGov,968 (RV),D,kamala_harris,24,column
+2026-04-13,YouGov,968 (A),D,josh_shapiro,4,column
+2026-04-13,YouGov,968 (A),D,kamala_harris,24,column
 2026-04-13,YouGov,968 (RV),R,marco_rubio,15,column
-2026-04-13,YouGov,968 (RV),D,pete_buttigieg,9,column
+2026-04-13,YouGov,968 (A),D,mark_kelly,5,column
+2026-04-13,YouGov,968 (A),D,pete_buttigieg,9,column
 2026-04-13,YouGov,968 (RV),R,ron_desantis,6,column
-2026-03-26,Harvard Harris,"2,009 (RV)",D,alexandria_ocasio_cortez,8,column
-2026-03-26,Harvard Harris,"2,009 (RV)",D,gavin_newsom,26,column
-2026-03-26,Harvard Harris,"2,009 (RV)",D,jb_pritzker,7,column
-2026-03-26,Harvard Harris,"2,009 (RV)",D,josh_shapiro,10,column
-2026-03-26,Harvard Harris,"2,009 (RV)",D,kamala_harris,41,column
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,alexandria_ocasio_cortez,7,column
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,amy_klobuchar,1,footnote
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,andy_beshear,3,column
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,cory_booker,3,column
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,gavin_newsom,19,column
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,gretchen_whitmer,2,footnote
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,jb_pritzker,3,column
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,john_fetterman,1,footnote
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,jon_ossoff,2,column
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,josh_shapiro,8,column
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,kamala_harris,22,column
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,mark_kelly,5,column
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,pete_buttigieg,11,column
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,ro_khanna,0,footnote
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,ruben_gallego,1,footnote
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,tim_walz,2,footnote
-2026-03-20,JL Partners/Daily Mail,541 (LV),D,wes_moore,1,footnote
-2026-03-16,Echelon Insights,"1,033 (LV)",D,alexandria_ocasio_cortez,11,column
-2026-03-16,Echelon Insights,"1,033 (LV)",D,andy_beshear,4,column
-2026-03-16,Echelon Insights,"1,033 (LV)",D,chris_murphy,1,footnote
-2026-03-16,Echelon Insights,"1,033 (LV)",D,cory_booker,4,column
-2026-03-16,Echelon Insights,"1,033 (LV)",D,gavin_newsom,19,column
-2026-03-16,Echelon Insights,"1,033 (LV)",D,gretchen_whitmer,2,footnote
-2026-03-16,Echelon Insights,"1,033 (LV)",D,jared_polis,1,footnote
-2026-03-16,Echelon Insights,"1,033 (LV)",D,jb_pritzker,2,column
-2026-03-16,Echelon Insights,"1,033 (LV)",D,john_fetterman,1,footnote
-2026-03-16,Echelon Insights,"1,033 (LV)",D,jon_ossoff,1,column
-2026-03-16,Echelon Insights,"1,033 (LV)",D,josh_shapiro,5,column
-2026-03-16,Echelon Insights,"1,033 (LV)",D,kamala_harris,21,column
-2026-03-16,Echelon Insights,"1,033 (LV)",D,mark_kelly,4,column
-2026-03-16,Echelon Insights,"1,033 (LV)",D,pete_buttigieg,9,column
-2026-03-16,Echelon Insights,"1,033 (LV)",D,rahm_emanuel,NA,footnote
-2026-03-16,Echelon Insights,"1,033 (LV)",D,raphael_warnock,2,footnote
-2026-03-16,Echelon Insights,"1,033 (LV)",D,ro_khanna,1,footnote
-2026-03-16,Echelon Insights,"1,033 (LV)",D,ruben_gallego,NA,footnote
-2026-03-16,Echelon Insights,"1,033 (LV)",D,wes_moore,2,footnote
-2026-03-10,Focaldata,"1,782 (V)",D,alexandria_ocasio_cortez,11,column
-2026-03-10,Focaldata,"1,782 (V)",D,andy_beshear,2,column
-2026-03-10,Focaldata,"1,782 (V)",D,gavin_newsom,22,column
-2026-03-10,Focaldata,"1,782 (V)",D,jb_pritzker,4,column
-2026-03-10,Focaldata,"1,782 (V)",D,jon_ossoff,2,column
-2026-03-10,Focaldata,"1,782 (V)",D,jon_stewart,2,footnote
-2026-03-10,Focaldata,"1,782 (V)",D,josh_shapiro,6,column
-2026-03-10,Focaldata,"1,782 (V)",D,kamala_harris,39,column
-2026-03-10,Focaldata,"1,782 (V)",D,mark_kelly,4,column
-2026-03-10,Focaldata,"1,782 (V)",D,pete_buttigieg,8,column
+2026-04-13,YouGov,968 (A),D,tim_walz,1,footnote
+2026-03-26,Harvard CAPS/Harris,"2,009 (RV)[q]",D,alexandria_ocasio_cortez,8,column
+2026-03-26,Harvard CAPS/Harris,"2,009 (RV)[q]",D,gavin_newsom,26,column
+2026-03-26,Harvard CAPS/Harris,"2,009 (RV)[q]",D,jb_pritzker,7,column
+2026-03-26,Harvard CAPS/Harris,"2,009 (RV)[q]",D,josh_shapiro,10,column
+2026-03-26,Harvard CAPS/Harris,"2,009 (RV)[q]",D,kamala_harris,41,column
+2026-03-20,Daily Mail/J.L. Partners,541 (LV),D,alexandria_ocasio_cortez,7,column
+2026-03-20,Daily Mail/J.L. Partners,541 (LV),D,gavin_newsom,19,column
+2026-03-20,Daily Mail/J.L. Partners,541 (LV),D,josh_shapiro,8,column
+2026-03-20,Daily Mail/J.L. Partners,541 (LV),D,kamala_harris,22,column
+2026-03-20,Daily Mail/J.L. Partners,541 (LV),D,pete_buttigieg,10,column
+2026-03-16,Echelon Insights,513 (LV),D,alexandria_ocasio_cortez,11,column
+2026-03-16,Echelon Insights,513 (LV),D,andy_beshear,3,column
+2026-03-16,Echelon Insights,513 (LV),D,chris_murphy,1,footnote
+2026-03-16,Echelon Insights,513 (LV),D,cory_booker,4,column
+2026-03-16,Echelon Insights,513 (LV),D,gavin_newsom,19,column
+2026-03-16,Echelon Insights,513 (LV),D,gretchen_whitmer,2,footnote
+2026-03-16,Echelon Insights,513 (LV),D,jared_polis,1,footnote
+2026-03-16,Echelon Insights,513 (LV),D,jb_pritzker,2,column
+2026-03-16,Echelon Insights,513 (LV),D,john_fetterman,1,footnote
+2026-03-16,Echelon Insights,513 (LV),D,jon_ossoff,1,column
+2026-03-16,Echelon Insights,513 (LV),D,josh_shapiro,5,column
+2026-03-16,Echelon Insights,513 (LV),D,kamala_harris,21,column
+2026-03-16,Echelon Insights,513 (LV),D,mark_kelly,4,column
+2026-03-16,Echelon Insights,513 (LV),D,pete_buttigieg,9,column
+2026-03-16,Echelon Insights,513 (LV),D,raphael_warnock,2,footnote
+2026-03-16,Echelon Insights,513 (LV),D,ro_khanna,1,footnote
+2026-03-16,Echelon Insights,513 (LV),D,wes_moore,2,footnote
+2026-03-10,Focaldata,672 (LV),D,alexandria_ocasio_cortez,11,column
+2026-03-10,Focaldata,672 (LV),D,andy_beshear,2,column
+2026-03-10,Focaldata,672 (LV),D,gavin_newsom,22,column
+2026-03-10,Focaldata,672 (LV),D,jb_pritzker,4,column
+2026-03-10,Focaldata,672 (LV),D,jon_ossoff,2,column
+2026-03-10,Focaldata,672 (LV),D,jon_stewart,2,footnote
+2026-03-10,Focaldata,672 (LV),D,josh_shapiro,6,column
+2026-03-10,Focaldata,672 (LV),D,kamala_harris,39,column
+2026-03-10,Focaldata,672 (LV),D,mark_kelly,4,column
+2026-03-10,Focaldata,672 (LV),D,pete_buttigieg,8,column
 2026-03-09,McLaughlin & Associates,456 (LV),D,alexandria_ocasio_cortez,11,column
 2026-03-09,McLaughlin & Associates,456 (LV),D,amy_klobuchar,3,footnote
 2026-03-09,McLaughlin & Associates,456 (LV),D,cory_booker,2,column
@@ -1178,196 +1216,219 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-03-09,McLaughlin & Associates,456 (LV),D,stephen_a_smith,1,footnote
 2026-03-09,McLaughlin & Associates,456 (LV),D,tim_walz,2,footnote
 2026-03-09,McLaughlin & Associates,456 (LV),D,wes_moore,1,footnote
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,alexandria_ocasio_cortez,12.7,column
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,andy_beshear,2.4,column
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,chris_murphy,1,footnote
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,cory_booker,2.2,column
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,gavin_newsom,19.2,column
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,gretchen_whitmer,2,footnote
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,jared_polis,0.9,footnote
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,jb_pritzker,3.5,column
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,jon_ossoff,1.4,footnote
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,josh_shapiro,3.5,column
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,kamala_harris,19.7,column
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,mark_cuban,1.5,footnote
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,mark_kelly,6.7,column
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,pete_buttigieg,13.9,column
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,rahm_emanuel,0,footnote
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,raphael_warnock,1.1,footnote
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,ruben_gallego,0.2,footnote
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,tim_walz,1.8,footnote
-2026-03-09,Yale Youth Poll,"1,557 (RV)",D,wes_moore,0.9,footnote
-2026-03-05,Noble Predictive Insights,"1,152 (RV)",D,alexandria_ocasio_cortez,6,column
-2026-03-05,Noble Predictive Insights,"1,152 (RV)",D,cory_booker,3,column
-2026-03-05,Noble Predictive Insights,"1,152 (RV)",D,gavin_newsom,16,column
-2026-03-05,Noble Predictive Insights,"1,152 (RV)",D,jb_pritzker,2,column
-2026-03-05,Noble Predictive Insights,"1,152 (RV)",D,josh_shapiro,5,column
-2026-03-05,Noble Predictive Insights,"1,152 (RV)",D,kamala_harris,31,column
-2026-03-05,Noble Predictive Insights,"1,152 (RV)",D,pete_buttigieg,7,column
-2026-02-27,J.L. Partners,"1,095 (RV)",D,alexandria_ocasio_cortez,9,column
-2026-02-27,J.L. Partners,"1,095 (RV)",D,cory_booker,5,column
-2026-02-27,J.L. Partners,"1,095 (RV)",D,gavin_newsom,19,column
-2026-02-27,J.L. Partners,"1,095 (RV)",D,jb_pritzker,4,column
-2026-02-27,J.L. Partners,"1,095 (RV)",D,josh_shapiro,5,column
-2026-02-27,J.L. Partners,"1,095 (RV)",D,kamala_harris,23,column
-2026-02-27,J.L. Partners,"1,095 (RV)",D,pete_buttigieg,10,column
-2026-02-26,Harvard Harris,"1,999 (RV)",D,alexandria_ocasio_cortez,14,column
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,alexandria_ocasio_cortez,12.7,column
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,andy_beshear,2.4,column
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,chris_murphy,1,footnote
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,cory_booker,2.2,column
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,gavin_newsom,19.1,column
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,gretchen_whitmer,2,footnote
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,jared_polis,0.9,footnote
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,jb_pritzker,3.5,column
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,jon_ossoff,1.4,column
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,josh_shapiro,3.5,column
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,kamala_harris,19.7,column
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,mark_cuban,1.5,footnote
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,mark_kelly,6.7,column
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,pete_buttigieg,13.9,column
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,rahm_emanuel,0,footnote
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,raphael_warnock,1.1,footnote
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,ruben_gallego,0.2,footnote
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,tim_walz,1.8,footnote
+2026-03-09,Yale Youth Poll,"1,754 (RV)",D,wes_moore,0.9,footnote
+2026-03-05,The Center Square/Noble Predictive Insights,"1,152 (RV)",D,alexandria_ocasio_cortez,6,column
+2026-03-05,The Center Square/Noble Predictive Insights,"1,152 (RV)",D,amy_klobuchar,2,footnote
+2026-03-05,The Center Square/Noble Predictive Insights,"1,152 (RV)",D,andy_beshear,2,column
+2026-03-05,The Center Square/Noble Predictive Insights,"1,152 (RV)",D,chris_murphy,0,footnote
+2026-03-05,The Center Square/Noble Predictive Insights,"1,152 (RV)",D,cory_booker,3,column
+2026-03-05,The Center Square/Noble Predictive Insights,"1,152 (RV)",D,gavin_newsom,16,column
+2026-03-05,The Center Square/Noble Predictive Insights,"1,152 (RV)",D,jb_pritzker,2,column
+2026-03-05,The Center Square/Noble Predictive Insights,"1,152 (RV)",D,josh_shapiro,5,column
+2026-03-05,The Center Square/Noble Predictive Insights,"1,152 (RV)",D,kamala_harris,31,column
+2026-03-05,The Center Square/Noble Predictive Insights,"1,152 (RV)",D,mark_kelly,4,column
+2026-03-05,The Center Square/Noble Predictive Insights,"1,152 (RV)",D,pete_buttigieg,7,column
+2026-03-05,The Center Square/Noble Predictive Insights,"1,152 (RV)",D,ro_khanna,0,footnote
+2026-03-05,The Center Square/Noble Predictive Insights,"1,152 (RV)",D,wes_moore,1,footnote
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,alexandria_ocasio_cortez,7,column
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,amy_klobuchar,1,footnote
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,andy_beshear,2,column
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,cory_booker,5,column
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,gavin_newsom,19,column
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,gretchen_whitmer,3,footnote
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,jb_pritzker,4,column
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,john_fetterman,0,footnote
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,jon_ossoff,1,column
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,josh_shapiro,5,column
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,kamala_harris,23,column
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,mark_kelly,5,column
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,pete_buttigieg,10,column
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,ro_khanna,0,footnote
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,ruben_gallego,0,footnote
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,tim_walz,2,footnote
+2026-02-27,Daily Mail/J.L. Partners,"1,095 (RV)",D,wes_moore,0,footnote
+2026-02-26,Harvard CAPS/Harris,"1,999 (RV)[q]",D,alexandria_ocasio_cortez,14,column
+2026-02-26,Harvard CAPS/Harris,"1,999 (RV)[q]",D,gavin_newsom,24,column
+2026-02-26,Harvard CAPS/Harris,"1,999 (RV)[q]",D,jb_pritzker,6,column
+2026-02-26,Harvard CAPS/Harris,"1,999 (RV)[q]",D,josh_shapiro,10,column
+2026-02-26,Harvard CAPS/Harris,"1,999 (RV)[q]",D,kamala_harris,39,column
 2026-02-26,Harvard Harris,"1,999 (RV)",R,donald_trump_jr,27,column
-2026-02-26,Harvard Harris,"1,999 (RV)",D,gavin_newsom,24,column
-2026-02-26,Harvard Harris,"1,999 (RV)",D,jb_pritzker,6,column
 2026-02-26,Harvard Harris,"1,999 (RV)",R,jd_vance,43,column
-2026-02-26,Harvard Harris,"1,999 (RV)",D,jon_ossoff,7,column
-2026-02-26,Harvard Harris,"1,999 (RV)",D,josh_shapiro,10,column
-2026-02-26,Harvard Harris,"1,999 (RV)",D,kamala_harris,39,column
 2026-02-26,Harvard Harris,"1,999 (RV)",R,marco_rubio,14,column
 2026-02-26,Harvard Harris,"1,999 (RV)",R,ron_desantis,8,column
 2026-02-26,Harvard Harris,"1,999 (RV)",R,tucker_carlson,3,footnote
-2026-02-23,Echelon Insights,"1,002 (LV)",D,alexandria_ocasio_cortez,9,column
-2026-02-23,Echelon Insights,"1,002 (LV)",D,andy_beshear,2,column
-2026-02-23,Echelon Insights,"1,002 (LV)",D,chris_murphy,1,footnote
-2026-02-23,Echelon Insights,"1,002 (LV)",D,cory_booker,3,column
+2026-02-23,Echelon Insights,498 (LV),D,alexandria_ocasio_cortez,9,column
+2026-02-23,Echelon Insights,498 (LV),D,andy_beshear,2,column
+2026-02-23,Echelon Insights,498 (LV),D,chris_murphy,1,footnote
+2026-02-23,Echelon Insights,498 (LV),D,cory_booker,3,column
 2026-02-23,Echelon Insights,429 (LV),R,donald_trump_jr,14,column
 2026-02-23,Echelon Insights,429 (LV),R,doug_burgum,0,footnote
-2026-02-23,Echelon Insights,"1,002 (LV)",D,gavin_newsom,24,column
+2026-02-23,Echelon Insights,498 (LV),D,gavin_newsom,24,column
 2026-02-23,Echelon Insights,429 (LV),R,glenn_youngkin,1,footnote
-2026-02-23,Echelon Insights,"1,002 (LV)",D,gretchen_whitmer,2,footnote
-2026-02-23,Echelon Insights,"1,002 (LV)",D,jared_polis,1,footnote
-2026-02-23,Echelon Insights,"1,002 (LV)",D,jb_pritzker,4,column
+2026-02-23,Echelon Insights,498 (LV),D,gretchen_whitmer,2,footnote
+2026-02-23,Echelon Insights,498 (LV),D,jared_polis,1,footnote
+2026-02-23,Echelon Insights,498 (LV),D,jb_pritzker,4,column
 2026-02-23,Echelon Insights,429 (LV),R,jd_vance,37,column
-2026-02-23,Echelon Insights,"1,002 (LV)",D,john_fetterman,1,footnote
-2026-02-23,Echelon Insights,"1,002 (LV)",D,jon_ossoff,1,column
+2026-02-23,Echelon Insights,498 (LV),D,john_fetterman,1,footnote
+2026-02-23,Echelon Insights,498 (LV),D,jon_ossoff,1,column
 2026-02-23,Echelon Insights,429 (LV),R,josh_hawley,NA,footnote
-2026-02-23,Echelon Insights,"1,002 (LV)",D,josh_shapiro,4,column
-2026-02-23,Echelon Insights,"1,002 (LV)",D,kamala_harris,18,column
+2026-02-23,Echelon Insights,498 (LV),D,josh_shapiro,4,column
+2026-02-23,Echelon Insights,498 (LV),D,kamala_harris,18,column
 2026-02-23,Echelon Insights,429 (LV),R,kristi_noem,1,footnote
 2026-02-23,Echelon Insights,429 (LV),R,marco_rubio,11,column
 2026-02-23,Echelon Insights,429 (LV),R,marjorie_taylor_greene,2,footnote
-2026-02-23,Echelon Insights,"1,002 (LV)",D,mark_kelly,4,column
+2026-02-23,Echelon Insights,498 (LV),D,mark_kelly,4,column
 2026-02-23,Echelon Insights,429 (LV),R,nikki_haley,3,column
-2026-02-23,Echelon Insights,"1,002 (LV)",D,pete_buttigieg,8,column
-2026-02-23,Echelon Insights,"1,002 (LV)",D,rahm_emanuel,NA,footnote
-2026-02-23,Echelon Insights,"1,002 (LV)",D,raphael_warnock,1,footnote
-2026-02-23,Echelon Insights,"1,002 (LV)",D,ro_khanna,NA,footnote
+2026-02-23,Echelon Insights,498 (LV),D,pete_buttigieg,8,column
+2026-02-23,Echelon Insights,498 (LV),D,raphael_warnock,1,footnote
 2026-02-23,Echelon Insights,429 (LV),R,robert_kennedy_jr,3,column
 2026-02-23,Echelon Insights,429 (LV),R,ron_desantis,8,column
 2026-02-23,Echelon Insights,429 (LV),R,sarah_huckabee_sanders,1,footnote
-2026-02-23,Echelon Insights,"1,002 (LV)",D,stephen_a_smith,1,footnote
+2026-02-23,Echelon Insights,498 (LV),D,stephen_a_smith,1,footnote
 2026-02-23,Echelon Insights,429 (LV),R,steve_bannon,NA,footnote
 2026-02-23,Echelon Insights,429 (LV),R,ted_cruz,3,column
 2026-02-23,Echelon Insights,429 (LV),R,tim_scott,2,footnote
 2026-02-23,Echelon Insights,429 (LV),R,tucker_carlson,2,footnote
 2026-02-23,Echelon Insights,429 (LV),R,tulsi_gabbard,1,footnote
 2026-02-23,Echelon Insights,429 (LV),R,vivek_ramaswamy,3,column
-2026-02-23,Echelon Insights,"1,002 (LV)",D,wes_moore,1,footnote
-2026-02-22,Emerson College,438 (LV),D,alexandria_ocasio_cortez,9,column
-2026-02-22,Emerson College,438 (LV),D,andy_beshear,5,column
-2026-02-22,Emerson College,438 (LV),D,gavin_newsom,20,column
-2026-02-22,Emerson College,438 (LV),D,gretchen_whitmer,2,footnote
-2026-02-22,Emerson College,438 (LV),D,jb_pritzker,3,column
+2026-02-23,Echelon Insights,498 (LV),D,wes_moore,1,footnote
+2026-02-22,Emerson College,438 (LV),D,alexandria_ocasio_cortez,9.1,column
+2026-02-22,Emerson College,438 (LV),D,andy_beshear,5.1,column
+2026-02-22,Emerson College,438 (LV),D,gavin_newsom,19.6,column
+2026-02-22,Emerson College,438 (LV),D,gretchen_whitmer,2.4,footnote
+2026-02-22,Emerson College,438 (LV),D,jb_pritzker,2.7,column
 2026-02-22,Emerson College,454 (LV),R,jd_vance,52,column
 2026-02-22,Emerson College,438 (LV),D,josh_shapiro,7,column
-2026-02-22,Emerson College,438 (LV),D,kamala_harris,13,column
+2026-02-22,Emerson College,438 (LV),D,kamala_harris,12.8,column
 2026-02-22,Emerson College,454 (LV),R,marco_rubio,20,column
 2026-02-22,Emerson College,454 (LV),R,nikki_haley,3,column
-2026-02-22,Emerson College,438 (LV),D,pete_buttigieg,16,column
+2026-02-22,Emerson College,438 (LV),D,pete_buttigieg,15.7,column
 2026-02-22,Emerson College,454 (LV),R,robert_kennedy_jr,4,column
 2026-02-22,Emerson College,454 (LV),R,ron_desantis,6,column
 2026-02-22,Emerson College,454 (LV),R,ted_cruz,1,column
-2026-02-18,YouGov/BGSU,556 (RV),D,alexandria_ocasio_cortez,11,column
-2026-02-18,YouGov/BGSU,556 (RV),D,amy_klobuchar,1,footnote
-2026-02-18,YouGov/BGSU,556 (RV),D,andy_beshear,3,column
-2026-02-18,YouGov/BGSU,556 (RV),D,cory_booker,2,column
+2026-02-18,BGSU/YouGov,556 (RV),D,alexandria_ocasio_cortez,11,column
+2026-02-18,BGSU/YouGov,556 (RV),D,amy_klobuchar,1,footnote
+2026-02-18,BGSU/YouGov,556 (RV),D,andy_beshear,3,column
+2026-02-18,BGSU/YouGov,556 (RV),D,cory_booker,2,column
+2026-02-18,BGSU/YouGov,556 (RV),D,elizabeth_warren,4,footnote
+2026-02-18,BGSU/YouGov,556 (RV),D,gavin_newsom,21,column
+2026-02-18,BGSU/YouGov,556 (RV),D,gretchen_whitmer,2,footnote
+2026-02-18,BGSU/YouGov,556 (RV),D,jb_pritzker,6,column
+2026-02-18,BGSU/YouGov,556 (RV),D,josh_shapiro,3,column
+2026-02-18,BGSU/YouGov,556 (RV),D,kamala_harris,18,column
+2026-02-18,BGSU/YouGov,556 (RV),D,mark_kelly,7,column
+2026-02-18,BGSU/YouGov,556 (RV),D,pete_buttigieg,11,column
+2026-02-18,BGSU/YouGov,556 (RV),D,phil_murphy,1,footnote
+2026-02-18,BGSU/YouGov,556 (RV),D,rahm_emanuel,0,footnote
+2026-02-18,BGSU/YouGov,556 (RV),D,tim_walz,3,footnote
 2026-02-18,YouGov/BGSU,463 (RV),R,donald_trump_jr,8,column
-2026-02-18,YouGov/BGSU,556 (RV),D,elizabeth_warren,4,footnote
-2026-02-18,YouGov/BGSU,556 (RV),D,gavin_newsom,21,column
-2026-02-18,YouGov/BGSU,556 (RV),D,gretchen_whitmer,2,footnote
-2026-02-18,YouGov/BGSU,556 (RV),D,jb_pritzker,6,column
 2026-02-18,YouGov/BGSU,463 (RV),R,jd_vance,51,column
 2026-02-18,YouGov/BGSU,463 (RV),R,josh_hawley,1,footnote
-2026-02-18,YouGov/BGSU,556 (RV),D,josh_shapiro,3,column
-2026-02-18,YouGov/BGSU,556 (RV),D,kamala_harris,18,column
 2026-02-18,YouGov/BGSU,463 (RV),R,marco_rubio,15,column
-2026-02-18,YouGov/BGSU,556 (RV),D,mark_kelly,7,column
 2026-02-18,YouGov/BGSU,463 (RV),R,nikki_haley,2,column
-2026-02-18,YouGov/BGSU,556 (RV),D,pete_buttigieg,11,column
-2026-02-18,YouGov/BGSU,556 (RV),D,phil_murphy,1,footnote
-2026-02-18,YouGov/BGSU,556 (RV),D,rahm_emanuel,0,footnote
 2026-02-18,YouGov/BGSU,463 (RV),R,rand_paul,1,footnote
 2026-02-18,YouGov/BGSU,463 (RV),R,robert_kennedy_jr,2,column
 2026-02-18,YouGov/BGSU,463 (RV),R,ron_desantis,9,column
 2026-02-18,YouGov/BGSU,463 (RV),R,ted_cruz,2,column
-2026-02-18,YouGov/BGSU,556 (RV),D,tim_walz,3,footnote
 2026-02-18,YouGov/BGSU,463 (RV),R,tucker_carlson,1,footnote
 2026-02-18,YouGov/BGSU,463 (RV),R,tulsi_gabbard,0,footnote
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,alexandria_ocasio_cortez,7,column
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,andy_beshear,2,column
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,chris_murphy,1,footnote
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,cory_booker,2,column
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,gavin_newsom,20,column
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,gretchen_whitmer,2,footnote
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,jb_pritzker,2,column
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,jon_ossoff,1,column
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,jon_stewart,2,footnote
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,josh_shapiro,5,column
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,kamala_harris,23,column
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,mark_cuban,1,footnote
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,mark_kelly,4,column
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,pete_buttigieg,8,column
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,rahm_emanuel,0,footnote
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,ro_khanna,1,footnote
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,ruben_gallego,0,footnote
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,stephen_a_smith,0,footnote
-2026-02-15,Manhattan Institute,"1,782 (RV)",D,wes_moore,1,footnote
-2026-02-12,YouGov/Yahoo,"1,704 (RV)",D,alexandria_ocasio_cortez,12,column
-2026-02-12,YouGov/Yahoo,"1,704 (RV)",D,cory_booker,3,column
-2026-02-12,YouGov/Yahoo,"1,704 (RV)",D,gavin_newsom,19,column
-2026-02-12,YouGov/Yahoo,"1,704 (RV)",D,jb_pritzker,6,column
-2026-02-12,YouGov/Yahoo,"1,704 (RV)",D,kamala_harris,18,column
-2026-02-12,YouGov/Yahoo,"1,704 (RV)",D,mark_kelly,9,column
-2026-02-12,YouGov/Yahoo,"1,704 (RV)",D,pete_buttigieg,13,column
-2026-02-12,YouGov/Yahoo,"1,704 (RV)",D,tim_walz,3,footnote
-2026-02-10,Focaldata,"1,148 (RV)",D,alexandria_ocasio_cortez,10,column
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,alexandria_ocasio_cortez,7,column
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,andy_beshear,2,column
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,chris_murphy,1,footnote
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,cory_booker,2,column
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,gavin_newsom,20,column
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,gretchen_whitmer,2,footnote
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,jb_pritzker,2,column
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,jon_ossoff,1,column
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,jon_stewart,2,footnote
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,josh_shapiro,5,column
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,kamala_harris,23,column
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,mark_cuban,1,footnote
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,mark_kelly,4,column
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,pete_buttigieg,8,column
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,rahm_emanuel,0,footnote
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,ro_khanna,1,footnote
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,ruben_gallego,0,footnote
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,stephen_a_smith,0,footnote
+2026-02-15,Manhattan Institute,"1,782 (LV)",D,wes_moore,1,footnote
+2026-02-12,Yahoo/YouGov,"1,704 (RV)",D,alexandria_ocasio_cortez,12,column
+2026-02-12,Yahoo/YouGov,"1,704 (RV)",D,cory_booker,3,column
+2026-02-12,Yahoo/YouGov,"1,704 (RV)",D,gavin_newsom,19,column
+2026-02-12,Yahoo/YouGov,"1,704 (RV)",D,jb_pritzker,6,column
+2026-02-12,Yahoo/YouGov,"1,704 (RV)",D,kamala_harris,18,column
+2026-02-12,Yahoo/YouGov,"1,704 (RV)",D,mark_kelly,9,column
+2026-02-12,Yahoo/YouGov,"1,704 (RV)",D,pete_buttigieg,13,column
+2026-02-12,Yahoo/YouGov,"1,704 (RV)",D,tim_walz,3,footnote
+2026-02-10,Focaldata,438 (LV),D,alexandria_ocasio_cortez,10,column
+2026-02-10,Focaldata,438 (LV),D,andy_beshear,1,column
 2026-02-10,Focaldata,"1,148 (RV)",R,donald_trump_jr,14,column
-2026-02-10,Focaldata,"1,148 (RV)",D,gavin_newsom,21,column
+2026-02-10,Focaldata,438 (LV),D,gavin_newsom,21,column
 2026-02-10,Focaldata,"1,148 (RV)",R,glenn_youngkin,0,footnote
-2026-02-10,Focaldata,"1,148 (RV)",D,jb_pritzker,3,column
+2026-02-10,Focaldata,438 (LV),D,gretchen_whitmer,4,footnote
+2026-02-10,Focaldata,438 (LV),D,jb_pritzker,3,column
 2026-02-10,Focaldata,"1,148 (RV)",R,jd_vance,52,column
+2026-02-10,Focaldata,438 (LV),D,jon_ossoff,1,column
 2026-02-10,Focaldata,"1,148 (RV)",R,josh_hawley,1,footnote
-2026-02-10,Focaldata,"1,148 (RV)",D,josh_shapiro,7,column
-2026-02-10,Focaldata,"1,148 (RV)",D,kamala_harris,39,column
+2026-02-10,Focaldata,438 (LV),D,josh_shapiro,7,column
+2026-02-10,Focaldata,438 (LV),D,kamala_harris,39,column
 2026-02-10,Focaldata,"1,148 (RV)",R,marco_rubio,9,column
+2026-02-10,Focaldata,438 (LV),D,mark_kelly,6,column
 2026-02-10,Focaldata,"1,148 (RV)",R,nikki_haley,3,column
-2026-02-10,Focaldata,"1,148 (RV)",D,pete_buttigieg,7,column
+2026-02-10,Focaldata,438 (LV),D,pete_buttigieg,7,column
 2026-02-10,Focaldata,"1,148 (RV)",R,robert_kennedy_jr,6,column
 2026-02-10,Focaldata,"1,148 (RV)",R,ron_desantis,8,column
 2026-02-10,Focaldata,"1,148 (RV)",R,ted_cruz,3,column
 2026-02-10,Focaldata,"1,148 (RV)",R,vivek_ramaswamy,4,column
-2026-01-29,Harvard Harris,"2,000 (RV)",D,alexandria_ocasio_cortez,12,column
+2026-01-29,Harvard CAPS/Harris,"2,000 (RV)[q]",D,alexandria_ocasio_cortez,12,column
+2026-01-29,Harvard CAPS/Harris,"2,000 (RV)[q]",D,gavin_newsom,30,column
+2026-01-29,Harvard CAPS/Harris,"2,000 (RV)[q]",D,jb_pritzker,7,column
+2026-01-29,Harvard CAPS/Harris,"2,000 (RV)[q]",D,josh_shapiro,9,column
+2026-01-29,Harvard CAPS/Harris,"2,000 (RV)[q]",D,kamala_harris,39,column
 2026-01-29,Harvard Harris,"2,000 (RV)",R,donald_trump_jr,21,column
-2026-01-29,Harvard Harris,"2,000 (RV)",D,gavin_newsom,30,column
-2026-01-29,Harvard Harris,"2,000 (RV)",D,jb_pritzker,7,column
 2026-01-29,Harvard Harris,"2,000 (RV)",R,jd_vance,53,column
-2026-01-29,Harvard Harris,"2,000 (RV)",D,josh_shapiro,9,column
-2026-01-29,Harvard Harris,"2,000 (RV)",D,kamala_harris,39,column
 2026-01-29,Harvard Harris,"2,000 (RV)",R,marco_rubio,17,column
 2026-01-29,I&I/TIPP,527 (RV),D,alexandria_ocasio_cortez,2,column
+2026-01-29,I&I/TIPP,527 (RV),D,andy_beshear,2,column
 2026-01-29,I&I/TIPP,478 (LV),R,donald_trump_jr,18,column
 2026-01-29,I&I/TIPP,527 (RV),D,gavin_newsom,13,column
 2026-01-29,I&I/TIPP,478 (LV),R,glenn_youngkin,0,footnote
 2026-01-29,I&I/TIPP,478 (LV),R,greg_abbott,NA,footnote
+2026-01-29,I&I/TIPP,527 (RV),D,gretchen_whitmer,2,footnote
 2026-01-29,I&I/TIPP,527 (RV),D,jb_pritzker,3,column
 2026-01-29,I&I/TIPP,478 (LV),R,jd_vance,43,column
+2026-01-29,I&I/TIPP,527 (RV),D,jon_ossoff,2,column
 2026-01-29,I&I/TIPP,527 (RV),D,josh_shapiro,4,column
 2026-01-29,I&I/TIPP,527 (RV),D,kamala_harris,38,column
 2026-01-29,I&I/TIPP,478 (LV),R,kristi_noem,0,footnote
 2026-01-29,I&I/TIPP,478 (LV),R,marco_rubio,5,column
+2026-01-29,I&I/TIPP,527 (RV),D,mark_kelly,3,column
 2026-01-29,I&I/TIPP,478 (LV),R,nikki_haley,2,column
 2026-01-29,I&I/TIPP,527 (RV),D,pete_buttigieg,5,column
 2026-01-29,I&I/TIPP,478 (LV),R,ron_desantis,5,column
 2026-01-29,I&I/TIPP,478 (LV),R,ted_cruz,2,column
 2026-01-29,I&I/TIPP,478 (LV),R,tim_scott,NA,footnote
+2026-01-29,I&I/TIPP,527 (RV),D,tim_walz,3,footnote
 2026-01-29,I&I/TIPP,478 (LV),R,tom_cotton,1,footnote
 2026-01-29,I&I/TIPP,478 (LV),R,vivek_ramaswamy,2,column
+2026-01-29,I&I/TIPP,527 (RV),D,wes_moore,1,footnote
 2026-01-27,McLaughlin & Associates,455 (LV),D,alexandria_ocasio_cortez,7,column
 2026-01-27,McLaughlin & Associates,455 (LV),D,amy_klobuchar,1,footnote
 2026-01-27,McLaughlin & Associates,455 (LV),D,cory_booker,3,column
@@ -1401,22 +1462,26 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-01-27,McLaughlin & Associates,442 (LV),R,tulsi_gabbard,2,footnote
 2026-01-27,McLaughlin & Associates,442 (LV),R,vivek_ramaswamy,2,column
 2026-01-27,McLaughlin & Associates,455 (LV),D,wes_moore,1,footnote
-2026-01-27,Rasmussen Reports,"1,115 (LV)",D,alexandria_ocasio_cortez,7,column
-2026-01-27,Rasmussen Reports,"1,115 (LV)",D,cory_booker,6,column
-2026-01-27,Rasmussen Reports,"1,115 (LV)",D,gavin_newsom,20,column
-2026-01-27,Rasmussen Reports,"1,115 (LV)",D,josh_shapiro,10,column
-2026-01-27,Rasmussen Reports,"1,115 (LV)",D,kamala_harris,34,column
-2026-01-27,Rasmussen Reports,"1,115 (LV)",D,pete_buttigieg,10,column
-2026-01-27,Rasmussen Reports,"1,115 (LV)",D,wes_moore,3,footnote
+2026-01-26,Echelon Insights,502 (LV),D,alexandria_ocasio_cortez,9,column
+2026-01-26,Echelon Insights,502 (LV),D,andy_beshear,2,column
+2026-01-26,Echelon Insights,502 (LV),D,cory_booker,3,column
 2026-01-26,Echelon Insights,430 (LV),R,donald_trump_jr,12,column
 2026-01-26,Echelon Insights,430 (LV),R,doug_burgum,0,footnote
+2026-01-26,Echelon Insights,502 (LV),D,gavin_newsom,27,column
 2026-01-26,Echelon Insights,430 (LV),R,glenn_youngkin,2,footnote
+2026-01-26,Echelon Insights,502 (LV),D,gretchen_whitmer,3,footnote
+2026-01-26,Echelon Insights,502 (LV),D,jb_pritzker,3,column
 2026-01-26,Echelon Insights,430 (LV),R,jd_vance,40,column
 2026-01-26,Echelon Insights,430 (LV),R,josh_hawley,1,footnote
+2026-01-26,Echelon Insights,502 (LV),D,josh_shapiro,3,column
+2026-01-26,Echelon Insights,502 (LV),D,kamala_harris,21,column
 2026-01-26,Echelon Insights,430 (LV),R,kristi_noem,0,footnote
 2026-01-26,Echelon Insights,430 (LV),R,marco_rubio,6,column
 2026-01-26,Echelon Insights,430 (LV),R,marjorie_taylor_greene,1,footnote
+2026-01-26,Echelon Insights,502 (LV),D,mark_kelly,4,column
 2026-01-26,Echelon Insights,430 (LV),R,nikki_haley,5,column
+2026-01-26,Echelon Insights,502 (LV),D,pete_buttigieg,8,column
+2026-01-26,Echelon Insights,502 (LV),D,raphael_warnock,2,footnote
 2026-01-26,Echelon Insights,430 (LV),R,robert_kennedy_jr,4,column
 2026-01-26,Echelon Insights,430 (LV),R,ron_desantis,7,column
 2026-01-26,Echelon Insights,430 (LV),R,sarah_huckabee_sanders,1,footnote
@@ -1426,6 +1491,17 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-01-26,Echelon Insights,430 (LV),R,tucker_carlson,2,footnote
 2026-01-26,Echelon Insights,430 (LV),R,tulsi_gabbard,1,footnote
 2026-01-26,Echelon Insights,430 (LV),R,vivek_ramaswamy,3,column
+2026-01-26,Echelon Insights,502 (LV),D,wes_moore,1,footnote
+2026-01-26,Focaldata,791 (LV),D,alexandria_ocasio_cortez,9,column
+2026-01-26,Focaldata,791 (LV),D,andy_beshear,2,column
+2026-01-26,Focaldata,791 (LV),D,gavin_newsom,22,column
+2026-01-26,Focaldata,791 (LV),D,gretchen_whitmer,3,footnote
+2026-01-26,Focaldata,791 (LV),D,jb_pritzker,4,column
+2026-01-26,Focaldata,791 (LV),D,jon_ossoff,1,column
+2026-01-26,Focaldata,791 (LV),D,josh_shapiro,4,column
+2026-01-26,Focaldata,791 (LV),D,kamala_harris,40,column
+2026-01-26,Focaldata,791 (LV),D,mark_kelly,6,column
+2026-01-26,Focaldata,791 (LV),D,pete_buttigieg,9,column
 2026-01-24,Big Data Poll,"1,346 (LV)",D,alexandria_ocasio_cortez,6.4,column
 2026-01-24,Big Data Poll,"1,346 (LV)",D,andy_beshear,2.5,column
 2026-01-24,Big Data Poll,"1,346 (LV)",D,gavin_newsom,22.2,column
@@ -1441,45 +1517,45 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-01-24,Big Data Poll,"1,306 (RV)",R,ron_desantis,10,column
 2026-01-24,Big Data Poll,"1,306 (RV)",R,ted_cruz,4,column
 2026-01-24,Big Data Poll,"1,306 (RV)",R,tulsi_gabbard,2,footnote
-2026-01-14,YouGov,"2,250 (LV)",D,alexandria_ocasio_cortez,9,column
-2026-01-14,YouGov,"2,250 (LV)",D,amy_klobuchar,0,footnote
-2026-01-14,YouGov,"2,250 (LV)",D,andy_beshear,2,column
-2026-01-14,YouGov,"2,250 (LV)",D,bernie_sanders,7,footnote
-2026-01-14,YouGov,"2,250 (LV)",D,cory_booker,3,column
+2026-01-14,YouGov,"1,024 (A)",D,alexandria_ocasio_cortez,9,column
+2026-01-14,YouGov,"1,024 (A)",D,amy_klobuchar,0,footnote
+2026-01-14,YouGov,"1,024 (A)",D,andy_beshear,2,column
+2026-01-14,YouGov,"1,024 (A)",D,bernie_sanders,7,footnote
+2026-01-14,YouGov,"1,024 (A)",D,cory_booker,3,column
 2026-01-14,YouGov,"2,250 (A)",R,donald_trump_jr,11,column
-2026-01-14,YouGov,"2,250 (LV)",D,elizabeth_warren,3,footnote
-2026-01-14,YouGov,"2,250 (LV)",D,gavin_newsom,17,column
+2026-01-14,YouGov,"1,024 (A)",D,elizabeth_warren,3,footnote
+2026-01-14,YouGov,"1,024 (A)",D,gavin_newsom,17,column
 2026-01-14,YouGov,"2,250 (A)",R,glenn_youngkin,1,footnote
-2026-01-14,YouGov,"2,250 (LV)",D,gretchen_whitmer,0,footnote
-2026-01-14,YouGov,"2,250 (LV)",D,jb_pritzker,3,column
+2026-01-14,YouGov,"1,024 (A)",D,gretchen_whitmer,0,footnote
+2026-01-14,YouGov,"1,024 (A)",D,jb_pritzker,3,column
 2026-01-14,YouGov,"2,250 (A)",R,jd_vance,41,column
-2026-01-14,YouGov,"2,250 (LV)",D,josh_shapiro,2,column
-2026-01-14,YouGov,"2,250 (LV)",D,kamala_harris,20,column
+2026-01-14,YouGov,"1,024 (A)",D,josh_shapiro,2,column
+2026-01-14,YouGov,"1,024 (A)",D,kamala_harris,20,column
 2026-01-14,YouGov,"2,250 (A)",R,marco_rubio,7,column
-2026-01-14,YouGov,"2,250 (LV)",D,mark_kelly,7,column
+2026-01-14,YouGov,"1,024 (A)",D,mark_kelly,7,column
 2026-01-14,YouGov,"2,250 (A)",R,mike_pence,3,footnote
 2026-01-14,YouGov,"2,250 (A)",R,nikki_haley,1,column
-2026-01-14,YouGov,"2,250 (LV)",D,pete_buttigieg,8,column
+2026-01-14,YouGov,"1,024 (A)",D,pete_buttigieg,8,column
 2026-01-14,YouGov,"2,250 (A)",R,robert_kennedy_jr,1,column
 2026-01-14,YouGov,"2,250 (A)",R,ron_desantis,8,column
 2026-01-14,YouGov,"2,250 (A)",R,ted_cruz,2,column
 2026-01-14,YouGov,"2,250 (A)",R,tim_scott,0,footnote
-2026-01-14,YouGov,"2,250 (LV)",D,tim_walz,1,footnote
+2026-01-14,YouGov,"1,024 (A)",D,tim_walz,1,footnote
 2026-01-14,YouGov,"2,250 (A)",R,tulsi_gabbard,1,footnote
 2026-01-14,YouGov,"2,250 (A)",R,vivek_ramaswamy,2,column
 2026-01-07,Zogby Analytics,374 (LV),D,alexandria_ocasio_cortez,11,column
-2026-01-07,Zogby Analytics,374 (LV),D,gavin_newsom,21,column
+2026-01-07,Zogby Analytics,374 (LV),D,gavin_newsom,20.7,column
 2026-01-07,Zogby Analytics,340 (LV),R,glenn_youngkin,2,footnote
-2026-01-07,Zogby Analytics,374 (LV),D,jb_pritzker,5,column
+2026-01-07,Zogby Analytics,374 (LV),D,jb_pritzker,5.2,column
 2026-01-07,Zogby Analytics,340 (LV),R,jd_vance,58,column
 2026-01-07,Zogby Analytics,374 (LV),D,josh_shapiro,6,column
-2026-01-07,Zogby Analytics,374 (LV),D,kamala_harris,30,column
+2026-01-07,Zogby Analytics,374 (LV),D,kamala_harris,30.4,column
 2026-01-07,Zogby Analytics,340 (LV),R,marco_rubio,8,column
 2026-01-07,Zogby Analytics,340 (LV),R,marjorie_taylor_greene,3,footnote
-2026-01-07,Zogby Analytics,374 (LV),D,mark_kelly,7,column
-2026-01-07,Zogby Analytics,374 (LV),D,pete_buttigieg,8,column
+2026-01-07,Zogby Analytics,374 (LV),D,mark_kelly,7.3,column
+2026-01-07,Zogby Analytics,374 (LV),D,pete_buttigieg,7.6,column
 2026-01-07,Zogby Analytics,340 (LV),R,ron_desantis,9,column
-2026-01-07,Zogby Analytics,374 (LV),D,ruben_gallego,1,footnote
+2026-01-07,Zogby Analytics,374 (LV),D,ruben_gallego,1.4,footnote
 2026-01-07,Zogby Analytics,340 (LV),R,sarah_huckabee_sanders,4,footnote
 2026-01-07,Zogby Analytics,340 (LV),R,ted_cruz,3,column
 2025-12-19,Atlas Intel,"2,315 (A)",R,brian_kemp,0.4,footnote
@@ -1492,20 +1568,20 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-12-19,Atlas Intel,"2,315 (A)",R,tim_scott,0.2,footnote
 2025-12-19,Atlas Intel,"2,315 (A)",R,tom_cotton,0.5,footnote
 2025-12-19,Atlas Intel,"2,315 (A)",R,vivek_ramaswamy,1.5,column
-2025-12-19,AtlasIntel,"2,315 (A)[bw]",D,alexandria_ocasio_cortez,16,column
-2025-12-19,AtlasIntel,"2,315 (A)[bw]",D,andy_beshear,5.8,footnote
-2025-12-19,AtlasIntel,"2,315 (A)[bw]",D,cory_booker,2.5,column
-2025-12-19,AtlasIntel,"2,315 (A)[bw]",D,gavin_newsom,35.4,column
-2025-12-19,AtlasIntel,"2,315 (A)[bw]",D,gretchen_whitmer,1.8,column
-2025-12-19,AtlasIntel,"2,315 (A)[bw]",D,josh_shapiro,6.1,column
-2025-12-19,AtlasIntel,"2,315 (A)[bw]",D,kamala_harris,7.8,column
-2025-12-19,AtlasIntel,"2,315 (A)[bw]",D,pete_buttigieg,14.5,column
-2025-12-19,AtlasIntel,"2,315 (A)[bw]",D,rahm_emanuel,1.1,footnote
-2025-12-19,AtlasIntel,"2,315 (A)[bw]",D,raphael_warnock,0.2,footnote
-2025-12-19,AtlasIntel,"2,315 (A)[bw]",D,ro_khanna,1.8,footnote
-2025-12-19,AtlasIntel,"2,315 (A)[bw]",D,stephen_a_smith,0,footnote
-2025-12-19,AtlasIntel,"2,315 (A)[bw]",D,tim_walz,4.3,column
-2025-12-19,AtlasIntel,"2,315 (A)[bw]",D,wes_moore,1.1,footnote
+2025-12-19,AtlasIntel,"2,315 (A)[o]",D,alexandria_ocasio_cortez,16,column
+2025-12-19,AtlasIntel,"2,315 (A)[o]",D,andy_beshear,5.8,footnote
+2025-12-19,AtlasIntel,"2,315 (A)[o]",D,cory_booker,2.5,column
+2025-12-19,AtlasIntel,"2,315 (A)[o]",D,gavin_newsom,35.4,column
+2025-12-19,AtlasIntel,"2,315 (A)[o]",D,gretchen_whitmer,1.8,column
+2025-12-19,AtlasIntel,"2,315 (A)[o]",D,josh_shapiro,6.1,column
+2025-12-19,AtlasIntel,"2,315 (A)[o]",D,kamala_harris,7.8,column
+2025-12-19,AtlasIntel,"2,315 (A)[o]",D,pete_buttigieg,14.5,column
+2025-12-19,AtlasIntel,"2,315 (A)[o]",D,rahm_emanuel,1.1,footnote
+2025-12-19,AtlasIntel,"2,315 (A)[o]",D,raphael_warnock,0.2,footnote
+2025-12-19,AtlasIntel,"2,315 (A)[o]",D,ro_khanna,1.8,footnote
+2025-12-19,AtlasIntel,"2,315 (A)[o]",D,stephen_a_smith,0,footnote
+2025-12-19,AtlasIntel,"2,315 (A)[o]",D,tim_walz,4.3,column
+2025-12-19,AtlasIntel,"2,315 (A)[o]",D,wes_moore,1.1,footnote
 2025-12-19,Daily Mail/J.L. Partners,383 (LV),D,alexandria_ocasio_cortez,3,column
 2025-12-19,Daily Mail/J.L. Partners,383 (LV),D,amy_klobuchar,1,footnote
 2025-12-19,Daily Mail/J.L. Partners,383 (LV),D,andy_beshear,2,footnote
@@ -1934,18 +2010,18 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-09-16,Atlas Intel,"1,066 (A)",R,tim_scott,1.6,footnote
 2025-09-16,Atlas Intel,"1,066 (A)",R,tom_cotton,0.3,footnote
 2025-09-16,Atlas Intel,"1,066 (A)",R,vivek_ramaswamy,5.7,column
-2025-09-16,AtlasIntel,"1,066 (A)[bw]",D,alexandria_ocasio_cortez,10.8,column
-2025-09-16,AtlasIntel,"1,066 (A)[bw]",D,andy_beshear,2.7,footnote
-2025-09-16,AtlasIntel,"1,066 (A)[bw]",D,cory_booker,2.9,column
-2025-09-16,AtlasIntel,"1,066 (A)[bw]",D,gavin_newsom,37.4,column
-2025-09-16,AtlasIntel,"1,066 (A)[bw]",D,gretchen_whitmer,0.3,column
-2025-09-16,AtlasIntel,"1,066 (A)[bw]",D,josh_shapiro,2.1,column
-2025-09-16,AtlasIntel,"1,066 (A)[bw]",D,kamala_harris,20.5,column
-2025-09-16,AtlasIntel,"1,066 (A)[bw]",D,pete_buttigieg,12.1,column
-2025-09-16,AtlasIntel,"1,066 (A)[bw]",D,raphael_warnock,0.6,footnote
-2025-09-16,AtlasIntel,"1,066 (A)[bw]",D,stephen_a_smith,0.2,footnote
-2025-09-16,AtlasIntel,"1,066 (A)[bw]",D,tim_walz,3.6,column
-2025-09-16,AtlasIntel,"1,066 (A)[bw]",D,wes_moore,0.6,footnote
+2025-09-16,AtlasIntel,"1,066 (A)[o]",D,alexandria_ocasio_cortez,10.8,column
+2025-09-16,AtlasIntel,"1,066 (A)[o]",D,andy_beshear,2.7,footnote
+2025-09-16,AtlasIntel,"1,066 (A)[o]",D,cory_booker,2.9,column
+2025-09-16,AtlasIntel,"1,066 (A)[o]",D,gavin_newsom,37.4,column
+2025-09-16,AtlasIntel,"1,066 (A)[o]",D,gretchen_whitmer,0.3,column
+2025-09-16,AtlasIntel,"1,066 (A)[o]",D,josh_shapiro,2.1,column
+2025-09-16,AtlasIntel,"1,066 (A)[o]",D,kamala_harris,20.5,column
+2025-09-16,AtlasIntel,"1,066 (A)[o]",D,pete_buttigieg,12.1,column
+2025-09-16,AtlasIntel,"1,066 (A)[o]",D,raphael_warnock,0.6,footnote
+2025-09-16,AtlasIntel,"1,066 (A)[o]",D,stephen_a_smith,0.2,footnote
+2025-09-16,AtlasIntel,"1,066 (A)[o]",D,tim_walz,3.6,column
+2025-09-16,AtlasIntel,"1,066 (A)[o]",D,wes_moore,0.6,footnote
 2025-09-08,YouGov,519 (A),D,alexandria_ocasio_cortez,8,column
 2025-09-08,YouGov,519 (A),D,amy_klobuchar,1,footnote
 2025-09-08,YouGov,519 (A),D,bernie_sanders,5,footnote
@@ -1969,14 +2045,14 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-09-08,YouGov,519 (A),D,tim_walz,5,column
 2025-09-08,YouGov,"1,114 (A)",R,tulsi_gabbard,1,footnote
 2025-09-08,YouGov,"1,114 (A)",R,vivek_ramaswamy,2,column
-2025-09-02,YouGov/Yahoo,"1,690 (A)[cq]",D,alexandria_ocasio_cortez,12,column
-2025-09-02,YouGov/Yahoo,"1,690 (A)[cq]",D,gavin_newsom,21,column
-2025-09-02,YouGov/Yahoo,"1,690 (A)[cq]",D,gretchen_whitmer,2,column
-2025-09-02,YouGov/Yahoo,"1,690 (A)[cq]",D,jb_pritzker,7,column
-2025-09-02,YouGov/Yahoo,"1,690 (A)[cq]",D,josh_shapiro,4,column
-2025-09-02,YouGov/Yahoo,"1,690 (A)[cq]",D,kamala_harris,19,column
-2025-09-02,YouGov/Yahoo,"1,690 (A)[cq]",D,pete_buttigieg,10,column
-2025-09-02,YouGov/Yahoo,"1,690 (A)[cq]",D,tim_walz,4,column
+2025-09-02,YouGov/Yahoo,"1,690 (A)[dh]",D,alexandria_ocasio_cortez,12,column
+2025-09-02,YouGov/Yahoo,"1,690 (A)[dh]",D,gavin_newsom,21,column
+2025-09-02,YouGov/Yahoo,"1,690 (A)[dh]",D,gretchen_whitmer,2,column
+2025-09-02,YouGov/Yahoo,"1,690 (A)[dh]",D,jb_pritzker,7,column
+2025-09-02,YouGov/Yahoo,"1,690 (A)[dh]",D,josh_shapiro,4,column
+2025-09-02,YouGov/Yahoo,"1,690 (A)[dh]",D,kamala_harris,19,column
+2025-09-02,YouGov/Yahoo,"1,690 (A)[dh]",D,pete_buttigieg,10,column
+2025-09-02,YouGov/Yahoo,"1,690 (A)[dh]",D,tim_walz,4,column
 2025-08-31,Leger,328 (LV),D,alexandria_ocasio_cortez,10,column
 2025-08-31,Leger,328 (LV),D,gavin_newsom,24,column
 2025-08-31,Leger,328 (LV),D,gretchen_whitmer,2,column
@@ -2099,16 +2175,16 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-07-18,Atlas Intel,"1,935 (A)",R,tim_scott,2.6,footnote
 2025-07-18,Atlas Intel,"1,935 (A)",R,tom_cotton,0.2,footnote
 2025-07-18,Atlas Intel,"1,935 (A)",R,vivek_ramaswamy,1.8,column
-2025-07-18,AtlasIntel,"1,935 (A)[bw]",D,alexandria_ocasio_cortez,18.5,column
-2025-07-18,AtlasIntel,"1,935 (A)[bw]",D,cory_booker,4.1,column
-2025-07-18,AtlasIntel,"1,935 (A)[bw]",D,gavin_newsom,15.8,column
-2025-07-18,AtlasIntel,"1,935 (A)[bw]",D,gretchen_whitmer,1.4,column
-2025-07-18,AtlasIntel,"1,935 (A)[bw]",D,josh_shapiro,3.2,column
-2025-07-18,AtlasIntel,"1,935 (A)[bw]",D,kamala_harris,14.5,column
-2025-07-18,AtlasIntel,"1,935 (A)[bw]",D,pete_buttigieg,26.7,column
-2025-07-18,AtlasIntel,"1,935 (A)[bw]",D,rahm_emanuel,0.3,footnote
-2025-07-18,AtlasIntel,"1,935 (A)[bw]",D,raphael_warnock,0.5,footnote
-2025-07-18,AtlasIntel,"1,935 (A)[bw]",D,tim_walz,8.7,column
+2025-07-18,AtlasIntel,"1,935 (A)[o]",D,alexandria_ocasio_cortez,18.5,column
+2025-07-18,AtlasIntel,"1,935 (A)[o]",D,cory_booker,4.1,column
+2025-07-18,AtlasIntel,"1,935 (A)[o]",D,gavin_newsom,15.8,column
+2025-07-18,AtlasIntel,"1,935 (A)[o]",D,gretchen_whitmer,1.4,column
+2025-07-18,AtlasIntel,"1,935 (A)[o]",D,josh_shapiro,3.2,column
+2025-07-18,AtlasIntel,"1,935 (A)[o]",D,kamala_harris,14.5,column
+2025-07-18,AtlasIntel,"1,935 (A)[o]",D,pete_buttigieg,26.7,column
+2025-07-18,AtlasIntel,"1,935 (A)[o]",D,rahm_emanuel,0.3,footnote
+2025-07-18,AtlasIntel,"1,935 (A)[o]",D,raphael_warnock,0.5,footnote
+2025-07-18,AtlasIntel,"1,935 (A)[o]",D,tim_walz,8.7,column
 2025-07-14,Echelon Insights,505 (LV),D,alexandria_ocasio_cortez,6,column
 2025-07-14,Echelon Insights,505 (LV),D,andy_beshear,2,footnote
 2025-07-14,Echelon Insights,505 (LV),D,chris_murphy,2,footnote
@@ -2214,16 +2290,16 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-06-25,Emerson College,416 (RV),R,tulsi_gabbard,1,footnote
 2025-06-25,Emerson College,416 (RV),R,vivek_ramaswamy,1,column
 2025-06-25,Emerson College,404 (RV),D,wes_moore,2,footnote
-2025-06-16,co/efficient,"1,035 (LV)[dc]",D,alexandria_ocasio_cortez,14,column
+2025-06-16,co/efficient,"1,035 (LV)[dt]",D,alexandria_ocasio_cortez,14,column
 2025-06-16,co/efficient,"1,035 (LV)",R,donald_trump,24,column
-2025-06-16,co/efficient,"1,035 (LV)[dc]",D,gavin_newsom,21,column
+2025-06-16,co/efficient,"1,035 (LV)[dt]",D,gavin_newsom,21,column
 2025-06-16,co/efficient,"1,035 (LV)",R,jd_vance,61,column
-2025-06-16,co/efficient,"1,035 (LV)[dc]",D,josh_shapiro,3,column
-2025-06-16,co/efficient,"1,035 (LV)[dc]",D,kamala_harris,26,column
+2025-06-16,co/efficient,"1,035 (LV)[dt]",D,josh_shapiro,3,column
+2025-06-16,co/efficient,"1,035 (LV)[dt]",D,kamala_harris,26,column
 2025-06-16,co/efficient,"1,035 (LV)",R,marco_rubio,5,column
-2025-06-16,co/efficient,"1,035 (LV)[dc]",D,pete_buttigieg,11,column
+2025-06-16,co/efficient,"1,035 (LV)[dt]",D,pete_buttigieg,11,column
 2025-06-16,co/efficient,"1,035 (LV)",R,ron_desantis,10,column
-2025-06-16,co/efficient,"1,035 (LV)[dc]",D,tim_walz,10,column
+2025-06-16,co/efficient,"1,035 (LV)[dt]",D,tim_walz,10,column
 2025-06-16,co/efficient,"1,035 (LV)",R,vivek_ramaswamy,6,column
 2025-06-15,McLaughlin & Associates,434 (LV),D,alexandria_ocasio_cortez,7,column
 2025-06-15,McLaughlin & Associates,434 (LV),D,amy_klobuchar,2,footnote
@@ -2286,20 +2362,20 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-05-27,Atlas Intel,"1,044 (A)",R,tim_scott,2.2,footnote
 2025-05-27,Atlas Intel,"1,044 (A)",R,tom_cotton,0.9,footnote
 2025-05-27,Atlas Intel,"1,044 (A)",R,vivek_ramaswamy,5.3,column
-2025-05-27,AtlasIntel,"3,469 (A)[bw]",D,alexandria_ocasio_cortez,19.4,column
-2025-05-27,AtlasIntel,"3,469 (A)[bw]",D,andy_beshear,0.2,footnote
-2025-05-27,AtlasIntel,"3,469 (A)[bw]",D,chris_murphy,0.4,footnote
-2025-05-27,AtlasIntel,"3,469 (A)[bw]",D,cory_booker,10.4,column
-2025-05-27,AtlasIntel,"3,469 (A)[bw]",D,gavin_newsom,7.1,column
-2025-05-27,AtlasIntel,"3,469 (A)[bw]",D,gretchen_whitmer,3.7,column
-2025-05-27,AtlasIntel,"3,469 (A)[bw]",D,jb_pritzker,0.1,column
-2025-05-27,AtlasIntel,"3,469 (A)[bw]",D,josh_shapiro,4.8,column
-2025-05-27,AtlasIntel,"3,469 (A)[bw]",D,kamala_harris,16.6,column
-2025-05-27,AtlasIntel,"3,469 (A)[bw]",D,pete_buttigieg,31.5,column
-2025-05-27,AtlasIntel,"3,469 (A)[bw]",D,rahm_emanuel,0.2,footnote
-2025-05-27,AtlasIntel,"3,469 (A)[bw]",D,raphael_warnock,1.4,footnote
-2025-05-27,AtlasIntel,"3,469 (A)[bw]",D,ro_khanna,0.3,footnote
-2025-05-27,AtlasIntel,"3,469 (A)[bw]",D,stephen_a_smith,0.3,footnote
+2025-05-27,AtlasIntel,"3,469 (A)[o]",D,alexandria_ocasio_cortez,19.4,column
+2025-05-27,AtlasIntel,"3,469 (A)[o]",D,andy_beshear,0.2,footnote
+2025-05-27,AtlasIntel,"3,469 (A)[o]",D,chris_murphy,0.4,footnote
+2025-05-27,AtlasIntel,"3,469 (A)[o]",D,cory_booker,10.4,column
+2025-05-27,AtlasIntel,"3,469 (A)[o]",D,gavin_newsom,7.1,column
+2025-05-27,AtlasIntel,"3,469 (A)[o]",D,gretchen_whitmer,3.7,column
+2025-05-27,AtlasIntel,"3,469 (A)[o]",D,jb_pritzker,0.1,column
+2025-05-27,AtlasIntel,"3,469 (A)[o]",D,josh_shapiro,4.8,column
+2025-05-27,AtlasIntel,"3,469 (A)[o]",D,kamala_harris,16.6,column
+2025-05-27,AtlasIntel,"3,469 (A)[o]",D,pete_buttigieg,31.5,column
+2025-05-27,AtlasIntel,"3,469 (A)[o]",D,rahm_emanuel,0.2,footnote
+2025-05-27,AtlasIntel,"3,469 (A)[o]",D,raphael_warnock,1.4,footnote
+2025-05-27,AtlasIntel,"3,469 (A)[o]",D,ro_khanna,0.3,footnote
+2025-05-27,AtlasIntel,"3,469 (A)[o]",D,stephen_a_smith,0.3,footnote
 2025-05-26,McLaughlin & Associates,439 (LV),D,alexandria_ocasio_cortez,9,column
 2025-05-26,McLaughlin & Associates,439 (LV),D,amy_klobuchar,3,footnote
 2025-05-26,McLaughlin & Associates,439 (LV),D,cory_booker,7,column
@@ -2429,20 +2505,20 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-04-23,YouGov/ The Times,"1,296 (A)",R,tucker_carlson,1,footnote
 2025-04-23,YouGov/ The Times,"1,296 (A)",R,tulsi_gabbard,2,footnote
 2025-04-23,YouGov/ The Times,"1,296 (A)",R,vivek_ramaswamy,4,column
-2025-04-23,YouGov/The Times,"1,296 (A)[dk]",D,alexandria_ocasio_cortez,7,column
-2025-04-23,YouGov/The Times,"1,296 (A)[dk]",D,andy_beshear,1,footnote
-2025-04-23,YouGov/The Times,"1,296 (A)[dk]",D,cory_booker,7,column
-2025-04-23,YouGov/The Times,"1,296 (A)[dk]",D,elizabeth_warren,4,footnote
-2025-04-23,YouGov/The Times,"1,296 (A)[dk]",D,gavin_newsom,7,column
-2025-04-23,YouGov/The Times,"1,296 (A)[dk]",D,gretchen_whitmer,1,column
-2025-04-23,YouGov/The Times,"1,296 (A)[dk]",D,jb_pritzker,3,column
-2025-04-23,YouGov/The Times,"1,296 (A)[dk]",D,josh_shapiro,4,column
-2025-04-23,YouGov/The Times,"1,296 (A)[dk]",D,kamala_harris,28,column
-2025-04-23,YouGov/The Times,"1,296 (A)[dk]",D,mark_kelly,1,footnote
-2025-04-23,YouGov/The Times,"1,296 (A)[dk]",D,pete_buttigieg,9,column
-2025-04-23,YouGov/The Times,"1,296 (A)[dk]",D,rahm_emanuel,1,footnote
-2025-04-23,YouGov/The Times,"1,296 (A)[dk]",D,tim_walz,3,column
-2025-04-23,YouGov/The Times,"1,296 (A)[dk]",D,wes_moore,1,footnote
+2025-04-23,YouGov/The Times,"1,296 (A)[eb]",D,alexandria_ocasio_cortez,7,column
+2025-04-23,YouGov/The Times,"1,296 (A)[eb]",D,andy_beshear,1,footnote
+2025-04-23,YouGov/The Times,"1,296 (A)[eb]",D,cory_booker,7,column
+2025-04-23,YouGov/The Times,"1,296 (A)[eb]",D,elizabeth_warren,4,footnote
+2025-04-23,YouGov/The Times,"1,296 (A)[eb]",D,gavin_newsom,7,column
+2025-04-23,YouGov/The Times,"1,296 (A)[eb]",D,gretchen_whitmer,1,column
+2025-04-23,YouGov/The Times,"1,296 (A)[eb]",D,jb_pritzker,3,column
+2025-04-23,YouGov/The Times,"1,296 (A)[eb]",D,josh_shapiro,4,column
+2025-04-23,YouGov/The Times,"1,296 (A)[eb]",D,kamala_harris,28,column
+2025-04-23,YouGov/The Times,"1,296 (A)[eb]",D,mark_kelly,1,footnote
+2025-04-23,YouGov/The Times,"1,296 (A)[eb]",D,pete_buttigieg,9,column
+2025-04-23,YouGov/The Times,"1,296 (A)[eb]",D,rahm_emanuel,1,footnote
+2025-04-23,YouGov/The Times,"1,296 (A)[eb]",D,tim_walz,3,column
+2025-04-23,YouGov/The Times,"1,296 (A)[eb]",D,wes_moore,1,footnote
 2025-04-14,Atlas Intel,"2,347 (A)",R,glenn_youngkin,3,footnote
 2025-04-14,Atlas Intel,"2,347 (A)",R,jd_vance,60,column
 2025-04-14,Atlas Intel,"2,347 (A)",R,kristi_noem,8,footnote
@@ -2450,15 +2526,15 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-04-14,Atlas Intel,"2,347 (A)",R,ron_desantis,9,column
 2025-04-14,Atlas Intel,"2,347 (A)",R,tucker_carlson,5,footnote
 2025-04-14,Atlas Intel,"2,347 (A)",R,vivek_ramaswamy,1,column
-2025-04-14,AtlasIntel,"2,347 (A)[bw]",D,alexandria_ocasio_cortez,15.9,column
-2025-04-14,AtlasIntel,"2,347 (A)[bw]",D,andy_beshear,2.4,footnote
-2025-04-14,AtlasIntel,"2,347 (A)[bw]",D,chris_murphy,1.6,footnote
-2025-04-14,AtlasIntel,"2,347 (A)[bw]",D,cory_booker,8.7,column
-2025-04-14,AtlasIntel,"2,347 (A)[bw]",D,gavin_newsom,6.8,column
-2025-04-14,AtlasIntel,"2,347 (A)[bw]",D,gretchen_whitmer,8.6,column
-2025-04-14,AtlasIntel,"2,347 (A)[bw]",D,kamala_harris,24.1,column
-2025-04-14,AtlasIntel,"2,347 (A)[bw]",D,pete_buttigieg,27.7,column
-2025-04-14,AtlasIntel,"2,347 (A)[bw]",D,raphael_warnock,1.9,footnote
+2025-04-14,AtlasIntel,"2,347 (A)[o]",D,alexandria_ocasio_cortez,15.9,column
+2025-04-14,AtlasIntel,"2,347 (A)[o]",D,andy_beshear,2.4,footnote
+2025-04-14,AtlasIntel,"2,347 (A)[o]",D,chris_murphy,1.6,footnote
+2025-04-14,AtlasIntel,"2,347 (A)[o]",D,cory_booker,8.7,column
+2025-04-14,AtlasIntel,"2,347 (A)[o]",D,gavin_newsom,6.8,column
+2025-04-14,AtlasIntel,"2,347 (A)[o]",D,gretchen_whitmer,8.6,column
+2025-04-14,AtlasIntel,"2,347 (A)[o]",D,kamala_harris,24.1,column
+2025-04-14,AtlasIntel,"2,347 (A)[o]",D,pete_buttigieg,27.7,column
+2025-04-14,AtlasIntel,"2,347 (A)[o]",D,raphael_warnock,1.9,footnote
 2025-04-14,Data for Progress,745 (LV),D,alexandria_ocasio_cortez,12,column
 2025-04-14,Data for Progress,745 (LV),D,amy_klobuchar,2,footnote
 2025-04-14,Data for Progress,745 (LV),D,andy_beshear,2,footnote
@@ -2507,22 +2583,22 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2025-04-14,Echelon Insights,"1,014 (LV)",R,tulsi_gabbard,1,footnote
 2025-04-14,Echelon Insights,"1,014 (LV)",R,vivek_ramaswamy,5,column
 2025-04-14,Echelon Insights,449 (LV),D,wes_moore,2,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dq]",D,alexandria_ocasio_cortez,21.3,column
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dq]",D,andy_beshear,2.8,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dq]",D,gavin_newsom,6.4,column
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dq]",D,gretchen_whitmer,3,column
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dq]",D,jared_polis,0.3,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dq]",D,jb_pritzker,3.3,column
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dq]",D,john_fetterman,0.5,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dq]",D,josh_shapiro,4.6,column
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dq]",D,kamala_harris,27.5,column
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dq]",D,mark_cuban,3.2,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dq]",D,mark_kelly,3.6,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dq]",D,pete_buttigieg,14,column
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dq]",D,roy_cooper,1.3,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dq]",D,ruben_gallego,0.5,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dq]",D,stephen_a_smith,1,footnote
-2025-04-03,Yale Youth Poll,"4,100 (RV)[dq]",D,wes_moore,0.7,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[eh]",D,alexandria_ocasio_cortez,21.3,column
+2025-04-03,Yale Youth Poll,"4,100 (RV)[eh]",D,andy_beshear,2.8,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[eh]",D,gavin_newsom,6.4,column
+2025-04-03,Yale Youth Poll,"4,100 (RV)[eh]",D,gretchen_whitmer,3,column
+2025-04-03,Yale Youth Poll,"4,100 (RV)[eh]",D,jared_polis,0.3,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[eh]",D,jb_pritzker,3.3,column
+2025-04-03,Yale Youth Poll,"4,100 (RV)[eh]",D,john_fetterman,0.5,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[eh]",D,josh_shapiro,4.6,column
+2025-04-03,Yale Youth Poll,"4,100 (RV)[eh]",D,kamala_harris,27.5,column
+2025-04-03,Yale Youth Poll,"4,100 (RV)[eh]",D,mark_cuban,3.2,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[eh]",D,mark_kelly,3.6,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[eh]",D,pete_buttigieg,14,column
+2025-04-03,Yale Youth Poll,"4,100 (RV)[eh]",D,roy_cooper,1.3,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[eh]",D,ruben_gallego,0.5,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[eh]",D,stephen_a_smith,1,footnote
+2025-04-03,Yale Youth Poll,"4,100 (RV)[eh]",D,wes_moore,0.7,footnote
 2025-04-01,YouGov/Economist,691 (A),D,alexandria_ocasio_cortez,8,column
 2025-04-01,YouGov/Economist,691 (A),D,bernie_sanders,8,footnote
 2025-04-01,YouGov/Economist,691 (A),D,cory_booker,1,column
