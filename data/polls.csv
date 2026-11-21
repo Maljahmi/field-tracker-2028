@@ -1,31 +1,31 @@
 end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-11-16,Echelon Insights,531 (LV),D,alexandria_ocasio_cortez,10,column
 2026-11-16,Echelon Insights,531 (LV),D,andy_beshear,2,column
-2026-11-16,Echelon Insights,397 (RV),R,brian_kemp,NA,footnote
+2026-11-16,Echelon Insights,397 (LV),R,brian_kemp,NA,footnote
 2026-11-16,Echelon Insights,531 (LV),D,cory_booker,2,column
-2026-11-16,Echelon Insights,397 (RV),R,doug_burgum,NA,footnote
+2026-11-16,Echelon Insights,397 (LV),R,doug_burgum,NA,footnote
 2026-11-16,Echelon Insights,531 (LV),D,gavin_newsom,11,column
-2026-11-16,Echelon Insights,397 (RV),R,glenn_youngkin,1,footnote
+2026-11-16,Echelon Insights,397 (LV),R,glenn_youngkin,1,footnote
 2026-11-16,Echelon Insights,531 (LV),D,gretchen_whitmer,2,footnote
 2026-11-16,Echelon Insights,531 (LV),D,jb_pritzker,3,column
-2026-11-16,Echelon Insights,397 (RV),R,jd_vance,40,column
+2026-11-16,Echelon Insights,397 (LV),R,jd_vance,40,column
 2026-11-16,Echelon Insights,531 (LV),D,jon_ossoff,10,column
-2026-11-16,Echelon Insights,397 (RV),R,josh_hawley,NA,footnote
+2026-11-16,Echelon Insights,397 (LV),R,josh_hawley,NA,footnote
 2026-11-16,Echelon Insights,531 (LV),D,josh_shapiro,4,column
 2026-11-16,Echelon Insights,531 (LV),D,kamala_harris,19,column
-2026-11-16,Echelon Insights,397 (RV),R,marco_rubio,26,column
-2026-11-16,Echelon Insights,397 (RV),R,marjorie_taylor_greene,1,footnote
+2026-11-16,Echelon Insights,397 (LV),R,marco_rubio,26,column
+2026-11-16,Echelon Insights,397 (LV),R,marjorie_taylor_greene,1,footnote
 2026-11-16,Echelon Insights,531 (LV),D,mark_kelly,5,column
 2026-11-16,Echelon Insights,531 (LV),D,pete_buttigieg,15,column
-2026-11-16,Echelon Insights,397 (RV),R,rand_paul,1,footnote
+2026-11-16,Echelon Insights,397 (LV),R,rand_paul,1,footnote
 2026-11-16,Echelon Insights,531 (LV),D,raphael_warnock,1,footnote
 2026-11-16,Echelon Insights,531 (LV),D,ro_khanna,1,footnote
-2026-11-16,Echelon Insights,397 (RV),R,robert_kennedy_jr,4,column
-2026-11-16,Echelon Insights,397 (RV),R,ron_desantis,12,column
-2026-11-16,Echelon Insights,397 (RV),R,sarah_huckabee_sanders,2,footnote
-2026-11-16,Echelon Insights,397 (RV),R,steve_bannon,NA,footnote
-2026-11-16,Echelon Insights,397 (RV),R,ted_cruz,1,column
-2026-11-16,Echelon Insights,397 (RV),R,tucker_carlson,1,footnote
+2026-11-16,Echelon Insights,397 (LV),R,robert_kennedy_jr,4,column
+2026-11-16,Echelon Insights,397 (LV),R,ron_desantis,12,column
+2026-11-16,Echelon Insights,397 (LV),R,sarah_huckabee_sanders,2,footnote
+2026-11-16,Echelon Insights,397 (LV),R,steve_bannon,NA,footnote
+2026-11-16,Echelon Insights,397 (LV),R,ted_cruz,1,column
+2026-11-16,Echelon Insights,397 (LV),R,tucker_carlson,1,footnote
 2026-11-16,Emerson College,499 (RV),D,abdul_el_sayed,0.8,footnote
 2026-11-16,Emerson College,499 (RV),D,alexandria_ocasio_cortez,12.1,column
 2026-11-16,Emerson College,499 (RV),D,andy_beshear,4,column
@@ -87,6 +87,22 @@ end_date,pollster,sample,party,candidate_id,pct,listed_as
 2026-11-12,Rainey Center,518 (LV),D,ruben_gallego,0,footnote
 2026-11-12,Rainey Center,518 (LV),D,stephen_a_smith,1,footnote
 2026-11-12,Rainey Center,518 (LV),D,wes_moore,1,footnote
+2026-11-12,The Rainey Center,406 (LV),R,brian_kemp,NA,footnote
+2026-11-12,The Rainey Center,406 (LV),R,donald_trump_jr,7,column
+2026-11-12,The Rainey Center,406 (LV),R,glenn_youngkin,NA,footnote
+2026-11-12,The Rainey Center,406 (LV),R,jd_vance,36,column
+2026-11-12,The Rainey Center,406 (LV),R,marco_rubio,24,column
+2026-11-12,The Rainey Center,406 (LV),R,marjorie_taylor_greene,2,footnote
+2026-11-12,The Rainey Center,406 (LV),R,mike_pence,1,footnote
+2026-11-12,The Rainey Center,406 (LV),R,nikki_haley,1,column
+2026-11-12,The Rainey Center,406 (LV),R,rand_paul,NA,footnote
+2026-11-12,The Rainey Center,406 (LV),R,robert_kennedy_jr,4,column
+2026-11-12,The Rainey Center,406 (LV),R,ron_desantis,10,column
+2026-11-12,The Rainey Center,406 (LV),R,sarah_huckabee_sanders,NA,footnote
+2026-11-12,The Rainey Center,406 (LV),R,steve_bannon,NA,footnote
+2026-11-12,The Rainey Center,406 (LV),R,ted_cruz,4,column
+2026-11-12,The Rainey Center,406 (LV),R,thomas_massie,NA,footnote
+2026-11-12,The Rainey Center,406 (LV),R,tucker_carlson,NA,footnote
 2026-11-11,Economist/YouGov,489 (A),D,alexandria_ocasio_cortez,12,column
 2026-11-11,Economist/YouGov,489 (A),D,andy_beshear,3,column
 2026-11-11,Economist/YouGov,489 (A),D,bernie_sanders,2,footnote
